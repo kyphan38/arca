@@ -1,6 +1,6 @@
 # array and hashing
 
-| []() | | |
+<!-- | []() | | | -->
 
 ## Easy
 
