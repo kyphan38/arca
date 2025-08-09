@@ -10,13 +10,18 @@
 ## What Is an Operating System?
 
 - Middleware between user programs and system hardware
-  - Not user application software, but system software
+  - Not user software, but system software
   - Examples: Linux, Windows, MacOS
+- Real-world example: Imagine you drive a car
+  - The user/application (You): Want to car to go faster, slow down, or turn left/right
+  - The OS (The car's interface): Steering wheel, gas/brake pedal, gear shift (can so)
+  - The hardware (The mechanical details): Piston, bugi, etc.
+  - You dont need to know how the pistons work to step on gas
+  - You just need to know step on the gas the car goes faster
+  - The OS works the same way for computer programs
 - Manages computer hardware: CPU, main memory, I/O devices (hard disk, network card, mouse, keyboard etc.)
-  - User applications do not have to worry about low-level hardware details
-- Components
-  - Kernel: The core functionality of the OS
-  - Other programs: Shell, commands, and utilities that help users interact with the OS
+  - User applications do not have to worry about the details of low-level hardware
+  - Instead of having the application talk directly to the hardware (which is extremely complicated and dangreous), the OS system provides a set of standardized API called System Calls
 
 ## Goals of Operating Systems
 
