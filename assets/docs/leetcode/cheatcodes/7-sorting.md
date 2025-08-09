@@ -4,7 +4,6 @@
 
 | Number | Note | Times |
 |--------|------|-------|
-| [88. Merge Sorted Array](https://leetcode.com/problems/merge-sorted-array/description/) | add the biggest from last to first, use 3 pointers, edge case is second arr remains | |
 | [1051. Height Checker](https://leetcode.com/problems/height-checker/description/) | | |
 | [1122. Relative Sort Array](https://leetcode.com/problems/relative-sort-array/description/) | count ocurrence in arr1 with defaultdict, find unseen, set arr2, multiply with occurence | |
 | [1365. How Many Numbers Are Smaller Than the Current Number](https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/) | lambda `row[k]` with reverse | |
