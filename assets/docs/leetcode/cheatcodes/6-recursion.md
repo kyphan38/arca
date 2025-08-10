@@ -10,3 +10,5 @@
 | [504. Base 7](https://leetcode.com/problems/base-7/description/) | num is smaller than 0 => adding subtraction sign and call recursion and smaller and than 7 return string of num, lastly return //7 and string %7 |
 | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) | using self |
 | [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/description/) | if n is equals to 0 => return 0, and return n%k plus recursion |
+
+## Optional
