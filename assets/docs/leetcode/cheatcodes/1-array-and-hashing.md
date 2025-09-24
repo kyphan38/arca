@@ -8,8 +8,8 @@
 
 | Number | Note | Times |
 |--------|------|-------|
-| [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | optimize if else (in or not in?), subtraction | |
-| [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | 2 loops, check each index's value, check current index is equal and greater than the checking word or not? if these two conditions does not meet, return slices, consider the case of one word | |
+| [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | brute force,  two-pass hash table, one-pass hash table | |
+| [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | brute force - horizontal, brute force - vertical | |
 | [169. Majority Element](https://leetcode.com/problems/majority-element/description/) | count and balance the appearance to at least 0, change to new number once they're back | |
 | [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | sorting, check i-1 vs i or using set | 1 |
 | [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | hasmap with get, how to check character in s has the same frequency to t (different order) | |
