@@ -10,9 +10,9 @@
 |--------|------|-------|
 | [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | brute force,  two-pass hash table, one-pass hash table | |
 | [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | brute force - horizontal, brute force - vertical | |
-| [169. Majority Element](https://leetcode.com/problems/majority-element/description/) | count and balance the appearance to at least 0, change to new number once they're back | |
-| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | sorting, check i-1 vs i or using set | 1 |
-| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | hasmap with get, how to check character in s has the same frequency to t (different order) | |
+| [169. Majority Element](https://leetcode.com/problems/majority-element/description/) | one-pass or two-pass hash table, boyer-moore voting algorithm | |
+| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | brute force, sorting, one-pass hash table | |
+| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | sorting, hash table | |
 | [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/) | prefix | |
 | [383. Ransom Note](https://leetcode.com/problems/ransom-note/description/) | instead of find and remove => count and check, 2 seperate loops, using ascii | |
 | [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/) | | |
