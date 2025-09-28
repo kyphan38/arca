@@ -5,7 +5,7 @@
 Information
 
 - Animal rescue and awareness organization
-- Global, with HQ in Brisbane Australia - 100 staff
+- Global, with HQ in Brisbane Australia - 100 staffs
   - Call center, admin, IT, marketing, legal and accounts
 - Around 100 remote workers across Australia and globally
   - Animal care, activists, and lobbyists

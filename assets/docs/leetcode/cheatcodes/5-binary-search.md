@@ -28,7 +28,6 @@
 | [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/) | | |
 | [2300. Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/) | | |
 
-
 ## Hard
 
 | Number | Note | Times |

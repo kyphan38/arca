@@ -23,118 +23,122 @@
   - User applications do not have to worry about the details of low-level hardware
   - Instead of having the application talk directly to the hardware (which is extremely complicated and dangreous), the OS system provides a set of standardized API called System Calls
 
-## Goals of Operating Systems
+### Goals
 
-- Abstracts detailed hardware resources for user programs
-- Optimizes the use of the CPU, memory, and other resources
-- Ensures separation between multiple processes
+- Abstracts the hardware by hiding the complex, low-level details of how physical components work underthehood
+- Optimizes the use of the CPU, memory, and other resources by deciding which process gets to use which resources, and for how long
+- Ensures separation between multiple processes. It means that one program should not crash/impact another program or the entire system
 
-## History of Operating Systems
+## Program
 
-- Initially, OS was a library providing common functionality to access hardware via function calls from user programs
-  - Convenient, as users did not need to write code to manage hardware
-  - Centralized management of hardware resources is more efficient
-- As computers evolved to run multiple processes concurrently
-  - Multiple untrusted users shared the same hardware
-- So, OS evolved into trusted system software, providing isolation between users and protecting hardware
-  - Ensures multiple users are isolated and protected from each other
-  - Protects system hardware and software from unauthorized access
-
-## Key Concepts in Operating Systems
-
-- Virtualization: The OS provides a "virtual" or logical view of the hardware, hiding the complex physical view, giving each user/program the illusion of having entire hardware to itself
-- Concurrency: The OS runs multiple user programs simultaneously (at the same time), sharing system resources efficiently and securely
-- Persistence: The OS stores user data persistently on external I/O devices
-
-## What Is a Program?
+### Definition
 
 - Consist of code (CPU instructions) and data for a specific task
-- Store program concept
-  - User programs are stored in main memory (instructions + data)
-  - Memory is byte-addressable, data is accessed via memory addresses
-  - The CPU fetches code/data from memory using addresses and executes instructions
+  - Icon (.app) &rarr; Contents folder (executable file) and Resources (data)
 - Processes
-  - A process is a running program
-  - Modern CPUs have multiple cores for parallel execution
-  - Each core runs one process at a time
-  - Hyper-threading allows one physical core to appear as multiple logical cores, running multiple processes simultaneously
+  - A running program has one or more separate processes to handle each seprate tasks
 
 ## What Happens When You Run a Program?
 
-Stage 1: OS
+Stage 1: Preparation
 
-- A compiler translates high-level code into an executable
-- The executable file (e.g., “a.out”) is stored on the hard disk
-- When executed, a new process is created
-- The process is allocated a virtual address space in RAM to store code and data (compile-time data allocated at start, runtime data allocated as the program runs)
-- The executable is loaded from disk to main memory when the program starts
-- The CPU begins executing the program's instructions
+- A compiler translates high-level code into an executable file containing machine code (the 1s and 0s) and data
+- The executable file (e.g., “a.out”) is created and stored on the hard disk
 
-Stage 2: CPU
+Stage 2: OS
+
+- Creates a process and a record (Process Control Block) to keep track of its status
+- Allocates a private virtual address space for the process in the main memory (RAM) where the process resides in
+- Tells the loader (OS'service) to read the content of executable file (from the hard disk) and copy it into the newly allocated address space in RAM
+- Intializes the CPU context
+  - Set the PC to point the memory address of the very first instruction
+  - Initializes other registers
+
+&rarr; Then, the OS hands control over the CPU
+
+Stage 3: CPU
 
 - Fetches the instruction pointed by the PC from memory
 - Increments the PC to point to the next instruction
-- Loads data required into registers
-- Decodes and executes the instruction
-- Stores results back to memory, if needed
-
-CPU execution context
-
-- When running a process, CPU registers store the execution context (e.g., Program Counter (PC) points to the current instruction, general-purpose registers store data)
+- Decodes the instruction to figure out what operation needs to be done
+- Loads the data from memory into registers, if needed
+- Executes the instruction
+- Stores results back into a register or a memory location
 
 ![img](./img/1.png)
 
 ![img](./img/2.png)
 
-## Role of OS in Running a Process
-
-- Allocates memory for the new process in RAM
-  - Loads code and data from the disk executable
-  - Allocates memory for stack and heap
-- Initializes the CPU context (e.g., PC points to the first instruction)
-- The process begins execution
-  - The CPU runs user instructions
-  - The OS steps out but intervenes when needed
-
 ![img](./img/3.png)
 
-## Concurrent Execution and CPU Virtualization
+## Concepts
 
-- The CPU runs multiple programs concurrently
-  - The OS switches between processes, running one for a short time before switching to another
-- How the OS ensures correct concurrent execution
-  - Runs process A for some time
-  - Pauses A, saves its context, and loads the context of process B (context switching)
-  - Runs process B for some time
-  - Pauses B, restores A's context, and resumes A
-- Each process believes it is running alone on the CPU
-  - Context switching ensures no disruption is perceived by the process
-- The OS virtualizes the CPU across multiple processes
-- The OS scheduler decides which process to run on which CPU and when
+### CPU Virtualization
 
-## Context Switching
+Previously, one computer could only run one process at a time, which creates a poor, slow user experience. For example, you couldn't listen to music while surfing the web
+
+In order to solve this problem, we should make one computer to run multiple processes simultaneously. The OS achieves multitasking through a concept called CPU Virtualization. This is done using two key components
+
+- The OS scheduler is the component responsible for deciding which process to run next and for how long
+- The OS performs a context switch - switches between different processes very quickly to swap processes on the CPU
+
+This process happens so quickly that the OS creates the illusion that each process has its own dedicated CPU
+
+How a context switching is performed
+
+- The OS runs Process A for a short time
+- It then pauses Process A and saves its execution context (the current state of its CPU registers, including the PC)
+- The OS loads the saved context of another process, Process B
+- It runs Process B for a short time before switching again
 
 ![img](./img/4.png)
 
-## Memory Image of a Process
+### Memory Virtualization
 
-- Memory image: The code and data of a process in memory
-  - Code: CPU instructions in the program
-  - Compile-time data: Global/static variables in the program executable
-  - Runtime data: Stack and heap for dynamic memory allocation
-- The heap and stack can grow/shrink during execution with OS assistance
-  - The stack pointer (CPU register) tracks the top of the stack
-- The memory image includes additional code (e.g., language libraries, kernel code) that the process may execute
+Without memory virtualization, every process would use the memory directly on the physical RAM, which leads to 2 major issues
 
-## Address Space of a Process
+- A bug or crash in one process can overwrite and corrupt the memory of another process, or even the OS itself, causing the entire computer to crash
+- One process can read or modify another process's data, creating a massive security vulnerability
 
-- The OS gives each process the illusion that its memory image is laid out contiguously from address 0 (virtual address space)
-- In reality, processes are allocated memory in chunks across RAM at physical addresses, which the programmer does not see
-  - Pointer addresses in a program are virtual, not physical
-- The OS maps virtual addresses to physical addresses when accessed
-- The OS virtualizes memory, providing each process with its own virtual address space
+Memory image: From a process's perspective, it has a large, clean, contiguous block of memory, which starts at address 0, including
+
+- Code: The program's instructions
+- Data: Global and static variables
+- Heap: For dynamically allocated memory that can grow
+- Stack: For function calls and local variables, which grows and shrinks
+
+Mapping
+
+- The OS maintains a page table for each process that translates the virtual addresses into the real physical addresses in RAM
+- This guarantees each process is completely isolated
 
 ![img](./img/5.png)
+
+### User Mode and Kernel Mode
+
+Imagine a system with only one mode, every process has a full and unrestricted access to all of the hardware and memory. This will create a chaotic and unreliable environment
+
+- (Same to memory virtualization)
+
+Privilege levels: CPUs have different modes of operation. The two most important are
+
+- User mode (Unprivileged): Where user applications run. In this mode, the CPU is not allowed to execute certain "privileged" instructions that could harm the system, like directly accessing hardware or modifying critical OS data
+- Kernel mode (Privileged): Where the OS runs. In this mode, the CPU can execute all instructions, giving the OS full control over the hardware and memory
+
+Transitions to Kernel Mode: A process can't just switch to kernel mode whenever it wants. It is controlled and happens only in three specific situations
+
+- System salls: When a user program needs to request a service from the OS (e.g., "read a file" or "send data over the network"). The program executes a special instruction that safely transfers control to the OS, which performs the task in kernel mode and then returns control to the user program
+- Interrupts: When a hardware device (like a keyboard, mouse, or network card) needs the OS's attention. The hardware sends an interrupt signal to the CPU, which pauses the current user process, saves its state, and jumps to an OS interrupt handler in kernel mode to service the device
+- Faults (Exceptions): When a user program makes an error, such as dividing by zero or trying to access invalid memory. The CPU traps this error and transfers control to the OS in kernel mode to handle it, which often involves terminating the faulty program.
+
+### Managing I/O Devices
+
+To mange the I/O devices, there are two components
+
+- Device controllers: Each physical device is managed by a hardware chip called a device controller. This controller understands the low-level signals needed to operate the device
+- Device drivers: To communicate with the device controller, the OS uses a piece of software called a device driver. Each driver is specific to a piece of hardware and knows exactly which commands to send to the controller to perform I/O operations (e.g., "read block 500 from the hard disk"). The driver is also responsible for handling interrupts from the device when an operation is complete.
+
+This hardware/software pairing allows the OS to abstract the details of I/O, presenting a simple, consistent interface for applications to use (e.g., readFile()), regardless of the underlying hardware
 
 ## Isolation and Privilege Levels
 
@@ -227,3 +231,7 @@ CPU execution context
 - Performance engineering: Focuses on making programs run faster
 - Distributed systems: Examines how multiple applications across multiple machines work together to perform tasks reliably
 - Other topics: Virtualization, cloud computing, security, etc.
+
+## Questions
+
+- What does a computer system contain?
