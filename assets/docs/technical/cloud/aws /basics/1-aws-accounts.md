@@ -14,14 +14,6 @@ Create multiple accounts
 
 - All unique emails, no pre-setup required
 
-```bash
-catguy@gmail.com
----
-cayguy+AWSAccount1@gmail.com
-cayguy+AWSAccount2@gmail.com
-cayguy+AWSAccount3@gmail.com
-```
-
 ## How to Setup MFA
 
 We only usernames and passwords - if leaked, anyone can be you!
@@ -46,16 +38,3 @@ More factors means more security and harder to fake
 Billing Dashboards &rarr; Billing Preferences
 
 Billing Dashboards &rarr; Budgets &rarr; Create a budget
-
-## DIY - How to Create a Production Account
-
-Steps
-
-- New email for the Production AWS Account
-  - Remember the Gmail "+" trick
-- Create the Production AWS Account
-  - Same as the General account but - Production
-- Add MFA to account root user (and test)
-- Add a budget to Production Account (remember the checkboxes)
-- Enable IAM user and role access to billing
-- Add account contacts

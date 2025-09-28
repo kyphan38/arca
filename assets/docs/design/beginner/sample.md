@@ -1,4 +1,4 @@
-# Disk Storage (HDD/SSD)
+# sample
 
 ## Question
 
@@ -14,8 +14,6 @@ In the context of a large-scale system, what are the primary trade-offs of disk 
   - Use for: Storing foundational data that must not be lost (e.g., user databases, transaction logs, object storage).
   - Avoid for: Storing data that requires frequent, low-latency access, like session information or data for real-time computations. High-performance systems are designed to minimize disk I/O by using caching layers in RAM.
 
-# Memory (RAM)
-
 ## Question
 
 What is RAM's function in a server, and what is the key trade-off when designing a system around it?
@@ -29,8 +27,6 @@ What is RAM's function in a server, and what is the key trade-off when designing
 - System Design Application:
   - Use for: Caching layers (e.g., Redis, Memcached), in-memory databases, and holding the active "working set" of data for an application to ensure low-latency responses.
   - Key Decision: The main trade-off is cost vs. performance. You must provision enough RAM to prevent frequent, slow disk access. However, relying solely on RAM for storage is risky due to its volatility; critical data must eventually be persisted to disk.
-
-# CPU Cache
 
 ## Question
 
@@ -46,8 +42,6 @@ You can't directly control the CPU cache. As a system designer, why must you sti
   - Why it matters: While not directly managed, application performance is heavily influenced by "cache-friendliness."
   - Application: Writing code and choosing data structures that promote locality of reference (accessing memory sequentially or reusing data that's close together) leads to high cache-hit rates. A low cache-hit rate (a "cache miss") forces the CPU to fetch from RAM, which is a significant performance penalty. In high-frequency trading or large-scale data processing, cache-aware programming is critical.
 
-# Limits of a Single Computer
-
 ## Question
 
 Why is "just getting a bigger server" (vertical scaling) often not a viable long-term strategy for large-scale systems?
@@ -59,8 +53,6 @@ Why is "just getting a bigger server" (vertical scaling) often not a viable long
 - System Design Application:
   - Architectural Shift: This physical limitation forces us to move from vertical scaling (one big machine) to horizontal scaling (many smaller machines).
   - Core Principle: Modern system design is built on the principle of distributed systems. The key challenge is to design applications that can be partitioned and have their workloads distributed across a fleet of computers, assuming that any single machine has finite capacity.
-
-# Vertical vs. Horizontal Scaling
 
 ## Question
 
@@ -76,8 +68,6 @@ Compare vertical and horizontal scaling. In large-scale systems, why is horizont
   - Con: It introduces complexity, requiring a load balancer to distribute traffic.
 - Why Horizontal is Preferred: Large-scale services prioritize reliability and massive scalability. Horizontal scaling is the only practical way to move beyond the physical limits of a single machine and build a fault-tolerant system.
 
-# The Role of a Load Balancer
-
 ## Question
 
 What is the primary function of a load balancer, and why is it a non-negotiable component in a horizontally scaled architecture?
@@ -87,8 +77,6 @@ What is the primary function of a load balancer, and why is it a non-negotiable 
 - Primary Role: A load balancer's job is to receive all incoming user requests and distribute them evenly across multiple servers.
 - Problem it Solves: It prevents any single server from being overwhelmed with traffic, which would lead to slow responses or failures.
 - Why it's Essential: Without a load balancer, horizontal scaling is impossible. You could have many servers running, but no coordinated way to send traffic to them. It's the component that enables a group of individual servers to act as a single, cohesive, and highly available system.
-
-# The Three Pillars of Observability
 
 ## Question
 
