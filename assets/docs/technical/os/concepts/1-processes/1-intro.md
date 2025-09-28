@@ -5,19 +5,23 @@
 - What does a computer system contain?
   - User software: User applications (browser, email client, games, application servers, databases, AI/ML algorithms, etc.)
   - System software: Operating System (OS), etc.
-  - System hardware: CPU, memory, I/O devices, etc.
+  - Hardware: CPU, memory, I/O devices, etc.
 
-## OS
+## What Is an Operating System?
 
-### Definition
-
-- Middleware/sits between user software and system hardware
+- Middleware between user programs and system hardware
+  - Not user software, but system software
   - Examples: Linux, Windows, MacOS
+- Real-world example: Imagine you drive a car
+  - The user/application (You): Want to car to go faster, slow down, or turn left/right
+  - The OS (The car's interface): Steering wheel, gas/brake pedal, gear shift (can so)
+  - The hardware (The mechanical details): Piston, bugi, etc.
+  - You dont need to know how the pistons work to step on gas
+  - You just need to know step on the gas the car goes faster
+  - The OS works the same way for computer programs
 - Manages computer hardware: CPU, main memory, I/O devices (hard disk, network card, mouse, keyboard etc.)
   - User applications do not have to worry about the details of low-level hardware
   - Instead of having the application talk directly to the hardware (which is extremely complicated and dangreous), the OS system provides a set of standardized API called System Calls
-- Analogy: Ordering food at a restaurant
-  - You &rarr; The waiter &rarr; The kitchen
 
 ### Goals
 
