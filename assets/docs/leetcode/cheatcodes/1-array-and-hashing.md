@@ -1,13 +1,5 @@
 # array and hashing
 
-<<<<<<< HEAD
-- ASCII
-  - A to Z: 65 to 90
-  - a to z: 97 to 122
-=======
-<!-- | []() | | | -->
->>>>>>> docs
-
 ## Easy
 
 | Number | Note | Times |
