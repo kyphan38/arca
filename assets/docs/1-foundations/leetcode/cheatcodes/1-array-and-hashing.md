@@ -2,20 +2,19 @@
 
 ## Easy
 
-| Number | Note | Times |
-|--------|------|-------|
-| [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | brute force,  two-pass hash table, one-pass hash table | |
-| [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | brute force - horizontal, brute force - vertical | |
-| [169. Majority Element](https://leetcode.com/problems/majority-element/description/) | one-pass or two-pass hash table, boyer-moore voting algorithm | |
-| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | brute force, sorting, one-pass hash table | |
-| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | sorting, hash table | |
-| [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/) | prefix | |
-| [383. Ransom Note](https://leetcode.com/problems/ransom-note/description/) | instead of find and remove => count and check, 2 seperate loops, using ascii | |
-| [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/) | | |
-| [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | negate value for existing number, positive value is the missing one | |
-| [705. Design HashSet](https://leetcode.com/problems/design-hashset/description/) | | |
-| [706. Design HashMap](https://leetcode.com/problems/design-hashmap/description/) | | |
-| [1929. Concatenation of Array](https://leetcode.com/problems/concatenation-of-array/description/) | | |
+| Number | Note |
+|--------|------|
+| [1. Two Sum](https://leetcode.com/problems/two-sum/description/) | brute force,  two-pass hash table, one-pass hash table |
+| [14. Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/description/) | brute force - horizontal, brute force - vertical |
+| [169. Majority Element](https://leetcode.com/problems/majority-element/description/) | one-pass or two-pass hash table, boyer-moore voting algorithm |
+| [217. Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/) | brute force, sorting, one-pass hash table |
+| [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/) | sorting, hash table |
+| [303. Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/description/) | brute force, prefix sum |
+| [383. Ransom Note](https://leetcode.com/problems/ransom-note/description/) | hash table (1 dict count), hash table (2 dict counts) |
+| [409. Longest Palindrome](https://leetcode.com/problems/longest-palindrome/description/) | one-pass hash table - logic |
+| [448. Find All Numbers Disappeared in an Array](https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/) | two-pass with index marking |
+| [705. Design HashSet](https://leetcode.com/problems/design-hashset/description/) | x |
+| [706. Design HashMap](https://leetcode.com/problems/design-hashmap/description/) | x |
 
 ## Medium
 
