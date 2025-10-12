@@ -18,25 +18,25 @@
 
 ## Medium
 
-| Number | Note | Times |
-|--------|------|-------|
-| [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/) | | |
-| [31. Next Permutation](https://leetcode.com/problems/next-permutation/description/) | | |
-| [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/) | | |
-| [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/) | | |
-| [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/) | | |
-| [75. Sort Colors](https://leetcode.com/problems/sort-colors/description/) | | |
-| [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | | |
-| [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/) | | |
-| [229. Majority Element II](https://leetcode.com/problems/majority-element-ii/description/) | | |
-| [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/) | | |
-| [271. Encode and Decode Strings](https://neetcode.io/problems/string-encode-and-decode) | | |
-| [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/description/) | | |
-| [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/) | | |
-| [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) | | |
-| [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/) | | |
-| [525. Contiguous Array](https://leetcode.com/problems/contiguous-array/description/) | | |
-| [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/) | | |
-| [912. Sort an Array](https://leetcode.com/problems/sort-an-array/description/) | | |
+| Number | Note |
+|--------|------|
+| [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/) | |
+| [31. Next Permutation](https://leetcode.com/problems/next-permutation/description/) | |
+| [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/) | |
+| [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/) | |
+| [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/description/) | |
+| [75. Sort Colors](https://leetcode.com/problems/sort-colors/description/) | |
+| [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/) | |
+| [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/description/) | |
+| [229. Majority Element II](https://leetcode.com/problems/majority-element-ii/description/) | |
+| [238. Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/description/) | |
+| [271. Encode and Decode Strings](https://neetcode.io/problems/string-encode-and-decode) | |
+| [304. Range Sum Query 2D - Immutable](https://leetcode.com/problems/range-sum-query-2d-immutable/description/) | |
+| [347. Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/description/) | |
+| [380. Insert Delete GetRandom O(1)](https://leetcode.com/problems/insert-delete-getrandom-o1/description/) | |
+| [438. Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/) | |
+| [525. Contiguous Array](https://leetcode.com/problems/contiguous-array/description/) | |
+| [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/) | |
+| [912. Sort an Array](https://leetcode.com/problems/sort-an-array/description/) | |
 
 ## Optional

@@ -1,12 +1,6 @@
 # computer architecture
 
-Question 1: In the context of a large-scale system, what are the primary trade-offs of disk storage, and what is its main role?
-
-Question 2: What is RAM's function in a server, and what is the key trade-off when designing a system around it?
-
-Question 3: You can't directly control the CPU cache. As a system designer, why must you still understand it?
-
-QUestion 4: Why is "just getting a bigger server" (vertical scaling) often not a viable long-term strategy for large-scale systems?
+- [x] Done
 
 ## Why We Start With Computer Basics
 
@@ -76,4 +70,12 @@ QUestion 4: Why is "just getting a bigger server" (vertical scaling) often not a
 - One of the biggest limits is CPU speed
 - For a long time, Moore's Law described how CPUs got exponentially faster, doubling in speed roughly every two years
 - However, in the last 10 years or so, this trend has slowed down and CPU speeds are starting to level off. We can no longer count on a single CPU getting infinitely faster
-c
+
+## Questions
+
+Questions
+
+- Question 1: In the context of a large-scale system, what are the primary trade-offs of disk storage, and what is its main role?
+- Question 2: What is RAM's function in a server, and what is the key trade-off when designing a system around it?
+- Question 3: You can't directly control the CPU cache. As a system designer, why must you still understand it?
+- Question 4: Why is "just getting a bigger server" (vertical scaling) often not a viable long-term strategy for large-scale systems?
