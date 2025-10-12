@@ -73,7 +73,7 @@ Performance
   - IOPS → The I/O size will be small and you sacrifice throughput (little data → total data volume will be low)
   - Throughput → The I/O size will be large and you sacrifice IOPS (large data → total number of operations will be low)
 
-## EBS
+## Ebs
 
 Overview
 
@@ -107,7 +107,7 @@ Architecture
 
 ## EBS Volume Types - General Purpose SSD
 
-### GP2
+### Gp2
 
 Key words
 
@@ -163,7 +163,7 @@ System limits and edge cases
 
 ![img](./img/12.png)
 
-### GP3
+### Gp3
 
 Performance tiers
 

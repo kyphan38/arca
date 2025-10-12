@@ -1,5 +1,7 @@
 # devices
 
+- [x] Done
+
 ## Network
 
 Definition: A computer network is a digital telecommunication network which allows nodes to share resources

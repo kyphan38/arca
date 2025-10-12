@@ -8,7 +8,7 @@ Question 3: You can't directly control the CPU cache. As a system designer, why 
 
 QUestion 4: Why is "just getting a bigger server" (vertical scaling) often not a viable long-term strategy for large-scale systems?
 
-## Why We Start with Computer Basics
+## Why We Start With Computer Basics
 
 - To understand how large computer systems (called distributed systems) are designed, we first need to know how a single computer works
 - From a software point of view, a computer has a few main parts: the disk, memory (RAM), the processor (CPU), and the CPU's cache

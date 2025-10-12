@@ -7,7 +7,7 @@ What is it?
 - An ordered collection of contiguous elements
 - Elements are located one after another with no space in between
 
-## RAM
+## Ram
 
 What is it?
 

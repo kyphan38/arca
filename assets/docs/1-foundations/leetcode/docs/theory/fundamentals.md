@@ -2,7 +2,7 @@
 
 ## Data Types
 
-### Python numbers
+### Python Numbers
 
 int
 

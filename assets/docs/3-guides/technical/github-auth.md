@@ -6,7 +6,7 @@ GitHub prompts for credentials on every push. Use `.netrc` to store them
 
 ## Solution
 
-### Step 1: Create .netrc
+### Step 1: Create .Netrc
 
 ``` bash
 vim ~/.netrc

@@ -31,7 +31,7 @@ What is an Ethernet interface?
 - It is used for all communication that needs to leave the computer, like browse webistes, sending emails, etc. to the the local network
 - When you type `gooogle.com` into your browser, the request leaves your computer via the Ethernet interface, hits the local network, and is sent to the router, which then forwards it to the internet
 
-## Creating a Container with a Network Namespace
+## Creating a Container With a Network Namespace
 
 We give a container its own private network environment via Linux feature - network namespaces (or netns)
 

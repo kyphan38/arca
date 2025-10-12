@@ -1,5 +1,7 @@
 # interfaces and cables
 
+- [x] Done
+
 ## Ports
 
 Types
@@ -67,7 +69,7 @@ Definitions
 - Twisted: Pairs of wires are twisted together
 - Pair: Each pair consists of two insulated copper wires
 
-### 10BASE-T and 100BASE-T
+### 10base-T and 100base-T
 
 Definition: Full-Duplex transmission: Two devices can send data at the same time without issues
 
@@ -92,7 +94,7 @@ Tx and Rx table
   - A feature in modern networking devices
   - Automatically detect which pins their neighbor is transmitting data on, and then adjust which pins they use to transmit and receive data
   
-### 1000BASE-T and 10GBASE-T
+### 1000base-T and 10gbase-T
 
 Definitions
 
