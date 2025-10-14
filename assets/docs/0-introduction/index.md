@@ -2,6 +2,6 @@
 slug: /
 ---
 
-Hi folks, this is the place where I share, store my learning and work
+Hi folks, This is the space where I shard the journey-learning from personal experience, from others, and from AI
 
-![img](./img/bt.png)
+![img](./img/chill.png)

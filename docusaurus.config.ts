@@ -3,7 +3,7 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'This is my place, bro!',
+  title: 'yolo',
   favicon: 'img/earth.ico',
 
   url: 'https://kyphan38.github.io',
