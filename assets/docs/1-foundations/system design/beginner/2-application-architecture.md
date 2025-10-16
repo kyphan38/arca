@@ -1,6 +1,6 @@
 # application architecture
 
-- [x] Done
+- [] Done
 
 ![img](./img/3.png)
 
