@@ -53,7 +53,7 @@ Applications
 - When to use: RAM is perfect for tasks that need fast data access, such as caching layers (to speed up applications) or in-memory databases
 - Trade-off: The main decision when using RAM is balancing cost versus performance. You pay more for its speed
 
-## CPU
+## Cpu
 
 Definitions
 
