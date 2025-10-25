@@ -25,7 +25,7 @@ Note: The payload of an Ethernet frame may contain an IP packet, which includes 
 
 Note: PC1 wants to send this Ethernet frame to PC3, it has to learn PC3's MAC address &rarr; ARP
 
-## ARP
+## Arp
 
 Definitions
 
