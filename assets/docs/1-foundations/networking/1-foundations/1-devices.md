@@ -20,11 +20,11 @@ Definitions
 
 Note: The same device can be a client in some situations, and a server in other situations
 
-![img](./img/1.png)
+![img](./img/1/1.png)
 
-![img](./img/2.png)
+![img](./img/1/2.png)
 
-![img](./img/3.png)
+![img](./img/1/3.png)
 
 ## Switches
 
@@ -34,7 +34,7 @@ Definitions
 - Provide connectivity to hosts within the same LAN (Local Area Network)
 - Do not provide connectivity between LANs/over the Internet
 
-![img](./img/4.png)
+![img](./img/1/4.png)
 
 ## Routers
 
@@ -44,7 +44,7 @@ Definitions
 - Are used to provided connectivity between LANs
 - Are used to send data over the Internet
 
-![img](./img/5.png)
+![img](./img/1/5.png)
 
 ## Firewalls
 
@@ -59,4 +59,4 @@ Types
 - Network firewalls are hardware devices that filter traffic between networks
 - Host-based firewalls are software applications that filter traffic entering and exiting a host machine, like a PC
 
-![img](./img/6.png)
+![img](./img/1/6.png)

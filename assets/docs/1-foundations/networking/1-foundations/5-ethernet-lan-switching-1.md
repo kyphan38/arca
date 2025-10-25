@@ -4,11 +4,11 @@
 
 ## Local Area Networks
 
-![img](./img/18.png)
+![img](./img/5/1.png)
 
 ## Ethernet Frame
 
-![img](./img/19.png)
+![img](./img/5/2.png)
 
 ### Preamble
 
@@ -72,7 +72,7 @@ Definitions
 
 Additional information: Since 1 byte = 8 bits and 1 hexadecimal character = 4 bits, it takes two hexadecimal characters to represent one byte
 
-![img](./img/20.png)
+![img](./img/5/3.png)
 
 Notation
 
@@ -95,7 +95,7 @@ Note: Dynamically learned MAC addresses are removed from the MAC address table a
 
 Example
 
-![img](./img/21.png)
+![img](./img/5/4.png)
 
 ## Number Systems
 

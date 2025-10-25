@@ -15,13 +15,13 @@ Definitions
   - Ie. 36-byte packet + 12-byte padding = 46 bytes
   - Ie. If you send 36 bytes, but the minimum Ethernet payload size is 46 bytes, so a series of padding bytes must be added to meet the minimum payload size
 
-![img](./img/22.png)
+![img](./img/6/1.png)
 
 Note: The payload of an Ethernet frame may contain an IP packet, which includes IP addresses
 
 ## Ethernet LAN Switching
 
-![img](./img/23.png)
+![img](./img/6/2.png)
 
 Note: PC1 wants to send this Ethernet frame to PC3, it has to learn PC3's MAC address &rarr; ARP
 
@@ -35,11 +35,11 @@ Definitions
   - ARP Request: Broadcast message sent to all devices on the LAN asking "Who has this IP address?"
   - ARP Reply: Unicast message sent back to the requester with the MAC address associated with the IP address
 
-![img](./img/24.png)
+![img](./img/6/3.png)
 
-![img](./img/25.png)
+![img](./img/6/4.png)
 
-![img](./img/26.png)
+![img](./img/6/5.png)
 
 ### ARP Table
 
@@ -51,7 +51,7 @@ Definitions
 - Type static = default entry
 - Type dynamic = learned via ARP
 
-![img](./img/27.png)
+![img](./img/6/6.png)
 
 ## Ping
 
@@ -64,7 +64,7 @@ Definitions
   - ICMP Echo Reply: Sent back to the requester to confirm reachability
 - Command to use ping: `ping <ip-address>`
 
-![img](./img/28.png)
+![img](./img/6/7.png)
 
 ## Cisco Command
 
@@ -82,9 +82,9 @@ clear mac address-table dynamic interface <interface>
 
 ## Wireshark
 
-![img](./img/29.png)
+![img](./img/6/8.png)
 
-![img](./img/30.png)
+![img](./img/6/9.png)
 
 ## Summary
 
