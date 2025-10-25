@@ -17,11 +17,11 @@ Definition: Graphical User interface
 
 How to connect a Cisco device via the RJ-45 console port?
 
-![img](./img/16.png)
+![img](./img/4/1.png)
 
 ## Mode
 
-![img](./img/17.png)
+![img](./img/4/2.png)
 
 ### User Exec
 

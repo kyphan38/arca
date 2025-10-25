@@ -18,7 +18,7 @@ Definitions
 - Created by International Organization for Standardization (ISO)
 - Functions are divided into 7 layers
 
-![img](./img/14.png)
+![img](./img/3/1.png)
 
 ### Application Layer - Data
 
@@ -105,5 +105,4 @@ Definitions
 
 Note: The OSI Model still influences how network engineers think and talk about networks
 
-![img](./img/15.png)
-
+![img](./img/3/2.png)

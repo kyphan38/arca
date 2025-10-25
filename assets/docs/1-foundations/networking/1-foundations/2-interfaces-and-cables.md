@@ -9,7 +9,7 @@ Types
 - RJ45 is for standard Ethernet cables
 - SFP is for fiber optic or copper cables via SFP modules
 
-![img](./img/13.png)
+![img](./img/2/1.png)
 
 ## Ethernet
 
@@ -75,11 +75,11 @@ Definition: Full-Duplex transmission: Two devices can send data at the same time
 
 - Straight-through cable: A type of network cable used to connect to different types of devices
 
-![img](./img/7.png)
+![img](./img/2/2.png)
 
 - Crossover cable: A type of network cable used to directly connect two devices of the same type without going through a switch or hub.
 
-![img](./img/8.png)
+![img](./img/2/3.png)
 
 Tx and Rx table
 
@@ -100,7 +100,7 @@ Definitions
 
 - Each pair is bidirectional
 
-![img](./img/9.png)
+![img](./img/2/4.png)
 
 ## Fiber-Optic Cable
 
@@ -111,7 +111,7 @@ Definitions
 - Two connectors on each end
   - One for transmitting and one for receiving data
 
-![img](./img/10.png)
+![img](./img/2/5.png)
 
 Structure
 
@@ -120,7 +120,7 @@ Structure
 - (3) A protective buffer
 - (4) The outer jacket of the cable
 
-![img](./img/11.png)
+![img](./img/2/6.png)
 
 Multi-mode fiber
 
@@ -136,7 +136,7 @@ Single-mode fiber
 - Allows longer cables than both UTP and multi-mode fiber
 - More expensive than multi-mode fiber due to more expensive LED-based SFP transmitters
 
-![img](./img/12.png)
+![img](./img/2/7.png)
 
 Fiber-optic cable standards
 

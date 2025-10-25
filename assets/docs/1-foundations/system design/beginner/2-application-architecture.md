@@ -33,9 +33,3 @@
 - An important aspect not covered in detail is networking, which is how all these different components (servers, storage, services) communicate with each other, especially since they are often running on different computers in different locations
 
 ## Questions
-
-Questions
-
-- Question 1: Compare vertical and horizontal scaling. In large-scale systems, why is horizontal scaling almost always the preferred strategy?
-- Question 2: What is the primary function of a load balancer, and why is it a non-negotiable component in a horizontally scaled architecture?
-- Question 3: Describe the three core components used to monitor a modern application (logging, metrics, alerting) and how they interrelate?
