@@ -25,6 +25,7 @@ Lists
 - Tips and tricks
 - Troubleshooting
 - Common errors
+- Formula
 
 ## Conclusion
 

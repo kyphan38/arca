@@ -30,6 +30,13 @@ Example: 154.78.111.32/16
 | D     | 1110xxxx     | 224-239                   | Not applicable| Not applicable           | Not applicable | Multicast          | Multicast                      |
 | E     | 1111xxxx     | 240-255                   | Not applicable| Not applicable           | Not applicable | Experimental       | Experimental                   |
 
+Note
+
+- Class A
+  - Network 0.0.0.0 is a default route
+  - Network 127.0.0.0 is a loopback address
+
+
 Examples
 
 - Class A: 12.128.251.34/8
@@ -53,14 +60,21 @@ Definitions
 - Class B: /16 &rarr; 255.255.0.0
 - Class C: /24 &rarr; 255.255.255.0
 
-## Network Address
+### Network Address
 
 ![img](./img/7/10.png)
 
 Definitions
 
+- Used to identify the network itself (like a name of a road, not a specific house)
 - Host portion of the address is all 0's - network address
 - The network address cannot be assigned to a host
+
+### Broadcast Address
+
+Definitions
+
+- Used to send messages to all devices connected to the same network at the same time (like a loudspeaker shouting "Send to all houses on street 192.168.1")
 - Host portion of the address is all 1's - broadcast address
 - The broadcast address cannot be assigned to a host
 
