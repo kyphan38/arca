@@ -44,9 +44,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
-  },
-  "overrides": {
-    "cheerio": "1.0.0-rc.12"
+    "node": ">=20.18.1"
   }
 }
