@@ -43,7 +43,7 @@ description ## to R1 ##
 show interfaces status
 ```
 
-### Configure multiple interfaces
+### Configure Multiple Interfaces
 
 Commands - SW
 
@@ -72,8 +72,6 @@ Definitions
 
 Hub
 
-- A hub is a physical layer device that operates in half-duplex mode at layer 1 &rarr; Switch operates at layer 2 and uses MAC addresses to send frames to specific hosts
-- When a device sends a frame, the hub copies and sends the frame out of all other ports. If two devices (end devices connected to the hub) send frames at the same time, a collision occurs
 - A hub is a physical layer device that operates in half-duplex mode at layer 1. In contrast, a switch operates at layer 2 and uses MAC addresses to send frames to specific hosts
 - When a device sends a frame, the hub copies and sends the frame out of all other ports. If two devices send frames at the same time, a collision occurs
 
@@ -83,7 +81,6 @@ CSMA/CD
 
 - Carrier Sense Multiple Access with Collision Detection
 - Before sending frames, devices listen to the collision domain until they detect that other devices are not sending
-- If a collision does occur, the device sends a jamming signal to inform the other devices that a collision happened
 - If a collision does occur, the device sends a jamming signal to inform other devices that a collision happened
 - Each device will wait a random period of time before resending the frames
 - The process repeats

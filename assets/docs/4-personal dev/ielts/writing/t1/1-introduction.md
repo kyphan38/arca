@@ -4,68 +4,62 @@
 
 Overview
 
-- Introduction for bar charts, line graphs, tables, and pie charts is the same
+- Your first sentence has one simple job: to tell the examiner what the chart, table, or diagram shows
+- You do this by paraphrasing the description given in the prompt. Do not copy it. The basic approach is the same for all task types (bar charts, line graphs, tables, etc.)
 
 Steps-by-steps
 
-- Look at what information we do not put in the introduction
-- Use the description given
-- Look at other information like units
-- Paraphrase
+- Read the prompt: Carefully read the description provided with the task
+- Identify key information: Find the What, Where, and When
+  - What: What data is being shown? (e.g., sales, imports, development stages)
+  - Where: What location or group? (e.g., in the UK, for three companies)
+  - When: What is the time period? (e.g., from 2010 to 2020, in a typical month)
+- Paraphrase: Rewrite the prompt using different words and a different sentence structure
+- Include units: Make sure to state the units of measurement (e.g., in percentages, in tonnes, in US dollars)
 
-Note
+How to paraphrase
 
-- If there are two tables. 1 sentece for 1 chart and using while
-- Change from noun to verb or verb to noun
-- Just focus on the desciprition provided
+- Use synonyms (but be careful): This is the most common method
+  - Good: shows &rarr; illustrates, compares, gives information about
+  - Good: the number of &rarr; the quantity of
+  - Good: a typical month &rarr; an average month
 
-Note for higher band
+:::warning
+Only use words you are 100% sure about. Cafe is not the same as coffee shop. Village is not the same as town. Accuracy is more important than a fancy word
+:::
 
-- No need to change 
-  - Not a better word: shows, illustrates, or give the information about is the same band 
-- More precise, clearer information
-  - For example: ttypical/average monthly sale should be the amount of money madef rom the sales ...
-  - Change from average monthly sale to in a typical month
-- Change the order of the information means create a unique grammar structure
-- Be more specific, be more accurate and using nice range of lanageu
-- Better words: Typical month sales to typical month revenue
-- Group categories if there many
-  - from the sales of 6 food and drink items
-- ...
-  - Fish imported to HOw much the ... spent in total on imported fish or the total expenditure 
-- Change
-  - How to the way
-  - the use of to for use as
-  - how to the process of, the method of, the steps involed in
-  - collect to collection
-- Change the position of places, like from the end to the very first of the inotrudciton
-  - the way [place] collects and processes rainwater to be used for drinking water
-- ...
-  - is collected, collecting, the collection, collects (passive vocie, prep, noun, present simpe)
-  - how, the way, the process of, the method of, the steps involed in
-  - for the use of, for use as, in order to use it for, to be used for
-- use better word
-  - they way [S] Recyles rainwater to make it safe for drinking
-  - the way in which [S] harvests and rescyles rainwater so that it can be safely consumed
+- Change word forms (verb &harr; noun): This is a very effective and safe technique
+  - Original: ...how fish was imported...
+  - Rewrite: ...the importation of fish...
+  - Original: ...how rainwater is collected...
+  - Rewrite: ...the collection of rainwater...
+- Change the sentence order: This unique grammatical structure
+  - Original: The chart shows sales of three foods in a typical month in London
+  - Rewrite: In a typical month, the chart illustrates the revenue from sales of three foods in London. (Moves when to the front)
+- Group categories: If the prompt lists many items, group them together
+  - Original: ...sales of burgers, pizza, fish and chips, and salad
+  - Rewrite: ...sales of four different food items
+
+Types
+
+- Multiple charts (e.g., two tables or a chart and a table)
+  - Describe both charts in your introduction, usually in one sentence
+  - Use a linking word like while or whereas to connect them
+  - Example: The first table shows the reasons why people moved, while the second table indicates the percentage who moved from a city
+- Diagrams (Processes or Life Cycles)
+  - For process diagrams, avoid how to. Use more formal language
+    - Instead of: how rainwater is recycled...
+    - Use: the process of recycling rainwater... or the steps involved in recycling rainwater...
+  - For life cycles, focus on stages
+    - Instead of: the life cycle of a frog...
+    - Use: the stages in the life of a frog... or the developmental phases a frog passes through...
 
 Common mistakes
 
-- Not an essay
-- Use the correct words like diagram, chart, etc. If it is chart, you do not need to change that word or you can improve it is a bar chart of pie chart, etc.
-- Not using "below, provided" ,etc.
-- Use the correct information "sales" or "typical/average monthly sales", etc.
-- Avoid using "the example" because we are writing reporting
-- Use the categories in the right order
-- If there are multiple groups, instead of listing all you show write x groups
-- Remember the word and before the final item
-- If you do not know the correct word, please dont use to avoid appending mistakes, like cafe is different from coffee shop, ENglish is not Britishtah, village is not town
-- Use capital letters effectively (axis from data moved to lowercase)
-- Should not repeat information
-  - Portpotion before and repeat units are percentage in that table
-- Avoid illogical information organization
-  - Information about table, then chart and then table again
-- Diagram
-  - Life cycle to 
-    - the stages of the life of a frog
-    - the phases a frog passes though during its life
-    - the stages of development that a frog passes thorugh during its lifetime
+- DON'T copy the prompt. You must paraphrase
+- DON'T use words like below, provided, or in this report (e.g., The chart provided below shows...). The examiner already knows this
+- DON'T give your opinion or use phrases like this is an example. This is a report, not an essay
+- DON'T be redundant
+  - Bad: The table shows the proportion of... in percentages. (Proportion and percentage mean the same thing)
+  - Good: The table shows the percentage of...
+- DON'T use incorrect capital letters. Words from the chart's axes (like Total Sales) should usually be lowercase in your sentence (e.g., total sales)
