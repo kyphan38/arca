@@ -77,7 +77,7 @@ Definition: Full-Duplex transmission: Two devices can send data at the same time
 
 ![img](./img/2/2.png)
 
-- Crossover cable: A type of network cable used to directly connect two devices of the same type without going through a switch or hub.
+- Crossover cable: A type of network cable used to directly connect two devices of the same type without going through a switch or hub
 
 ![img](./img/2/3.png)
 

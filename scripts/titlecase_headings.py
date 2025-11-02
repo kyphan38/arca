@@ -2,8 +2,8 @@ import os
 from titlecase import titlecase
 
 # --- Configuration ---
-# The script starts two directories up from its own location and looks for an 'assets' folder.
-# You can change 'current_dir' to a specific path if your markdown files are elsewhere.
+# The script starts two directories up from its own location and looks for an 'assets' folder
+# You can change 'current_dir' to a specific path if your markdown files are elsewhere
 # For example: current_dir = "/path/to/your/markdown/files"
 script_dir = os.path.dirname(os.path.abspath(__file__))
 current_dir = os.path.normpath(os.path.join(script_dir, "..", "assets"))
@@ -11,7 +11,7 @@ current_dir = os.path.normpath(os.path.join(script_dir, "..", "assets"))
 # --- Main Logic ---
 def process_markdown_files(directory):
   """
-  Walks through a directory, finds markdown files, and processes their headings.
+  Walks through a directory, finds markdown files, and processes their headings
   """
   for root, _, files in os.walk(directory):
     for file in files:
@@ -21,7 +21,7 @@ def process_markdown_files(directory):
 
 def process_file(file_path):
   """
-  Reads a single markdown file and corrects the headings.
+  Reads a single markdown file and corrects the headings
   """
   try:
     with open(file_path, "r", encoding="utf-8") as f:

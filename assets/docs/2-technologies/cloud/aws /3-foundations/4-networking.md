@@ -14,6 +14,7 @@ Components
 Key features
 
 - Higher layer built on lower layer, adding features and capabilities
+- Higher layers are built on lower layers, adding features and capabilities
 - This bottom-up approach illustrates the limitations of each lower layer and how each subsequent upper layer was developed to address and overcome those limitations
 
 ### Layer 1 - Physical - Bit
@@ -24,6 +25,7 @@ Key features
 
 - Layer 1 (Physical) specifications define the transmission and reception of raw bit streams between a device and a shared physical medium
 - It defines things like voltage levels, timing, rates, distances, modulation, and connectors
+- It defines characteristics like voltage levels, timing, rates, distances, modulation, and connectors
 - Physical medium can be copper (electrical), fibre (light), or wifi (RF)
 
 Physical HUB
@@ -35,6 +37,7 @@ Physical HUB
 Combinations
 
 - We can mix and match multiple components depending on the network's needs
+- We can mix and match multiple components depending on the network's needs:
   - Cables and NICs
   - Cables and transceivers
   - Cables and repeaters and hubs
@@ -46,6 +49,7 @@ Summary
 - Standards for transmitting onto the medium
 - Standards for receiving from the medium
 - No access control
+- No uniquely identified devices
 - No uniquely identified devices
 - No devices &rarr; Device communications
 
@@ -89,6 +93,7 @@ Summary
 - Unicast 1:1
 - Broadcast 1:ALL
 - Switches - Like Hubs with Super powers (Layer 2)
+- Switches are like hubs with superpowers (Layer 2)
 
 ### Layer 3 - Network - Packet
 
@@ -150,6 +155,7 @@ Summary
 - ARP maps an IP address to its corresponding MAC address
 - A route determines where to forward a packet
 - Routing tables store multiple routes for packet forwarding
+- Routing tables store multiple routes for packet forwarding
 - Routers move packets, encapsulated in Layer 2 frames
 - Devices communicate over the Internet using IP addresses
 - IP uses source and destination IP addresses for communication
@@ -168,6 +174,13 @@ TCP and UDP
 - TCP segments
   - Source port: Identifies the port number of the sending application, enabling the recipient to know which application sent the data
   - Destination port: Identifies the port number of the receiving application, allowing the recipient's operating system to direct the segment to the correct application
+  - Sequence number: A 32-bit number used to ensure correct ordering of data segments and to acknowledge received data
+  - Acknowledgment number: A 32-bit number used by the receiver to indicate the next sequence number it expects to receive, confirming receipt of previous segments
+  - Flags 'N' things (*): A set of 1-bit flags (e.g., SYN, ACK, FIN, RST, PSH, URG) that control the state and management of the TCP connection
+  - Window: A 16-bit field that specifies the number of data bytes the sender of this segment is willing to accept from the other end (flow control)
+  - Checksum: A 16-bit field used for error checking of the TCP header and data to ensure integrity
+  - Urgent pointer: A 16-bit field that, if the URG flag is set, indicates the offset from the current sequence number to the last byte of urgent data
+  - Options: A variable-length field used to convey additional information not covered in the standard header, such as Maximum Segment Size (MSS)
   - Sequence number: A 32-bit number used to ensure correct ordering of data segments and to acknowledge received data
   - Acknowledgment number: A 32-bit number used by the receiver to indicate the next sequence number it expects to receive, confirming receipt of previous segments
   - Flags 'N' things (*): A set of 1-bit flags (e.g., SYN, ACK, FIN, RST, PSH, URG) that control the state and management of the TCP connection
@@ -200,6 +213,10 @@ Session and state
 - Translates private IPv4 addresses to public
 - Static NAT - 1 private to 1 (fixed) public address (IGW)
 - Dynamic NAT - 1 private to 1st available Public
+- Provides some security benefits
+- Translates private IPv4 addresses to public
+- Static NAT - 1 private to 1 (fixed) public address (IGW)
+- Dynamic NAT - 1 private to 1st available Public
 - Port Address Translation (PAT) - many private to 1 public (NATGW)
 - IPv4 only ... makes no sense with IPv6
 
@@ -228,6 +245,7 @@ Session and state
 
 - IPv4 standard created in 1981, defined in RFC791
 - 0.0.0.0 &rarr; 255.255.255.255 = 4,294,967,296 addresses
+- 0.0.0.0 &rarr; 255.255.255.255 = 4,294,967,296 addresses
 - Originally, directly managed by Internet Assigned Numbers Authority (IANA)
 - Parts now delegated to regional authorities (ARIN, RIPE NCC, APNIC, LACNIC, AFRINIC)
 - All public IPv4 addressing is allocated
@@ -242,10 +260,13 @@ Session and state
 - Defined by a standard RFC1918
 - 10.0.0.0 - 10.255.255.255 (1 x Class A network)
   - 16,777,216 IPV4 addresses
+  - 16,777,216 IPv4 addresses
 - 172.16.0.0 - 172.31.255.255 (16 x Class B networks)
   - 16 x 65,536 IPV4 addresses
+  - 16 x 65,536 IPv4 addresses
 - 192.168.0.0 - 192.168.255.255 (256 x Class C networks)
   - 256 × 256 IPv4 addresses
+  - 256 x 256 IPv4 addresses
 
 ### IPv6 Address Space
 

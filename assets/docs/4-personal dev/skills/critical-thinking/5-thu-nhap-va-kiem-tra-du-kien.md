@@ -81,4 +81,3 @@ Phân tích 2
 ![img](./img/18.png)
 
 ## Kiểm Tra Dữ Kiện
-

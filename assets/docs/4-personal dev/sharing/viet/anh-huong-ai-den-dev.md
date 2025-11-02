@@ -13,7 +13,7 @@
 - Không ngừng học hỏi và nâng cao kỹ năng
   - Nắm vững kiến thức nền tảng: Các kiến thức cốt lõi về cấu trúc dữ liệu, thuật toán, các mô hình lập trình và tư duy logic vẫn vô cùng quan trọng
   - Thành thạo các ngôn ngữ lập trình phổ biến và các công nghệ mới: Luôn cập nhật các xu hướng công nghệ, học thêm các ngôn ngữ lập trình mới (đặc biệt là những ngôn ngữ được sử dụng nhiều trong AI như Python) và các framework liên quan
-  - Tìm hiểu về AI và học máy: Có kiến thức cơ bản hoặc chuyên sâu về AI, học máy, và khoa học dữ liệu sẽ là một lợi thế lớn. Điều này không nhất thiết có nghĩa là tất cả lập trình viên đều phải trở thành chuyên gia AI, nhưng hiểu cách AI hoạt động và cách tích hợp nó vào sản phẩm là rất cần thiết.
+  - Tìm hiểu về AI và học máy: Có kiến thức cơ bản hoặc chuyên sâu về AI, học máy, và khoa học dữ liệu sẽ là một lợi thế lớn. Điều này không nhất thiết có nghĩa là tất cả lập trình viên đều phải trở thành chuyên gia AI, nhưng hiểu cách AI hoạt động và cách tích hợp nó vào sản phẩm là rất cần thiết
   - Rèn luyện kỹ năng "mềm": Kỹ năng giải quyết vấn đề, tư duy phản biện, sáng tạo, giao tiếp hiệu quả, làm việc nhóm và khả năng thích ứng nhanh với sự thay đổi ngày càng trở nên quan trọng
 - Học cách làm việc hiệu quả với AI
   - Sử dụng AI như một công cụ hỗ trợ: Hãy xem AI là một trợ thủ đắc lực giúp tăng năng suất và chất lượng công việc, chứ không phải là đối thủ cạnh tranh

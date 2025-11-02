@@ -25,7 +25,7 @@ echo "4. A method call: Your username is ${env.BUILD_USER_ID.toLowerCase()}"
 
 Double quotes vs. single quotes
 
-- Double quotes `"..."`: Creates a GString (Groovy String). It supports interpolation. Jenkins will scan this string for `${...}` expressions, evaluate them, and substitute the results.
+- Double quotes `"..."`: Creates a GString (Groovy String). It supports interpolation. Jenkins will scan this string for `${...}` expressions, evaluate them, and substitute the results
 - Single quotes `'...'`: Creates a standard java.lang.String. It does NOT support interpolation. It treats every character literally
 
 ```bash
@@ -45,16 +45,16 @@ This type of interpolation is not processed by Groovy. It is handled entirely by
 Linux/macOS
 
 - `$VARIABLE` and `${VARIABLE}`
-- When writing a sh step, you should almost always enclose your command in single quotes. This prevents Groovy from trying to interpret the $ characters and safely passes the literal string to the shell for it to process.
+- When writing a sh step, you should almost always enclose your command in single quotes. This prevents Groovy from trying to interpret the $ characters and safely passes the literal string to the shell for it to process
 
 ```bash
-// CORRECT: Let the shell handle the interpolation.
-// Groovy passes the literal string 'echo "Workspace is $WORKSPACE"' to the shell.
-// The shell then correctly expands $WORKSPACE.
+// CORRECT: Let the shell handle the interpolation
+// Groovy passes the literal string 'echo "Workspace is $WORKSPACE"' to the shell
+// The shell then correctly expands $WORKSPACE
 sh 'echo "Workspace is $WORKSPACE"'
 
-// INCORRECT: Groovy will try and fail to find a variable named WORKSPACE.
-// This will throw an error because there is no Groovy variable with that name.
+// INCORRECT: Groovy will try and fail to find a variable named WORKSPACE
+// This will throw an error because there is no Groovy variable with that name
 sh "echo 'Workspace is $WORKSPACE'" // This will cause a Groovy error
 ```
 
@@ -66,13 +66,13 @@ Windows
 
 What if you need to use a Groovy variable inside a shell command?
 
-In this advanced scenario, you must use double quotes for your sh step and carefully structure your command.
+In this advanced scenario, you must use double quotes for your sh step and carefully structure your command
 
 How it works:
 
-Groovy first performs its interpolation on the double-quoted string.
-The resulting string (with the Groovy variable now embedded as a literal) is sent to the shell.
-The shell then performs its own expansion on any remaining $ characters.
+Groovy first performs its interpolation on the double-quoted string
+The resulting string (with the Groovy variable now embedded as a literal) is sent to the shell
+The shell then performs its own expansion on any remaining $ characters
 
 ```groovy
 sh "echo 'Report for branch $BRANCH_NAME will be saved to \${params.FILENAME}'"
@@ -80,13 +80,13 @@ sh "echo 'Report for branch $BRANCH_NAME will be saved to \${params.FILENAME}'"
 
 Execution Analysis:
 
-Groovy processing: Jenkins evaluates the double-quoted string.
-It sees $BRANCH_NAME but finds no Groovy variable with that name, so it leaves it as is.
-It sees `\${params.FILENAME}` and substitutes its value, "report.txt".
+Groovy processing: Jenkins evaluates the double-quoted string
+It sees $BRANCH_NAME but finds no Groovy variable with that name, so it leaves it as is
+It sees `\${params.FILENAME}` and substitutes its value, "report.txt"
 String sent to shell: The final string sent to the agent's shell is: echo 'Report for branch $BRANCH_NAME will be saved to report.txt'
-Shell processing: The shell executes this command.
-It sees $BRANCH_NAME and expands it to its value (e.g., "main").
-The rest of the string is printed literally.
+Shell processing: The shell executes this command
+It sees $BRANCH_NAME and expands it to its value (e.g., "main")
+The rest of the string is printed literally
 
 <!-- ## Cases
 
