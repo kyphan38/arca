@@ -43,7 +43,7 @@ The time complexity = O(n)
 
 Space complexity refers to the total amount of memory space used by an algorithm/program, including the space of input values for execution
 
-In the interview, we rarely count the space of input values. However, we're better ask the interviewer.
+In the interview, we rarely count the space of input values. However, we're better ask the interviewer
 
 Example
 

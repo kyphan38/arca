@@ -36,7 +36,6 @@ Note
   - Network 0.0.0.0 is a default route
   - Network 127.0.0.0 is a loopback address
 
-
 Examples
 
 - Class A: 12.128.251.34/8

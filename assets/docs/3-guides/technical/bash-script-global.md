@@ -16,7 +16,7 @@ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 ```
 
-Each path is separated by a `:`. When you run a command (like `getDataaseName.sh`), the shell searches paths sequentially for commands.
+Each path is separated by a `:`. When you run a command (like `getDataaseName.sh`), the shell searches paths sequentially for commands
 
 By placing your script in `/usr/local/bin/`, which is already in `$PATH`, your script becomes globally accessible
 

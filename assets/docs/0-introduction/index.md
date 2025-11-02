@@ -8,7 +8,7 @@ My current favorite track
 
 <audio controls>
   <source src="/track.mp3" type="audio/mpeg" />
-  Your browser does not support the audio element.
+  Your browser does not support the audio element
 </audio>
 
 ![img](./img/chill.png)

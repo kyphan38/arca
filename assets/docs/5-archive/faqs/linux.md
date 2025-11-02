@@ -9,7 +9,7 @@ apt-get
 - Older, lower-level tool
 - Subcommands: install, remove, update, upgrade, dist-upgrade, autoremove
 - Fine-tuned control for dependencies and package states
-- Backward compatible, ideal for scripts and automation.
+- Backward compatible, ideal for scripts and automation
 
 apt
 

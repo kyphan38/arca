@@ -68,7 +68,7 @@ Functions
   - The CPU reads these instructions from RAM to run our programs
 - Managing data
   - It reads and writes data to both RAM and the disk
-  - It also uses RAM to store the data our code needs to work with, like variables.
+  - It also uses RAM to store the data our code needs to work with, like variables
 - Performing calculations: It handles all the mathematical operations, such as addition and subtraction
 
 ## CPU Cache

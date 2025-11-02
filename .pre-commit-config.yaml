@@ -1,10 +1,9 @@
 repos:
-  - repo: https://github.com/markdownlint/markdownlint
-    rev: v0.13.0
+  - repo: https://github.com/igorshubovych/markdownlint-cli
+    rev: v0.45.0
     hooks:
       - id: markdownlint
-        name: Markdownlint
-        description: Run markdownlint on your Markdown files
-        entry: mdl -r ~MD013,~MD007,~MD036,~MD024,~MD026,~MD009
-        language: ruby
+        name: Markdownlint (Node.js)
+        description: Run markdownlint-cli on your Markdown files
         files: \.(md|mdown|markdown|myst)$
+        args: [--fix]

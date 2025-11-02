@@ -248,7 +248,7 @@ Vòng lặp tích cực
 
 Sức mạnh của niềm tin
 
-- Câu trả lời nằm ngay trong câu hỏi: Cứ ép bản thân mình ngồi xuống, với một niềm tin rằng: Chỉ cần làm 5-10 phút thôi, mọi việc sẽ thú vị hơn.
+- Câu trả lời nằm ngay trong câu hỏi: Cứ ép bản thân mình ngồi xuống, với một niềm tin rằng: Chỉ cần làm 5-10 phút thôi, mọi việc sẽ thú vị hơn
 - Niềm tin này không phải là sự tự huyễn hoặc, mà là dựa trên sự hiểu biết về quy luật vận hành của chính mình
 
 Thủ thuật đánh lừa bản thân

@@ -2,7 +2,7 @@
 
 - [x] Done
 
-## Maximum Hosts per Network
+## Maximum Hosts Per Network
 
 Examples
 
