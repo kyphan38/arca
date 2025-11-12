@@ -1,6 +1,6 @@
 # switch interfaces
 
-- [] Done
+- [x] Done
 
 ## Network Topology
 

@@ -26,6 +26,8 @@ Lists
 - Troubleshooting
 - Common errors
 - Formula
+- Approaches
+- Categories
 
 ## Conclusion
 
