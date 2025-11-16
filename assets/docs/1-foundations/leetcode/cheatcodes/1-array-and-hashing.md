@@ -20,7 +20,7 @@
 
 | Number | Note |
 |--------|------|
-| [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/) | |
+| [8. String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/description/) | x |
 | [31. Next Permutation](https://leetcode.com/problems/next-permutation/description/) | |
 | [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/description/) | |
 | [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/description/) | |

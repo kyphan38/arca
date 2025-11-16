@@ -12,7 +12,7 @@
 
 ### Preamble
 
-Definitions
+Concepts
 
 - Length: 7 bytes (56 bits)
 - Alternating 1's and 0's
@@ -21,16 +21,16 @@ Definitions
 
 ### SFD
 
-Definitions
+Concepts
 
 - Start Frame Delimiter
 - Length: 1 byte (8 bits)
 - 10101011
 - Makes the end of the preamble and the beginning of the rest of the frame
 
-### Definition and Source
+### Concept and Source
 
-Definitions
+Concepts
 
 - Indicate the devices sending and receiving the frame
 - Consist of the destination and source "MAC address"
@@ -38,7 +38,7 @@ Definitions
 
 ### Type or Length
 
-Definitions
+Concepts
 
 - Indicate the Layer 3 protocol used in the encapsulated packet, which is always Internet Protocol (IP) version 4 or version 6
 - 2 bytes (16 bits) field
@@ -52,7 +52,7 @@ Information
 
 ### FCS
 
-Definitions
+Concepts
 
 - Frame Check Sequence
 - 4 bytes (32 bits) in length
@@ -61,7 +61,7 @@ Definitions
 
 ### MAC Address
 
-Definitions
+Concepts
 
 - 6 bytes (48 bits) physical address assigned to the device when it is made
   - The first 3 bytes are the OUI (Organizationally Unique Identifier), which is assigned to the company making the device
@@ -101,7 +101,7 @@ Example
 
 ### Decimal
 
-Definition: Uses 10 possible digits: 0 &rarr; 9
+Concept: Uses 10 possible digits: 0 &rarr; 9
 
 Example: 123.45
 
@@ -113,7 +113,7 @@ Example: 123.45
 
 ### Hexadecimal
 
-Definition: Uses 16 possible digits: 0 &rarr; 9, A &rarr; F
+Concept: Uses 16 possible digits: 0 &rarr; 9, A &rarr; F
 
 Example: Convert 30 (Decimal) to Hexadecimal
 
@@ -128,7 +128,7 @@ Example: Convert 30 (Decimal) to Hexadecimal
 
 ### Unicast Frame
 
-Definition: A frame destined for a single target
+Concept: A frame destined for a single target
 
 Types
 

@@ -4,13 +4,13 @@
 
 ## Computer Basics
 
-Definition: From a software point of view, a computer has a few main parts: the disk, memory (RAM), the processor (CPU), and the CPU's cache
+Concept: From a software point of view, a computer has a few main parts: the disk, memory (RAM), the processor (CPU), and the CPU's cache
 
 ![img](./img/1.png)
 
 ## The Disk (Storage)
 
-Definitions
+Concepts
 
 - Known as storage, a hard disk drive (HDD), or a solid-state drive (SSD)
   - SSDs are generally faster than HDD
@@ -33,7 +33,7 @@ Applications
 
 ## Memory (RAM)
 
-Definitions
+Concepts
 
 - Known as random access memory (RAM)
 - Not to store data permanently
@@ -55,7 +55,7 @@ Applications
 
 ## Cpu
 
-Definitions
+Concepts
 
 - The Central Processing Unit (CPU) is the brain of the computer
 - It manages everything the other parts do
@@ -73,7 +73,7 @@ Functions
 
 ## CPU Cache
 
-Definitions
+Concepts
 
 - The CPU cache is a small, extra-fast memory called a cache (belongs to the CPU)
 - Hold copies of data from RAM that the CPU uses very often

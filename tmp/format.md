@@ -11,7 +11,7 @@ Lists
 Lists
 
 - Prerequisites
-- Definitions
+- Concepts
 - Context
 - Step-by-step guide
 - Reasons
@@ -20,12 +20,16 @@ Lists
 - Functions
 - Processes
 - Examples
-- Code snippets
 - Best practices
 - Tips and tricks
 - Troubleshooting
 - Common errors
 - Formula
+- Approaches
+- Categories
+- Use cases
+- Scenarios
+- Terms
 
 ## Conclusion
 
