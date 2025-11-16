@@ -231,7 +231,7 @@ Hierarchical design
     - Generic TLDs (gTLDs): like .com, .org, .net
     - Country Code TLDs (ccTLDs): like .uk, .au
   - IANA delegates the management of each TLD to a specific organization called a Registry. For instance, an organization called Verisign is the registry for .com
-  - The TLD zone does not contain specific records like <www.netflix.com>
+  - The TLD zone does not contain specific records like ``www.netflix.com``
   - Its main job is to point to the name servers for a specific domain within its category
   - Example: The .com TLD server knows where to find the name servers for netflix.com
 - The Domain's Name servers
@@ -239,8 +239,8 @@ Hierarchical design
   - This is controlled by the domain owner (e.g., the IT team at Netflix)
   - These name servers host the zone file for that domain
   - This zone file is where the actual records are stored
-  - Example: The netflix.com name servers store the record for <www.netflix.com> that points to a specific IP address
-- Flow summary: Root server knows where &rarr; .com server is, which knows where &rarr; netflix.com server is, which knows &rarr; the IP address for <www.netflix.com>
+  - Example: The netflix.com name servers store the record for `www.netflix.com` that points to a specific IP address
+- Flow summary: Root server knows where &rarr; .com server is, which knows where &rarr; netflix.com server is, which knows &rarr; the IP address for `www.netflix.com`
 
 ![img](./img/5/14.png)
 
@@ -261,7 +261,7 @@ DNS query flow
 - Full query if there is no answer
   - Root servers
     - The resolver queries a root server
-    - The root server doesn't know the IP for <www.netflix.com>, but it knows where the .com servers are
+    - The root server doesn't know the IP for `www.netflix.com`, but it knows where the .com servers are
     - Response: It replies with the addresses of the .com TLD name servers
   - TLD servers (.com)
     - The resolver then queries a .com TLD name Server
