@@ -1,6 +1,6 @@
 # cloud computing
 
-## Definition
+## Concept
 
 NIST - 5 characteristics
 

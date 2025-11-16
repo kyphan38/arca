@@ -44,7 +44,7 @@ Examples
 
 ### Loopback Addresses
 
-Definitions
+Concepts
 
 - Address range 127.0.0.0 - 127.255.255.255
 - Used to test the network stack on the local device
@@ -53,7 +53,7 @@ Definitions
 
 ### Netmask
 
-Definitions
+Concepts
 
 - Class A: /8 &rarr; 255.0..0.0
 - Class B: /16 &rarr; 255.255.0.0
@@ -63,7 +63,7 @@ Definitions
 
 ![img](./img/7/10.png)
 
-Definitions
+Concepts
 
 - Used to identify the network itself (like a name of a road, not a specific house)
 - Host portion of the address is all 0's - network address
@@ -71,7 +71,7 @@ Definitions
 
 ### Broadcast Address
 
-Definitions
+Concepts
 
 - Used to send messages to all devices connected to the same network at the same time (like a loudspeaker shouting "Send to all houses on street 192.168.1")
 - Host portion of the address is all 1's - broadcast address

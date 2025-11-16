@@ -11,7 +11,7 @@ Questions: What is ..., define ..., tell me about ..., what does ... mean, etc.
 
 Framework: Define &rarr; Context &rarr; Example &rarr; Trade-offs or Alternatives
 
-- Definition - What is it?
+- Definition - Concepts
   - Start with a clear and concise one-sentence definition
   - Get straight to the point
 - Context - Why it exists?
@@ -174,7 +174,7 @@ Questions: Which ..., how do I identify when ..., what kind of error is ..., whi
 
 Framework: Identify &rarr; Criteria &rarr; Justify
 
-- Identify - What is it? - The direct answer
+- Identify - Concepts - The direct answer
   - Start with a direct and confident answer
   - State your choice, name the method, or identify the issue clearly and without hesitation
 - Criteria - What are the rules? - The "how you know"

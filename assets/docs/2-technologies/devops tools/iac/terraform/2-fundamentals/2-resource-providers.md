@@ -1,5 +1,7 @@
 # resource providers
 
+- [x] Done
+
 ## Providers
 
 Context
@@ -7,7 +9,7 @@ Context
 - Terraform supports multiple providers
 - Depending on what type of infrastructure we want to launch, we have to use appropriate providers accordingly
 
-Definitions: A provider is a plugin that lets Terraform manage an external API
+Concepts: A provider is a plugin that lets Terraform manage an external API
 
 Command: `terraform init`
 
@@ -15,7 +17,7 @@ Command: `terraform init`
 
 ## Resource
 
-Definition: Resource block describes one or more infrastructure objects
+Concept: Resource block describes one or more infrastructure objects
 
 Examples
 
@@ -24,7 +26,7 @@ Examples
 
 ## Resource Block
 
-Definitions
+Concepts
 
 - A resource block declares a resource of a given type ("aws_instance") with a given local name ("myec2")
 - Resource type and Name together serve as an identifier for a given resource and so must be unique

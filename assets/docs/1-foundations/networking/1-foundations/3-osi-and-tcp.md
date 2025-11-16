@@ -4,14 +4,14 @@
 
 ## Networking Model
 
-Definitions
+Concepts
 
 - Networking models categorize and provide a structure for networking protocols and standards
 - Protocol is a set of rules defining how network devices and software should work
 
 ## Osi
 
-Definitions
+Concepts
 
 - OSI: Open Systems Interconnection
 - A conceptual model that categorizes and standardizes the different functions in a network
@@ -22,7 +22,7 @@ Definitions
 
 ### Application Layer - Data
 
-Definitions
+Concepts
 
 - This layer is closest to the end user
 - Interacts with software applications, for example your web browser (Brave, Firefox, Chrome, etc.)
@@ -41,7 +41,7 @@ Processes
 
 ### Presentation Layer - Data
 
-Definitions
+Concepts
 
 - Data in the application layer is in application format
 - It needs to be translated to a different format to be sent over the network
@@ -96,7 +96,7 @@ Functions
 
 ## TCP/Ip
 
-Definitions
+Concepts
 
 - Conceptual model and set of communications protocols used in the Internet and other networks
 - Developed by the US Department of Defense through DARPA (Defense Advanced Research Projects Agency)

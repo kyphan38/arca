@@ -4,14 +4,14 @@
 
 ## Array
 
-What is it?
+Concepts
 
 - An ordered collection of contiguous elements
 - Elements are located one after another with no space in between
 
 ## Ram
 
-What is it?
+Concepts
 
 - RAM (Random Access Memory)
   - All variables and data structures are stored
@@ -125,7 +125,7 @@ def resize(self):
   self.arr = newArr
 ```
 
-What is it?
+Concepts
 
 - Dynamic arrays manage a block of memory with a certain capacity
 - If you don't specify the size, it will initialize it to some default size depending the programming language
@@ -171,7 +171,7 @@ With time complexity, we are concerned with asymptotic analysis. This means we c
 
 ## Stack
 
-What is it? LIFO
+Concepts LIFO
 
 - A subset of operations from a dynamic array
 - Only add and delete elements from one end of the array (referred to as the top of the stack)

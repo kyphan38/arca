@@ -102,7 +102,7 @@ Decoding EC2 types
 
 ## EC2 Instance Connect
 
-What is it?
+Concepts
 
 - A managed AWS service that provides secure, browser-based SSH access to your instances
 - Not an EC2 instance or a traditional bastion host, it's a serverless endpoint

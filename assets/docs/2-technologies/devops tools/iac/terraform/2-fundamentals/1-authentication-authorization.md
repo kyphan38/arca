@@ -1,8 +1,10 @@
 # authentication authorization
 
+- [x] Done
+
 ## Authentication and Authorization
 
-Definitions
+Concepts
 
 - Authentication is the process of verifying who a user is
 - Authorization is the process of verifying what they have access to

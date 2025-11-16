@@ -4,7 +4,7 @@
 
 ## Computer System
 
-Definitions: A computer system contains
+Concepts: A computer system contains
 
 - User software: User applications (browser, email client, games, application servers, databases, AI/ML algorithms, etc.)
 - System software: Operating System (OS), etc.
@@ -12,7 +12,7 @@ Definitions: A computer system contains
 
 ## Operating System?
 
-Definitions
+Concepts
 
 - Middleware between user software and hardware
   - Examples: Linux, Windows, MacOS
@@ -34,7 +34,7 @@ Goals
 
 ## Program
 
-Definitions
+Concepts
 
 - The executable file stored on disk
   - Contains code (CPU instructions) and data for a specific task
@@ -109,7 +109,7 @@ Context: WWithout memory virtualization, every program would use the computer's 
 - A bug in one program could overwrite and corrupt the memory of another program, or even the OS itself. This could crash the whole computer
 - One program could read or modify another program's private data, which is a huge security risk
 
-Definitions: How a program sees memory
+Concepts: How a program sees memory
 
 - Code: The program's instructions
 - Data: Global and static variables
@@ -126,7 +126,7 @@ Processes: Mapping
 
 ### Address Space of a Process
 
-Definitions
+Concepts
 
 - Virtual Address Space: This is the illusion of memory that the OS gives to every program. From the program's point of view, it has one large, clean block of memory all to itself, starting at address 0
 - Physical Address: This is the real address of the data inside the computer's RAM chips. In reality, a program's data is stored in small chunks scattered all over the physical RAM
@@ -148,7 +148,7 @@ Context
   - How can the OS share the computer's hardware safely?
 - The answer is found in mechanisms built directly into the CPU
 
-Definitions: CPUs create isolation using different privilege levels
+Concepts: CPUs create isolation using different privilege levels
 
 - Unprivileged instructions: These are regular, safe commands, like adding numbers or reading a program's own data
 - Privileged instructions: These are sensitive, powerful commands that can affect the whole computer, like managing memory or accessing hardware
@@ -157,7 +157,7 @@ Definitions: CPUs create isolation using different privilege levels
 
 ### User Mode and Kernel Mode
 
-Definitions
+Concepts
 
 - User mode (Unprivileged)
   - This is the mode where your user programs (like a browser or game) run
@@ -176,7 +176,7 @@ Processes: Switching modes
 
 ### System Calls
 
-Definition: When a user program needs a service from the Operating System (OS), it makes a system call
+Concept: When a user program needs a service from the Operating System (OS), it makes a system call
 
 Examples
 
@@ -200,7 +200,7 @@ Tip: Programmers usually don't make system calls directly. They use standard lib
 
 Context: Besides just running user programs, the CPU must also handle external events, like a mouse click or a key being pressed
 
-Definition: An interrupt is an external signal from an I/O device (like a keyboard or hard drive) that is asking for the CPU's attention
+Concept: An interrupt is an external signal from an I/O device (like a keyboard or hard drive) that is asking for the CPU's attention
 
 Examples
 
@@ -222,7 +222,7 @@ Note: This interrupt handling code is a part of the OS. The CPU simply runs the 
 
 ### I/O Devices
 
-Definitions
+Concepts
 
 - The CPU and memory are connected by a very fast system (or memory) bus
 - I/O (Input/Output) devices (like keyboards, monitors, and hard drives) connect to the CPU and memory using other, separate buses
@@ -237,7 +237,7 @@ Functions: I/O devices have two main jobs
 
 ### Device Controller and Device Driver
 
-Definitions
+Concepts
 
 - Every I/O device (like a keyboard or hard drive) is managed by a device controller
   - This controller is a small, specialized chip (a microcontroller) that knows how to operate the physical device

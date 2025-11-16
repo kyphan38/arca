@@ -173,7 +173,7 @@ physical address = virtual address + base
 
 ## Paging
 
-### What Is It?
+### Concepts
 
 - Allocate memory in fixed-size chunks ("pages")
 - Avoids external fragmentation (no small "holes")

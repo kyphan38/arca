@@ -20,7 +20,7 @@ Key terms
 Types
 
 - Block storage - EBS
-  - What is it?
+  - Concepts
     - A virtual hard drive (HDD, SSD)
     - Divides data into a collection of raw, fixed-size blocks, each with unique identifier
   - How it works?
@@ -34,7 +34,7 @@ Types
     - Bootable: Yes. EBS volumes can be configured as the boot volume for an EC2 instance, containing the OS and boot loader
   - Use cases: Databases, enterprise applications, OS volumes, etc.
 - File storage - EFS, FSx
-  - What is it?
+  - Concepts
     - Organizes data as a hierarchical structure of files within directories
     - Ideal for scenarios where multiple users or applications need to access the same set of files simultaneously
   - How it works?
@@ -48,7 +48,7 @@ Types
     - Bootable: No. The OS does not have low level access to the storage  
   - Use cases: CMS, web serving, big data analytics, home directories, etc.
 - Object storage - S3
-  - What is it?
+  - Concepts
     - Instead of a hierarchy of files and folders or raw blocks, data is stored as self-contained units called objects
     - Each object bundles the data itself with rich, customizable metadata and a globally unique identifier, all within a flat address space
   - How it works?

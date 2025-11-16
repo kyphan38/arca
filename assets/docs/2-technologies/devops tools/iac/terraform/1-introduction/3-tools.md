@@ -24,21 +24,21 @@ Categories
 
 ### Infrastructure Orchestration
 
-Definitions
+Concepts
 
-- Focus on creating and managing the raw infrastructure components (like servers, networks, etc.)
+- Focuses on creating and managing raw infrastructure components (like servers, networks, etc.)
 - Handles the provisioning of infrastructure resources according to specified requirements
 
-Example: Create 3 Servers with 4 GB RAM, 2 vCPUs. Each server should have firewall rule to allow SSH connection from Office IPs
+Example: Create three servers with 4 GB RAM and 2 vCPUs. Each server should have a firewall rule to allow SSH connections from Office IPs
 
 ### Configuration Management
 
-Definitions
+Concepts
 
-- Focus on maintaining the desired sttate of systems and ensure consistency across configurations
+- Focuses on maintaining the desired state of systems and ensuring consistency across configurations
 - Used after infrastructure is provisioned to configure software, manage application settings, or install necessary software (e.g., antivirus, monitoring agents, etc.)
 
-Example: All servers should have Antivirus installed with version 10.0.2
+Example: All servers should have Antivirus version 10.0.2 installed
 
 ### How Do They Work Together?
 
@@ -49,7 +49,7 @@ Example
 
 ![img](./img/3/1.png)
 
-Notes: Today, this line has become a bit blurry
+Note: Today, this line has become a bit blurry
 
 - Terraform can run provisioners (like remote-exec) to configure a server after creating it (but this is discouraged)
 - Ansible also has modules to create cloud resources (like aws_ec2)
@@ -58,18 +58,18 @@ Notes: Today, this line has become a bit blurry
 
 Prerequisites
 
-- Is your infrastructure going to be vendor specific in longer term ? Example AWS
-- Are you planning to have multi-cloud / hybrid cloud based infrastructure ?
-- How well does it integrate with configuration management tools ?
+- Is your infrastructure going to be vendor-specific in the longer term? (e.g., AWS)
+- Are you planning to have a multi-cloud / hybrid cloud-based infrastructure?
+- How well does it integrate with configuration management tools?
 - Price and Support
 
 Case 1: Cloudformation
 
-- Organization is going to be based on AWS for next 25 years
-- Official support is required in-case if team face any issue related to IAC tool or code itself
+- The organization is going to be based on AWS for the next 25 years
+- Official support is required in case the team faces any issues related to the IaC tool or the code itself
 - They want some kind of GUI interface that supports automatic code generation
 
 Case 2: Terraform
 
-- Organization is based on Hybrid Solution. They use VMware for on-premise setup; AWS, Azure and GCP for Cloud
-- Official support is required in-case if IAC tool has any issues
+- The organization is based on a Hybrid Solution. They use VMware for an on-premise setup and AWS, Azure, and GCP for the Cloud
+- Official support is required in case the IaC tool has any issues

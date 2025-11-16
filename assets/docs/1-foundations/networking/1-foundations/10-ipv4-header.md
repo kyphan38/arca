@@ -8,7 +8,7 @@
 
 ### Version
 
-Definitions
+Concepts
 
 - Length: 4 bits
 - Identifies the version of IP used
@@ -17,7 +17,7 @@ Definitions
 
 ### Internet Header Length
 
-Definitions
+Concepts
 
 - Length: 4 bits
 - The final field of the IPv4 header (Options) is variable in length, so this field is necessary to indicate the total length of the header
@@ -30,7 +30,7 @@ Definitions
 
 ### DSCP
 
-Definitions
+Concepts
 
 - Length: 6 bits
 - Differentiated Services Code Point
@@ -48,7 +48,7 @@ Defitions
 
 ### Total Length
 
-Definitions
+Concepts
 
 - Length: 16 bits
 - Indicates the total length of the packet (L3 header + L4 segment)
@@ -60,7 +60,7 @@ Definitions
 
 ### Identification
 
-Definitions
+Concepts
 
 - Length: 16 bits
 - If a packet is fragmented due to being too large, this field is used to identify which packet the fragment belongs to
@@ -71,7 +71,7 @@ Definitions
 
 ### Flags
 
-Definitions
+Concepts
 
 - Length: 3 bits
 - Used to control and identify fragments
@@ -82,7 +82,7 @@ Definitions
 
 ### Fragment Offset
 
-Definitions
+Concepts
 
 - Length: 13 bits
 - Used to indicate the position of the fragment within the original packet, unfragmented IP packet
@@ -90,7 +90,7 @@ Definitions
 
 ### Time to Live
 
-Definitions
+Concepts
 
 - Length: 8 bits
 - A router will drop a packet with a TTL of 0
@@ -101,7 +101,7 @@ Definitions
 
 ### Protocol
 
-Definitions
+Concepts
 
 - Length: 8 bits
 - Indicates the protocol of the encapsulated L4 PDU
@@ -112,7 +112,7 @@ Definitions
 
 ### Checksum
 
-Definitions
+Concepts
 
 - Length: 16 bits
 - A calculated checksum used to check for errors in the IPv4 header
@@ -124,7 +124,7 @@ Definitions
 
 ### Source and Destination IP Address
 
-Definitions
+Concepts
 
 - Length: 32 bits (each)
 - Source IP Address: IPv4 address of the sender of the packet
@@ -132,7 +132,7 @@ Definitions
 
 ### Options
 
-Definitions
+Concepts
 
 - Length: 0 - 320 bits
 - Rarely used

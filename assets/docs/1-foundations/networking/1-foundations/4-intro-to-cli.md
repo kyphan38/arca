@@ -4,14 +4,14 @@
 
 ## Cli
 
-Definitions
+Concepts
 
 - Command-line interface
 - The interface you use to configure Cisco devices
 
 ## Gui
 
-Definition: Graphical User interface
+Concept: Graphical User interface
 
 ## Cisco Device Connection
 
@@ -25,7 +25,7 @@ How to connect a Cisco device via the RJ-45 console port?
 
 ### User Exec
 
-Definitions
+Concepts
 
 - User EXEC mode is very limited
 - Users can look at some things, but cannot make any changes to the configuration
@@ -38,7 +38,7 @@ Router>
 
 ### Privileged Exec
 
-Definitions
+Concepts
 
 - Provides complete access to view the device's configuration, restart the device, etc.
 - Cannot change the configuration, but can change the time on the device, save the configuration file, etc.
@@ -57,7 +57,7 @@ Router(config)#
 
 ## Config
 
-Definitions
+Concepts
 
 - There are two separate configuration files kept on the device at once
 - Running-config is the current, active configuration file on the device. As you enter commands in the CLI, you edit the active configuration

@@ -61,7 +61,7 @@ no shutdown
 
 ## Full and Half Duplex
 
-Definitions
+Concepts
 
 - Half duplex: The device cannot send and receive data at the same time. If it is receiving a frame, it must wait before sending a frame
   - Devices attached to a hub must operate in half-duplex mode
@@ -89,7 +89,7 @@ CSMA/CD
 
 ### Speed and Duplex Autonegotitation
 
-Definitions
+Concepts
 
 - Interfaces that can run at different speeds (10/100 or 10/100/1000) have default settings of speed auto and duplex auto
 - Interfaces advertise their capabilities to the neighboring device and they negotiate the best speed and duplex settings they are both capabale of

@@ -56,7 +56,7 @@ Context
 - Encrypted data is obviously encrypted, making it clear that a file has been secured
 - Governments or authorities may demand decryption, and refusal could lead to legal consequences
 
-Definition
+Concept
 
 - Steganography is the practice of hiding information within a carrier, such as an image
 

@@ -17,7 +17,7 @@ ip address 192.168.24.2 255.255.255.0
 no shutdown
 ```
 
-Definitions
+Concepts
 
 - The following routes are automatically added to the routing table for each interface with an IP address configured
 - C - Connected

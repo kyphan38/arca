@@ -4,7 +4,7 @@
 
 ## Ethernet Frame
 
-Definitions
+Concepts
 
 - The Preamble and SFD is usually not considered part of the Ethernet header
 - The size of the Ethernet header and trailer is 18 bytes (6 - 6 - 2 - 4)
@@ -27,7 +27,7 @@ Note: PC1 wants to send this Ethernet frame to PC3, it has to learn PC3's MAC ad
 
 ## Arp
 
-Definitions
+Concepts
 
 - Address Resolution Protocol
 - ARP is used to discover the Layer 2 address (MAC address) of a known Layer 3 address (IP address)
@@ -43,7 +43,7 @@ Definitions
 
 ### ARP Table
 
-Definitions
+Concepts
 
 - Use `arp -a` to view the ARP table (Windows, macOS, Linux)
 - Internet address = IP address - Layer 3 address
@@ -55,7 +55,7 @@ Definitions
 
 ## Ping
 
-Definitions
+Concepts
 
 - A network utility used to test the reachability
 - Measures round-trip time

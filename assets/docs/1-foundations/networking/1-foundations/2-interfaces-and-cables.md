@@ -13,7 +13,7 @@ Types
 
 ## Ethernet
 
-Definition
+Concept
 
 - A collection of network protocols/standards
 
@@ -28,7 +28,7 @@ Physical cables: Used to connect devices in an Ethernet network
 
 ## Bits and Bytes
 
-Definitions
+Concepts
 
 - Value represented by either a 0 or 1
 - Data is sent or received a bit (not byte) at a time
@@ -43,7 +43,7 @@ Examples
 
 ## Ethernet Standards
 
-Definitions
+Concepts
 
 - Defined in the IEEE 802.3 standard in 1983
 - IEEE: Institute of Electrical and Electronics Engineers
@@ -63,7 +63,7 @@ Copper
 
 ## UTP Cables
 
-Definitions
+Concepts
 
 - Unshielded: The cable does not have additional shielding to protect the data signals from Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI)
 - Twisted: Pairs of wires are twisted together
@@ -71,7 +71,7 @@ Definitions
 
 ### 10base-T and 100base-T
 
-Definition: Full-Duplex transmission: Two devices can send data at the same time without issues
+Concept: Full-Duplex transmission: Two devices can send data at the same time without issues
 
 - Straight-through cable: A type of network cable used to connect to different types of devices
 
@@ -96,7 +96,7 @@ Tx and Rx table
   
 ### 1000base-T and 10gbase-T
 
-Definitions
+Concepts
 
 - Each pair is bidirectional
 
@@ -104,7 +104,7 @@ Definitions
 
 ## Fiber-Optic Cable
 
-Definitions
+Concepts
 
 - Electrical signal is sent over copper wiring
 - Light is sent over glass fibers
