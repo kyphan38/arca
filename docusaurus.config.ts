@@ -21,6 +21,16 @@ const config: Config = {
     locales: ['en'],
   },
 
+  headTags: [
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'robots',
+        content: 'noindex, nofollow',
+      },
+    },
+  ],
+
   presets: [
     [
       'classic',
