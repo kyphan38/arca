@@ -78,7 +78,7 @@ const config: Config = {
         language: "en",
         
         // 3. UI Settings
-        style: "none", // Keeps it simple, avoiding CSS conflicts
+        // style: "none", // Keeps it simple, avoiding CSS conflicts
       },
     ],
   ],
