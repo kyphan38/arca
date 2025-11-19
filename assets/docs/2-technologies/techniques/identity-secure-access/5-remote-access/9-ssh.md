@@ -70,22 +70,22 @@ Stage 1: TCP Connection
 
 Stage 2: Negotiation
 
-- The versions exchange (plain text)
-  - Client sends: SSH-2.0-OpenSSH_8.1
-  - Server sends: SSH-2.0-OpenSSH_8.2
+- The versions exchange (plain text):
+  - Client sends: `SSH-2.0-OpenSSH_8.1`
+  - Server sends: `SSH-2.0-OpenSSH_8.2`
   - Check: Do we both support 2.0? Yes
 - The algorithm menu (KEXINIT packet)
-  - Client sends: I support: curve25519-sha256, ecdh-sha2, diffie-hellman-group14, etc.
-  - Server sends: I support: curve25519-sha256, diffie-hellman-group14, etc.
-  - Selection: They pick the first algorithm that appears on both lists (e.g., curve25519-sha256)
+  - Client sends: I support: `curve25519-sha256`, `ecdh-sha2`, `diffie-hellman-group14`, etc.
+  - Server sends: I support: `curve25519-sha256`, `diffie-hellman-group14`, etc.
+  - Selection: They pick the first algorithm that appears on both lists (e.g., `curve25519-sha256`)
 
 Stage 3: Host identification
 
 - Prerequisite: The server generated its host keys ago when it was installed
-- Server sends its public host key (e.g, ssh-ed25519 AAAAC3...)
-- Client calculates the hash and searches in ~/.ssh/known_host on your laptop
+- Server sends its public host key (e.g, `ssh-ed25519 AAAAC3...`)
+- Client calculates the hash and searches in `~/.ssh/known_host` on your laptop
   - If new: Client asks you: Do you trust this fingerprint?
-  - If changed: Client shouts: Warning: Remote host identification changed
+  - If changed: Client shouts: `Warning: Remote host identification changed`
   - If match: Trust is verified. We proceed
 
 Stage 4: The secure tunnel (Key exchange)
@@ -99,12 +99,12 @@ Stage 5: User authentication
 - The server asks for credentials inside the encrypted tunnel
   - If you use a password
     - Input: You type mypassword
-    - Process: Server receives it. It finds your user in /etc/shadow
+    - Process: Server receives it. It finds your user in `/etc/shadow`
     - Hash check: Server takes the salt (a string of random data generated for each specific user when their account is created to avoid 2 different users with the same password hashing) from the file, adds it your input, runs the hash function
     - Compare: Does hash(input + salt) match the stored hash?
       - Yes &rarr; Access granted
   - If you use an SSH key
-    - Prerequisite: Your user public key is already inside the server's ~/.ssh/authorized_keys
+    - Prerequisite: Your user public key is already inside the server's `~/.ssh/authorized_keys`
     - Challenge: Server generates a random number
     - Sign: Your laptop uses your user private key to mathematically sign the number
     - Verify: Server uses your user public key (from the file) to verify the signature
@@ -178,17 +178,17 @@ Concepts
 
 ### Category 1: The Network Layer Failures (Stage 1)
 
-Case 1: ssh: connect to host 1.2.3.4 port 22: Connection refused
+Case 1: `ssh: connect to host 1.2.3.4 port 22: Connection refused`
 
 - The context: Your packet knocked on the door, and someone inside yelled "go away"
 - The root cause
-  - Service down: The machine is on, but the SSH Server software (sshd) is crashed or stopped
+  - Service down: The machine is on, but the SSH Server software (`sshd`) is crashed or stopped
   - Wrong port: You are knocking on Port 22, but the admin moved SSH to Port 2222 to hide it
 - Remediation
   - Check if the SSH service is running (if you have console access)
-  - Try a different port: ssh -p 2222 user@host
+  - Try a different port: `ssh -p 2222 user@host`
 
-Case 2: ssh: connect to host 1.2.3.4 port 22: Operation timed out
+Case 2: `ssh: connect to host 1.2.3.4 port 22: Operation timed out`
 
 - The context: You knocked on the door, and... silence. You waited 30 seconds, and no one answered
 - The root cause
@@ -198,19 +198,19 @@ Case 2: ssh: connect to host 1.2.3.4 port 22: Operation timed out
 - Remediation
   - Check your VPN connection
   - Check the firewall rules (Allow inbound TCP port 22)
-  - Ping the server (ping 1.2.3.4) to see if it's alive (though firewalls might block ping too)
+  - Ping the server (`ping 1.2.3.4`) to see if it's alive (though firewalls might block ping too)
 
 ### The Identity & Security Failures (Stage 3)
 
-Case 1: Warning: Unprotected private key file
+Case 1: `Warning: Unprotected private key file`
 
 - The context: SSH refuses to run because your private key is lying on the sidewalk
 - Root cause: File permissions
-  - Linux/Mac forces you to keep your private key secret. If the file permissions allow anyone else on your laptop to read it (e.g., 0644 or 0777), SSH triggers a fail-safe and stops
+  - Linux/Mac forces you to keep your private key secret. If the file permissions allow anyone else on your laptop to read it (e.g., `0644` or `0777`), SSH triggers a fail-safe and stops
 - Remediation: Lock the file so only you can read it
-  - chmod 600 ~/.ssh/id_rsa
+  - `chmod 600 ~/.ssh/id_rsa`
 
-Case 2: Warning: Remote host identification has changed
+Case 2: `Warning: Remote host identification has changed`
 
 - The context: The fingerprint mismatch
 - Root cause
@@ -218,26 +218,26 @@ Case 2: Warning: Remote host identification has changed
   - Man-in-the-middle attack
 - Remediation
   - Verify with the admin that the server was reinstalled
-  - Remove the old line: ssh-keygen -R 1.2.3.4
+  - Remove the old line: `ssh-keygen -R 1.2.3.4`
 
 ### Category 3: The authentication failures
 
-Case 1: Permission denied (publickey)
+Case 1: `Permission denied (publickey)`
 
 - The context: You offered a key, and the server said no
 
 Root cause:
 
-- Missing key: The public key is not in the server's ~/.ssh/authorized_keys file
-- Wrong key: You are using id_rsa, but the server only knows your id_ed25519 key
-- Wrong user: You are trying to log in as root but the server config (sshd_config) has PermitRootLogin no
+- Missing key: The public key is not in the server's `~/.ssh/authorized_keys` file
+- Wrong key: You are using `id_rsa`, but the server only knows your `id_ed25519` key
+- Wrong user: You are trying to log in as `root` but the server config (`sshd_config`) has `PermitRootLogin no`
 
 Remediation
 
 - The test: Use Verbose mode (see below) to see which key you are offering
 - The fix: You must get your public key onto that server (ask an admin, or use a password if allowed to add it)
 
-Case 2: Received disconnect from ...: 2: Too many authentication failures
+Case 2: `Received disconnect from ...: 2: Too many authentication failures`
 
 - The context: You have too many keys on your keyring
 - Root cause
@@ -248,13 +248,15 @@ Case 2: Received disconnect from ...: 2: Too many authentication failures
 - Remediation
   - Tell SSH to use only the specific key for this host: `ssh -i ~/.ssh/my_specific_key -o IdentitiesOnly=yes user@host`
 
-:::note
-ssh -v user@host
-:::
+- Tell SSH to use only the specific key for this host: `ssh -i ~/.ssh/my_specific_key -o IdentitiesOnly=yes user@host`
 
 - It prints the internal monologue of the SSH client. It shows you exactly where it fails
   - Connecting to
   - Remote protocol version
   - Server host key
   - Offering public key
-- Pro tip: If -v isn't enough, use -vv or -vvv for extreme detail
+- Pro tip: If `-v` isn't enough, use `-vv` or `-vvv` for extreme detail
+
+:::note
+`ssh -v user@host`
+:::
