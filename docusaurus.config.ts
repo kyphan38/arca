@@ -67,9 +67,10 @@ const config: Config = {
     [
       '@easyops-cn/docusaurus-search-local',
       {
-        hashed: true,
         indexDocs: true,
         indexBlog: true,
+        indexPages: true,
+        language: 'en',
       },
     ],
   ],

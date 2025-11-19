@@ -17,6 +17,7 @@
     "lint:md:fix": "markdownlint \"**/*.md\" --ignore node_modules --fix"
   },
   "dependencies": {
+    "@cmfcmf/docusaurus-search-local": "^2.0.1",
     "@docusaurus/core": "^3.8.1",
     "@docusaurus/preset-classic": "^3.8.1",
     "@docusaurus/theme-mermaid": "^3.8.1",
