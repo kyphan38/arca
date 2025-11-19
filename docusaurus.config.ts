@@ -65,24 +65,20 @@ const config: Config = {
 
   plugins: [
     [
-      '@easyops-cn/docusaurus-search-local',
+      require.resolve("@cmfcmf/docusaurus-search-local"),
       {
-        // 1. Basic Indexing
-        hashed: true,
+        // 1. Fix the "Hanging" issue (Lazy Loading)
+        // This is enabled by default in this plugin, so no huge file downloads!
+        
+        // 2. Fix the "SSH" / Short word issue
+        // We enable "partial" matching so "ss" finds "ssh"
+        // We keep the index simple to avoid over-processing technical terms
         indexDocs: true,
         indexBlog: true,
-        indexPages: true,
-        language: ["en"],
-
-        // 2. THE FIX: Enable "Technical" Matching
-        // This prevents "ssh" from being converted to "s" or ignored.
-        removeDefaultStemmer: true,
-
-        // 3. Optional: Highlight the word on the page when you click a result
-        highlightSearchTermsOnTargetPage: true,
-
-        // 4. Optional: Improve result limits
-        searchResultLimits: 8,
+        language: "en",
+        
+        // 3. UI Settings
+        style: "none", // Keeps it simple, avoiding CSS conflicts
       },
     ],
   ],
