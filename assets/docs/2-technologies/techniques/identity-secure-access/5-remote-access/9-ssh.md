@@ -176,6 +176,15 @@ Concepts
 
 ## Common Failures
 
+`ssh -v user@host`
+
+- It prints the internal monologue of the SSH client. It shows you exactly where it fails
+  - Connecting to
+  - Remote protocol version
+  - Server host key
+  - Offering public key
+- Pro tip: If `-v` isn't enough, use `-vv` or `-vvv` for extreme detail
+
 ### Category 1: The Network Layer Failures (Stage 1)
 
 Case 1: `ssh: connect to host 1.2.3.4 port 22: Connection refused`
@@ -247,16 +256,3 @@ Case 2: `Received disconnect from ...: 2: Too many authentication failures`
   - By the time SSH tries the correct key (Key #7), the server has already kicked you out for spamming it
 - Remediation
   - Tell SSH to use only the specific key for this host: `ssh -i ~/.ssh/my_specific_key -o IdentitiesOnly=yes user@host`
-
-- Tell SSH to use only the specific key for this host: `ssh -i ~/.ssh/my_specific_key -o IdentitiesOnly=yes user@host`
-
-- It prints the internal monologue of the SSH client. It shows you exactly where it fails
-  - Connecting to
-  - Remote protocol version
-  - Server host key
-  - Offering public key
-- Pro tip: If `-v` isn't enough, use `-vv` or `-vvv` for extreme detail
-
-:::note
-`ssh -v user@host`
-:::
