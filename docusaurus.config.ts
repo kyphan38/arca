@@ -67,10 +67,22 @@ const config: Config = {
     [
       '@easyops-cn/docusaurus-search-local',
       {
+        // 1. Basic Indexing
+        hashed: true,
         indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        language: 'en',
+        language: ["en"],
+
+        // 2. THE FIX: Enable "Technical" Matching
+        // This prevents "ssh" from being converted to "s" or ignored.
+        removeDefaultStemmer: true,
+
+        // 3. Optional: Highlight the word on the page when you click a result
+        highlightSearchTermsOnTargetPage: true,
+
+        // 4. Optional: Improve result limits
+        searchResultLimits: 8,
       },
     ],
   ],
