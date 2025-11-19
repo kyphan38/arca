@@ -65,11 +65,12 @@ const config: Config = {
 
   plugins: [
     [
-      require.resolve("@cmfcmf/docusaurus-search-local"),
+      '@easyops-cn/docusaurus-search-local',
       {
-        hashed: true,
         indexDocs: true,
         indexBlog: true,
+        indexPages: true,
+        language: 'en',
       },
     ],
   ],
