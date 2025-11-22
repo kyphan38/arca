@@ -1,7 +1,7 @@
 
-# inter-process communication
+# inter process communication
 
-## Inter-Process Communication (IPC)
+## Inter Process Communication (IPC)
 
 - Processes do not share memory with each other
   - Each process has its own separate memory space
