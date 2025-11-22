@@ -6,7 +6,7 @@
 
 Concept: From a software point of view, a computer has a few main parts: the disk, memory (RAM), the processor (CPU), and the CPU's cache
 
-![img](./img/1.png)
+![img](./img/1/1.png)
 
 ## The Disk (Storage)
 
@@ -90,7 +90,7 @@ Cons
 
 ## Limits
 
-![img](./img/2.png)
+![img](./img/1/2.png)
 
 Context
 
