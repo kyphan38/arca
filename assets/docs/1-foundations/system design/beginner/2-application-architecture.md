@@ -85,3 +85,7 @@ Concepts
 - An alerting system pushes notifications immediately when specific metrics cross a threshold
 
 Example: If successful requests drop from 100% to below 95%, the system automatically notifies the developer
+
+## Infographics
+
+![img](./img/2/2.png)

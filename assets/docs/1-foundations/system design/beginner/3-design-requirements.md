@@ -1,6 +1,6 @@
 # design requirements
 
-- [] Done content
+- [x] Done
 
 ## The Philosophy of System Design
 
@@ -37,7 +37,11 @@ Example: Aggregating raw server logs to calculate the percentage of successful v
 
 ## Availability
 
-Concept: The percentage of time a service is functioning and able to respond to requests.
+Concept: The percentage of time a service is functioning and able to respond to requests
+
+Formula: `Availability = uptime / (uptime + downtime)`
+
+![img](./img/3/1.png)
 
 ### The Nines
 
@@ -51,8 +55,8 @@ Concepts
 
 Concepts
 
-- SLO (Service Level Objective): The internal goal developers set for the system (e.g., "We want 99.999% uptime")
-- SLA (Service Level Agreement): An agreement with the customer. If the SLO is not met, there are consequences, such as a partial refund.
+- SLO (Service Level Objective): The internal goal developers set for the system (e.g., We want 99.999% uptime)
+- SLA (Service Level Agreement): An agreement with the customer. If the SLO is not met, there are consequences, such as a partial refund
 
 ## Reliability, Redundancy, and Fault Tolerance
 
@@ -60,10 +64,10 @@ Concepts: These terms are often used interchangeably but have specific meanings 
 
 - Reliability: The probability that the system will not fail
   - Adding a second server increases reliability because if one fails, the other works
-- Fault Tolerance: The ability of a system to continue functioning even if a part of it fails
-  - Redundancy: Having "unnecessary" copies of components (like a second server running the exact same code)
+- Fault tolerance: The ability of a system to continue functioning even if a part of it fails
+  - Redundancy: Having unnecessary copies of components (like a second server running the exact same code)
   - You don't need both to handle traffic, but the copy exists to take over in case of failure
-- Single Point of Failure: A system with only one server is a single point of failure. If it crashes, the whole system dies
+- Single point of failure: A system with only one server is a single point of failure. If it crashes, the whole system dies
 
 ## Throughput
 
@@ -100,3 +104,7 @@ Concepts
   - Caching: Storing data in faster storage. Reading from Cache (nanoseconds) is orders of magnitude faster than RAM (microseconds)
   - Geography: Distance matters. A user on the other side of the world experiences high latency
   - Solution: Place servers in different parts of the world so users connect to a server physically closer to them
+
+## Infographics
+
+![img](./img/3/2.png)

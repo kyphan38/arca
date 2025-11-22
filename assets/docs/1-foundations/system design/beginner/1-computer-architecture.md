@@ -98,3 +98,7 @@ Context
 - One of the biggest limits is CPU speed
 - For a long time, Moore's Law described how CPUs got exponentially faster, doubling in speed roughly every two years
 - However, in the last 10 years or so, this trend has slowed down and CPU speeds are starting to level off. We can no longer count on a single CPU getting infinitely faster
+
+## Infographics
+
+![img](./img/1/3.png)
