@@ -1,14 +1,20 @@
 # process abstraction
 
+- [x] Done
+
 ## The Process Abstraction
+
+Concepts
 
 - A process is a running program
 - When a program runs, the OS creates a new process, allocates memory, initializes the CPU context, and starts it in user mode
 - User programs run on the CPU until the OS intervenes for system calls, interrupts, or faults
 
-![img](./img/9.png)
+![img](./img/2/1.png)
 
 ## What Defines a Process?
+
+Concepts
 
 - A unique process identifier (PID)
 - Memory image in RAM, including
@@ -23,15 +29,19 @@
 
 ## States of a Process
 
+Stages
+
 - Running: Currently executing on the CPU
   - Its context is in the CPU registers
-- Blocked/Suspended/Sleeping: Cannot run, or wait for an event (e.g., I/O completion)
-- Ready/Runnable: Ready to run, but waiting for the OS scheduler
+- Blocked / suspended / sleeping: Cannot run, or wait for an event (e.g., I/O completion)
+- Ready / runnable: Ready to run, but waiting for the OS scheduler
 - The context of blocked and ready processes is saved in OS memory so they can resume later
 
-![img](./img/10.png)
+![img](./img/2/2.png)
 
-## Example: Process State Transitions
+## Process State Transitions
+
+Example
 
 - Initially, P0 is running, and P1 is ready
 - If P0 requests data from a disk via a system call, the OS handles it but moves P0 to the blocked state since the data isn't immediately available. The OS then switches to P1
@@ -39,6 +49,8 @@
 - The OS can continue running P1, and the scheduler will switch to P0 later
 
 ## Process Control Block (PCB)
+
+Concepts
 
 - The PCB is a kernel data structure storing all process information
 - It contains
@@ -52,13 +64,15 @@
 
 ## CPU Scheduler
 
+Concepts
+
 - The OS maintains a list of all PCBs
 - The scheduler loops through this list, picking a ready process to run on each CPU core
 - It periodically performs context switches between processes
 
 ## Booting
 
-When a computer system boots up, the Basic Input Output System (BIOS) starts running
+Concept: When a computer system boots up, the Basic Input Output System (BIOS) starts running
 
 - BIOS is stored in non-volatile memory and initialize other hardware
 - BIOS locates the boot loader in the boot disk (hard disk, USB, etc.)
@@ -67,6 +81,8 @@ When a computer system boots up, the Basic Input Output System (BIOS) starts run
 - After control is transferred, the OS code begins to run, exposes a terminal to the user, and the user can start programs
 
 ## Booting Real Systems
+
+Concepts
 
 - Bootloaders for simple or old OSs could fit into the 512 bytes of the first sector of the boot disk, as required for easy discovery by BIOS
 - However, modern OS bootloaders are complex, needing to read large kernel images from disk and network, and thus do not fit into 512 bytes

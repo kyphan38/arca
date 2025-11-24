@@ -70,11 +70,11 @@ Stage 3: Execution - CPU
 - The CPU executes the instruction
 - The CPU stores results back into a register or a memory location
 
-![img](./img/1.png)
+![img](./img/1/1.png)
 
-![img](./img/2.png)
+![img](./img/1/2.png)
 
-![img](./img/3.png)
+![img](./img/1/3.png)
 
 ## Terms
 
@@ -100,7 +100,7 @@ Processes: How a context switch works
 - The OS loads the saved state of another program, Program B
 - It runs Program B for a short time before switching again
 
-![img](./img/4.png)
+![img](./img/1/4.png)
 
 ### Memory Virtualization
 
@@ -122,7 +122,7 @@ Processes: Mapping
 - This map translates the program's fake (virtual) addresses into the real (physical) addresses in RAM
 - This guarantees that each program is kept completely separate and isolated
 
-![img](./img/5.png)
+![img](./img/1/5.png)
 
 ### Address Space of a Process
 
@@ -218,7 +218,7 @@ Processes: How are interrupts handled?
 
 Note: This interrupt handling code is a part of the OS. The CPU simply runs the OS's handler and then returns to the user's code
 
-![img](./img/6.png)
+![img](./img/1/6.png)
 
 ### I/O Devices
 
@@ -233,7 +233,7 @@ Functions: I/O devices have two main jobs
 - Interface with the external world (e.g., keyboard, mouse, screen)
 - Store user data persistently (e.g., hard drive, SSD)
 
-![img](./img/7.png)
+![img](./img/1/7.png)
 
 ### Device Controller and Device Driver
 
@@ -252,11 +252,13 @@ Functions: The OS kernel uses the device driver to
 - Start I/O operations by giving commands to the device (for example, telling a hard disk to read this block of data)
 - Handle interrupts that come from the device (for example, when the hard disk sends a signal to say, I've finished reading that data and it's ready for you)
 
-![img](./img/8.png)
+![img](./img/1/8.png)
 
 ## Advices
 
 ### Why Study Operating Systems?
+
+Reasons
 
 - Knowledge of hardware (architecture) and system software (OS), and how user programs interact with these lower layers, is essential for writing high-performance, reliable user programs
 - Key questions addressed by studying OS
@@ -268,6 +270,8 @@ Functions: The OS kernel uses the device driver to
 - OS expertise is one of the most critical skills for building high-performance, robust, and complex real-world systems
 
 ### Beyond OS to Real Systems and Future Courses
+
+Summary
 
 - Architecture + OS: Provides the foundation for understanding how a user program runs on a single machine
 - Networking: Explores how programs communicate across machines

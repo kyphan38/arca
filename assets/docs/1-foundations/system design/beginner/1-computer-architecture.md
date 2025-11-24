@@ -6,7 +6,7 @@
 
 Concept: From a software point of view, a computer has a few main parts: the disk, memory (RAM), the processor (CPU), and the CPU's cache
 
-![img](./img/1.png)
+![img](./img/1/1.png)
 
 ## The Disk (Storage)
 
@@ -90,7 +90,7 @@ Cons
 
 ## Limits
 
-![img](./img/2.png)
+![img](./img/1/2.png)
 
 Context
 
@@ -98,3 +98,7 @@ Context
 - One of the biggest limits is CPU speed
 - For a long time, Moore's Law described how CPUs got exponentially faster, doubling in speed roughly every two years
 - However, in the last 10 years or so, this trend has slowed down and CPU speeds are starting to level off. We can no longer count on a single CPU getting infinitely faster
+
+## Infographics
+
+![img](./img/1/3.png)

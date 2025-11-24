@@ -67,18 +67,9 @@ const config: Config = {
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
-        // 1. Fix the "Hanging" issue (Lazy Loading)
-        // This is enabled by default in this plugin, so no huge file downloads!
-        
-        // 2. Fix the "SSH" / Short word issue
-        // We enable "partial" matching so "ss" finds "ssh"
-        // We keep the index simple to avoid over-processing technical terms
         indexDocs: true,
         indexBlog: true,
         language: "en",
-        
-        // 3. UI Settings
-        // style: "none", // Keeps it simple, avoiding CSS conflicts
       },
     ],
   ],

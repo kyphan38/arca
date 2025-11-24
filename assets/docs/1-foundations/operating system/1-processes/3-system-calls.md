@@ -1,6 +1,10 @@
 # system calls
 
+- [x] Done
+
 ## API for Process Management
+
+Concepts
 
 - The OS provides an API of functions for user programs
   - This API consists of system calls, which execute in privileged kernel mode
@@ -9,12 +13,16 @@
 
 ## Portability of Code Across OS
 
+Concepts
+
 - The POSIX API standardizes system calls for code portability across compliant operating systems
   - Recompilation may still be needed for different hardware architectures
 - Language libraries (e.g., C's printf) often wrap system calls (e.g., write)
 - The Application Binary Interface (ABI) defines the interface between machine code and hardware
 
 ## Process Related System Calls (In Unix)
+
+Concepts
 
 - fork(): Creates a new child process
   - All processes are forked from a parent
@@ -28,7 +36,7 @@
 - A parent's call to fork() creates a new child process with a new PID
 - The child gets a copy of the parent's memory image
 
-!img
+![img](./img/3/1.png)
 
 - After fork():
   - Parent and child resume execution from the fork() call
@@ -39,15 +47,19 @@
 
 ## Exit() System Call
 
-- A process calls exit() to terminate
-  - The OS never runs the process again
+Concepts
+
+- A process calls exit() to terminate when a process finishes execution
+  - The OS switches the process out and never runs it again
   - In C, exit() is called automatically at the end of main()
 - An exiting process cannot free its own memory
-- A terminated process becomes a "zombie"
+- A terminated process becomes a zombie
 
 ## Wait() System Call
 
-- A parent calls wait() to "reap" (clean up) a zombie child
+Concepts
+
+- A parent calls wait() to reap (clean up) a zombie child
 - wait() cleans up one terminated child's resources
 - If the child is running, wait() blocks the parent until the child exits
 - If the child is a zombie, wait() reaps it and returns immediately
@@ -60,13 +72,17 @@
 
 ## Exec() System Call
 
+Concepts
+
 - exec() replaces the current process's code and memory with a new program
 - It takes an executable file as an argument
 - The process's memory image is completely replaced by the new executable's
-- A successful exec() does not return; the new program starts executing
+- A successful exec() does not return, the new program starts executing
 - An unsuccessful exec() returns an error, and the original program continues
 
 ## Shell and Terminal
+
+Concepts
 
 - The init process is the first process on boot and spawns a shell (e.g., bash)
 - All other processes are forked from existing ones
@@ -77,12 +93,17 @@
 
 ## Foreground and Background Execution
 
-- Foreground commands block the shell until they finish
+Concepts
+
+- By default, user command runs in foreground, shell cannot accept next 
+command until previous one finishes
 - For background commands (&), the shell forks but does not wait(), returning to the prompt immediately
 - The shell reaps background processes later, sometimes using non-blocking wait() calls
 - Multiple commands can be run serially or in parallel
 
 ## I/O Redirection
+
+Concepts
 
 - Every process has default file descriptors: STDIN, STDOUT, and STDERR
 - The shell can manipulate a child's file descriptors before exec() to redirect I/O
@@ -90,5 +111,9 @@
 
 ## Shell Commands With Pipes
 
+Concepts
+
 - The shell can pipe the output of one command to the input of another
 - This connects one child's STDOUT to another's STDIN using a kernel pipe
+
+Command: `cat foo.c | grep factorial`
