@@ -8,8 +8,9 @@ ALLOWED_TITLES = [
   "Architecture",   # Kien truc he thong
   "Components",     # Cac thanh phan con
   "Flow",           # Luong du lieu
-  "How it Works",   # Co che hoat dong
-  "Pros & Cons",    # Uu & Nhuoc diem
+  "How it works",   # Co che hoat dong
+  "Pros & cons",    # Uu & Nhuoc diem
+  "Categories",     # Phan loai
 
   # Group 2: Preparation
   "Setup",          # Thiet lap moi truong
@@ -25,17 +26,17 @@ ALLOWED_TITLES = [
   # Group 4: Deep Dive
   "Use Cases",      # Tinh huong su dung thuc te
   "Examples",       # Vi du minh hoa
-  "Best Practices", # Kinh nghiem thuc te
+  "Best practices", # Kinh nghiem thuc te
   "Performance",    # Hieu nang
   
   # Group 5: Maintenance
   "Troubleshooting", # Go loi
-  "Common Errors",   # Loi thuong gap
+  "Common errors",   # Loi thuong gap
   "FAQ",             # Cau hoi thuong gap
   
   # Group 6: Conclusion
   "Summary",         # Tong ket
-  "Next Steps",      # Buoc tiep theo
+  "Next steps",      # Buoc tiep theo
   "References",      # Tai lieu tham khao
-  "See Also"         # Xem them cac bai lien quan
+  "See also"         # Xem them cac bai lien quan
 ]

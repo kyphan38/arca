@@ -1,6 +1,6 @@
 # array and hashing
 
-- [] Progress:
+- [] Progress: In-progress
 
 ## Examples
 

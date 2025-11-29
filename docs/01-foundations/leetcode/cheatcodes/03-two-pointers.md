@@ -1,6 +1,6 @@
 # two pointers
 
-- [] Progress:
+- [] Progress: Not yet
 
 ## Examples
 

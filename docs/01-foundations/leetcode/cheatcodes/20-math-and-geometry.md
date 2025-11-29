@@ -1,3 +1,3 @@
 # math and geometry
 
-- [] Progress:
+- [] Progress: Not yet

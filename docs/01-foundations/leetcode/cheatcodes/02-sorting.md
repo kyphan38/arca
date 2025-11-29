@@ -1,6 +1,6 @@
 # sorting
 
-- [] Progress:
+- [] Progress: In-progress
 
 ## Examples
 

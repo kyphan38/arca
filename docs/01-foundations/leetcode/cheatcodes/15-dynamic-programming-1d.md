@@ -1,3 +1,3 @@
 # dynamic programming 1d
 
-- [] Progress:
+- [] Progress: Not yet

@@ -1,3 +1,3 @@
 # bit manipulation
 
-- [] Progress:
+- [] Progress: Not yet

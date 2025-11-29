@@ -1,6 +1,6 @@
 # binary search
 
-- [] Progress:
+- [] Progress: Not yet
 
 ## Examples
 

@@ -1,3 +1,3 @@
 # heap and priority queue
 
-- [] Progress:
+- [] Progress: Not yet

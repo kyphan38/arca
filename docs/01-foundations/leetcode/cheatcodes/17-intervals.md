@@ -1,3 +1,3 @@
 # intervals
 
-- [] Progress:
+- [] Progress: Not yet

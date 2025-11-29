@@ -1,3 +1,3 @@
 # linked list
 
-- [] Progress:
+- [] Progress: Not yet

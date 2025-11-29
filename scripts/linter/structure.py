@@ -57,6 +57,11 @@ def check_structure(lines):
 
       last_seen_heading_level = level
 
+      if level in [2, 3]:
+        if text and not text.startswith('`'):
+          if text[0].islower():
+            errors.append(f"Line {line_num}: H{level} should start with an uppercase letter (Sentence case): '{text}'")
+
       # H1
       if level == 1:
         found_h1 = True

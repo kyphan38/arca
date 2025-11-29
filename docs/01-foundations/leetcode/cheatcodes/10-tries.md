@@ -1,3 +1,3 @@
 # tries
 
-- [] Progress:
+- [] Progress: Not yet

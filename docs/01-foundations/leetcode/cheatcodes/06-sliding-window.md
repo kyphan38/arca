@@ -1,6 +1,6 @@
 # sliding window
 
-- [] Progress:
+- [] Progress: Not yet
 
 ## Examples
 

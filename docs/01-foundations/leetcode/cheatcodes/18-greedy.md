@@ -1,3 +1,3 @@
 # greedy
 
-- [] Progress:
+- [] Progress: Not yet
