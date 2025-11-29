@@ -7,3 +7,12 @@ repos:
         description: Run markdownlint-cli on your Markdown files
         files: \.(md|mdown|markdown|myst)$
         args: [--fix]
+  - repo: local
+    hooks:
+      - id: docs-structure-check
+        name: Docs Structure Check
+        entry: python scripts/lint.py
+        language: python
+        pass_filenames: false 
+        types: [markdown]
+        files: ^docs/

@@ -1,1 +1,0 @@
-# math and geometry
