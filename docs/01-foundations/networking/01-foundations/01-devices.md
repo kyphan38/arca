@@ -6,7 +6,7 @@
 
 ### Concepts
 
-Here are the concepts
+Concepts are
 
 - A computer network is a digital telecommunication network which allows nodes to share resources
 - Node: Router, switch, firewall (software, hardware), server, client (smartphone, laptop, etc.), etc.
@@ -16,7 +16,7 @@ Here are the concepts
 
 ### Concepts
 
-Here are the concepts
+Concepts are
 
 - A client is a device that accesses a service made available by a server
   - Examples: Laptop, Desktop PC (Microsoft Windows), iMac (macOS), iPhone (iOS)
@@ -31,7 +31,7 @@ Note: The same device can be a client in some situations, and a server in other 
 
 ### Concepts
 
-Here are the concepts
+Concepts are
 
 - Have many network interfaces/ports for end hosts to connect (usually 24+)
 - Provide connectivity to hosts within the same LAN (Local Area Network)
@@ -43,7 +43,7 @@ Here are the concepts
 
 ### Concepts
 
-Here are the concepts
+Concepts are
 
 - Have fewer network interfaces than switches
 - Are used to provided connectivity between LANs
@@ -55,7 +55,7 @@ Here are the concepts
 
 ### Concepts
 
-Here are the concepts
+Concepts are
 
 - Monitor and control network traffic based on configured rules
 - Can be place inside the network, or outside the network
@@ -63,7 +63,7 @@ Here are the concepts
 
 ### Categories
 
-Here are the categories
+Categories are
 
 - Network firewalls are hardware devices that filter traffic between networks
 - Host-based firewalls are software applications that filter traffic entering and exiting a host machine, like a PC
