@@ -1,81 +1,55 @@
 # interfaces and cables
 
-- [] Progress: Review
+- [x] Done
 
 ## Ports
 
-### Categories
-
-Categories are
+Types
 
 - RJ45 is for standard Ethernet cables
 - SFP is for fiber optic or copper cables via SFP modules
 
-![img](./img/02/01.png)
+![img](./img/2/1.png)
 
 ## Ethernet
 
-### Concepts
+Concept
 
-Concepts are
+- A collection of network protocols/standards
 
-- A collection of network protocols or standards
-
-### Context
-
-Why do we need network protocols or standards?
+Why do we need network protocols/standards?
 
 - Requires a common language data transmission, formatting, etc.
 
-## Physical cables
-
-### Concepts
-
-Concepts are
-
-- Used to connect devices in an Ethernet network
-
-### Categories
-
-Categories are
+Physical cables: Used to connect devices in an Ethernet network
 
 - UTP cable: Transmits data using electrical signals through copper wires
-- Fiber optic cable: Transmits data using pulses of light through glass or plastic fibers
+- Fiber Optic cable: Transmits data using pulses of light through glass or plastic fibers
 
-## Bits and bytes
+## Bits and Bytes
 
-### Concepts
-
-Concepts are
+Concepts
 
 - Value represented by either a 0 or 1
 - Data is sent or received a bit (not byte) at a time
   - 1 byte = 8 bits
 - Speed is measured in bits per second (Kbps, Mbps, Gbps, etc.) not bytes per second
 
-### Examples
-
-Examples are
+Examples
 
 - 1 kilobit (Kb) = 1 000 bits (thousand)
 - 1 megabit (Mb) = 1 000 000 bits (million)
 - 1 gigabit (Gb) = 1 000 000 000 bits (billion)
 
-## Ethernet standards
+## Ethernet Standards
 
-### Concepts
-
-Concepts are
+Concepts
 
 - Defined in the IEEE 802.3 standard in 1983
 - IEEE: Institute of Electrical and Electronics Engineers
 - This standard is for local area networks (LANs)
 
-## Copper
-
-### Categories
-
-Categories are
+Copper
 
 | Speed     | Common Name       | IEEE Standard | Informal Name | Maximum Length | Pairs |
 |-----------|-------------------|---------------|---------------|----------------|-------|
@@ -84,16 +58,12 @@ Categories are
 | 1 Gbps    | Gigabit Ethernet  | 802.3ab       | 1000BASE-T    | 100 m          |4 pairs|
 | 10 Gbps   | 10 Gig Ethernet   | 802.3an       | 10GBASE-T     | 100 m          |4 pairs|
 
-Naming
-
 - BASE: Baseband signaling
 - T: Twisted pair
 
 ## UTP Cables
 
-### Concepts
-
-Concepts are
+Concepts
 
 - Unshielded: The cable does not have additional shielding to protect the data signals from Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI)
 - Twisted: Pairs of wires are twisted together
@@ -105,11 +75,11 @@ Concept: Full-Duplex transmission: Two devices can send data at the same time wi
 
 - Straight-through cable: A type of network cable used to connect to different types of devices
 
-![img](./img/02/02.png)
+![img](./img/2/2.png)
 
 - Crossover cable: A type of network cable used to directly connect two devices of the same type without going through a switch or hub
 
-![img](./img/02/03.png)
+![img](./img/2/3.png)
 
 Tx and Rx table
 
@@ -130,22 +100,18 @@ Concepts
 
 - Each pair is bidirectional
 
-![img](./img/02/04.png)
+![img](./img/2/4.png)
 
-## Fiber-optic cable
+## Fiber-Optic Cable
 
-### Concepts
-
-Concepts are
+Concepts
 
 - Electrical signal is sent over copper wiring
 - Light is sent over glass fibers
 - Two connectors on each end
   - One for transmitting and one for receiving data
 
-![img](./img/02/05.png)
-
-### Structure
+![img](./img/2/5.png)
 
 Structure
 
@@ -154,22 +120,23 @@ Structure
 - (3) A protective buffer
 - (4) The outer jacket of the cable
 
-![img](./img/02/06.png)
+![img](./img/2/6.png)
 
-### Categories
+Multi-mode fiber
 
-Categories
+- Core diameter is wider than single-mode fiber
+- Allows multiple angles(modes) of light waves to enter the fiberglass core
+- Allows longer cables than UTP, but shorter cables than single-mode fiber
+- Cheaper than single-mode fiber due to cheaper LED-based SFP transmitters
 
-- Multi-mode fiber
-  - Core diameter is wider than single-mode fiber
-  - Allows multiple angles(modes) of light waves to enter the fiberglass core
-  - Allows longer cables than UTP, but shorter cables than single-mode fiber
-  - Cheaper than single-mode fiber due to cheaper LED-based SFP transmitters
-- Single-mode fiber
-  - Core diameter is narrower than multi-mode
-  - Light enters at a single angle (mode from a laser-based transmitter)
-  - Allows longer cables than both UTP and multi-mode fiber
-  - More expensive than multi-mode fiber due to more expensive LED-based SFP transmitters
+Single-mode fiber
+
+- Core diameter is narrower than multi-mode
+- Light enters at a single angle (mode from a laser-based transmitter)
+- Allows longer cables than both UTP and multi-mode fiber
+- More expensive than multi-mode fiber due to more expensive LED-based SFP transmitters
+
+![img](./img/2/7.png)
 
 Fiber-optic cable standards
 
@@ -180,9 +147,7 @@ Fiber-optic cable standards
 | 10GBASE-LR    | 802.3ae       | 10 Gbps | Single-Mode               | 10 km                 |
 | 10GBASE-ER    | 802.3ae       | 10 Gbps | Single-Mode               | 30 km                 |
 
-![img](./img/02/07.png)
-
-## Summary
+## Comparison
 
 | UTP                                                                                  | Fiber-Optic                                                                                  |
 | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------|
