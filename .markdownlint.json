@@ -6,6 +6,6 @@
   "MD026": false,
   "MD009": false,
   "MD033": {
-    "allowed_elements": ["audio", "source", "details", "summary", "img", "br", "div", "span"]
+    "allowed_elements": ["audio", "source", "details", "summary", "img", "br", "div", "span", "video"]
   }
 }

@@ -17,7 +17,7 @@ Categories are
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - A collection of network protocols or standards
 
@@ -31,7 +31,7 @@ Why do we need network protocols or standards?
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - Used to connect devices in an Ethernet network
 
@@ -46,7 +46,7 @@ Categories are
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - Value represented by either a 0 or 1
 - Data is sent or received a bit (not byte) at a time
@@ -65,7 +65,7 @@ Examples are
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - Defined in the IEEE 802.3 standard in 1983
 - IEEE: Institute of Electrical and Electronics Engineers
@@ -93,7 +93,7 @@ Naming
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - Unshielded: The cable does not have additional shielding to protect the data signals from Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI)
 - Twisted: Pairs of wires are twisted together
@@ -136,7 +136,7 @@ Concepts
 
 ### Concepts
 
-Concepts are
+Concepts
 
 - Electrical signal is sent over copper wiring
 - Light is sent over glass fibers

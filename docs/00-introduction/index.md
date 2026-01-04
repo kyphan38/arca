@@ -8,9 +8,7 @@ Hi folks, this is the space where I share the journey-learning from personal exp
 
 My current favorite track
 
-<audio controls>
-  <source src="/track.mp3" type="audio/mpeg" />
+<video controls>
+  <source src="/chill.MOV" type="video/mp4" />
   Your browser does not support the audio element
-</audio>
-
-![img](./img/chill.png)
+</video>
