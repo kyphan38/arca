@@ -1,0 +1,16 @@
+#,Day / Topic
+1,Day 1: Network Devices
+2,Day 2: Interfaces and Cables
+3,Day 3: OSI Model & TCP/IP Suite
+4,Day 4: Intro to the CLI
+5,Day 7: IPv4 Addressing (Part 1)
+6,Day 8: IPv4 Addressing (Part 2)
+7,Day 10: IPv4 Header
+8,Day 12: The Life of a Packet
+9,Day 13: Subnetting (Part 1)
+10,Day 14: Subnetting (Part 2)
+11,Day 15: Subnetting (Part 3 - VLSM)
+12,Day 30: TCP & UDP
+13,Day 31: IPv6 Part 1
+14,Day 32: IPv6 Part 2
+15,Day 33: IPv6 Part 3

@@ -1,0 +1,9 @@
+#,Day / Topic
+1,Day 59: Intro to Network Automation (Part 1)
+2,Day 59: AI & Machine Learning (Part 2)
+3,"Day 60: JSON, XML, & YAML"
+4,Day 61: REST APIs
+5,Day 61: REST API Authentication (Part 2)
+6,Day 62: Software-Defined Networking
+7,"Day 63: Ansible, Puppet, & Chef (Part 1)"
+8,Day 63: Terraform (Part 2)

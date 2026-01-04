@@ -1,3 +1,0 @@
-# blog
-
-to be continued

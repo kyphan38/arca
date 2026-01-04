@@ -36,21 +36,10 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'assets/docs',
+          path: 'docs',
           sidebarPath: './sidebars/sidebars.ts',
           routeBasePath: '/',
           showLastUpdateTime: true,
-        },
-        blog: {
-          path: 'assets/blog',
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
         },
         theme: {
           customCss: './src/css/custom.css',
