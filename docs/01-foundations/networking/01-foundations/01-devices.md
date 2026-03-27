@@ -40,7 +40,7 @@
 - Are used to provide connectivity between LANs
 - Are used to send data over the Internet
 
-![img](./img/01/05.png)
+![img](./img/01/03.png)
 
 ## Firewalls
 
@@ -55,7 +55,7 @@
 - Network firewalls are hardware devices that filter traffic between networks
 - Host-based firewalls are software applications that filter traffic entering and exiting a host machine, like a PC
 
-![img](./img/01/06.png)
+![img](./img/01/04.png)
 
 ## Review Questions
 

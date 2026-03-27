@@ -1,6 +1,6 @@
 # interfaces and cables
 
-- [ ] Progress: Review
+- [x] Progress: Done
 
 ## Ports
 
@@ -128,6 +128,8 @@ Tx and Rx table
 ![img](./img/02/06.png)
 
 ### Categories
+
+Multi-mode fiber vs Single-mode fiber
 
 - Multi-mode fiber
   - Core diameter is wider than single-mode fiber

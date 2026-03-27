@@ -7,13 +7,24 @@ def check_structure(lines):
 
   found_h1 = False
   has_valid_progress = False
+  in_code_block = False
 
   heading_pattern = re.compile(r'^(#{1,6})\s+(.*)')
   progress_pattern = re.compile(r'^\s*-\s*\[\s*[xX ]?\s*\]\s*Progress:\s*(Draft|Review|Done)\s*$', re.IGNORECASE)
+  code_fence_pattern = re.compile(r'^\s*```')
 
   for i, line in enumerate(lines):
     line_num = i + 1
     content = line.strip()
+
+    # Track code blocks
+    if code_fence_pattern.match(line):
+      in_code_block = not in_code_block
+      continue
+
+    # Skip processing lines inside code blocks
+    if in_code_block:
+      continue
 
     if not content:
       continue

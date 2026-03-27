@@ -101,7 +101,7 @@ Rules:
 ## What NOT to Do
 
 - Do not add sections or content not present in the raw notes
-- Do not use **bold** for emphasis inside sentences — use it only for key terms in definitions
+- Do not use **bold** for emphasis inside sentences
 - Do not summarize unless explicitly asked
 - Do not wrap output in code fences unless it's actually code
 - Do not change image paths, table content, or code blocks
