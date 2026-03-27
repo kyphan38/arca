@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -19,7 +19,9 @@
 | [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/description/) | |
 | [1768. Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/description/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -31,10 +33,10 @@
 | [189. Rotate Array](https://leetcode.com/problems/rotate-array/description/) | |
 | [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/description/) | |
 
-### Hard
+## Hard
 
 | Number | Note |
 |--------|------|
 | [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/description/) | |
 
-### Optional
+## Optional

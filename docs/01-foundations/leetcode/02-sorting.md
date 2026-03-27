@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -15,7 +15,9 @@
 | [2144. Minimum Cost of Buying Candies With Discount](https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/) | |
 | [2357. Make Array Zero by Subtracting Equal Amounts](https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|

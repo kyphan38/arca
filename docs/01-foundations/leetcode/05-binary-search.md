@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -16,7 +16,9 @@
 | [441. Arranging Coins](https://leetcode.com/problems/arranging-coins/description/) | |
 | [704. Binary Search](https://leetcode.com/problems/binary-search/description/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -32,7 +34,9 @@
 | [1011. Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/description/) | |
 | [2300. Successful Pairs of Spells and Potions](https://leetcode.com/problems/successful-pairs-of-spells-and-potions/description/) | |
 
-### Hard
+## Hard
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -40,4 +44,4 @@
 | [410. Split Array Largest Sum](https://leetcode.com/problems/split-array-largest-sum/description/) | |
 | [1095. Find in Mountain Array](https://leetcode.com/problems/find-in-mountain-array/description/) | |
 
-### Optional
+## Optional

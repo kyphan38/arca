@@ -1,12 +1,10 @@
 # interfaces and cables
 
-- [] Progress: Review
+- [ ] Progress: Review
 
 ## Ports
 
 ### Categories
-
-Categories are
 
 - RJ45 is for standard Ethernet cables
 - SFP is for fiber optic or copper cables via SFP modules
@@ -17,27 +15,16 @@ Categories are
 
 ### Concepts
 
-Concepts
-
 - A collection of network protocols or standards
-
-### Context
-
-Why do we need network protocols or standards?
-
 - Requires a common language data transmission, formatting, etc.
 
 ## Physical cables
 
 ### Concepts
 
-Concepts
-
 - Used to connect devices in an Ethernet network
 
 ### Categories
-
-Categories are
 
 - UTP cable: Transmits data using electrical signals through copper wires
 - Fiber optic cable: Transmits data using pulses of light through glass or plastic fibers
@@ -46,16 +33,12 @@ Categories are
 
 ### Concepts
 
-Concepts
-
 - Value represented by either a 0 or 1
 - Data is sent or received a bit (not byte) at a time
   - 1 byte = 8 bits
 - Speed is measured in bits per second (Kbps, Mbps, Gbps, etc.) not bytes per second
 
 ### Examples
-
-Examples are
 
 - 1 kilobit (Kb) = 1 000 bits (thousand)
 - 1 megabit (Mb) = 1 000 000 bits (million)
@@ -65,8 +48,6 @@ Examples are
 
 ### Concepts
 
-Concepts
-
 - Defined in the IEEE 802.3 standard in 1983
 - IEEE: Institute of Electrical and Electronics Engineers
 - This standard is for local area networks (LANs)
@@ -75,8 +56,6 @@ Concepts
 
 ### Categories
 
-Categories are
-
 | Speed     | Common Name       | IEEE Standard | Informal Name | Maximum Length | Pairs |
 |-----------|-------------------|---------------|---------------|----------------|-------|
 | 10 Mbps   | Ethernet          | 802.3i        | 10BASE-T      | 100 m          |2 pairs|
@@ -84,7 +63,7 @@ Categories are
 | 1 Gbps    | Gigabit Ethernet  | 802.3ab       | 1000BASE-T    | 100 m          |4 pairs|
 | 10 Gbps   | 10 Gig Ethernet   | 802.3an       | 10GBASE-T     | 100 m          |4 pairs|
 
-Naming
+### Concepts
 
 - BASE: Baseband signaling
 - T: Twisted pair
@@ -93,15 +72,13 @@ Naming
 
 ### Concepts
 
-Concepts
-
 - Unshielded: The cable does not have additional shielding to protect the data signals from Electromagnetic Interference (EMI) and Radio Frequency Interference (RFI)
 - Twisted: Pairs of wires are twisted together
 - Pair: Each pair consists of two insulated copper wires
 
-### 10base-T and 100base-T
+### Examples
 
-Concept: Full-Duplex transmission: Two devices can send data at the same time without issues
+Full-Duplex transmission: Two devices can send data at the same time without issues
 
 - Straight-through cable: A type of network cable used to connect to different types of devices
 
@@ -123,10 +100,8 @@ Tx and Rx table
 - Auto MDI-X
   - A feature in modern networking devices
   - Automatically detect which pins their neighbor is transmitting data on, and then adjust which pins they use to transmit and receive data
-  
-### 1000base-T and 10gbase-T
 
-Concepts
+### Use Cases
 
 - Each pair is bidirectional
 
@@ -136,8 +111,6 @@ Concepts
 
 ### Concepts
 
-Concepts
-
 - Electrical signal is sent over copper wiring
 - Light is sent over glass fibers
 - Two connectors on each end
@@ -145,9 +118,7 @@ Concepts
 
 ![img](./img/02/05.png)
 
-### Structure
-
-Structure
+### Components
 
 - (1) The fiberglass core itself
 - (2) Cladding that reflects light
@@ -157,8 +128,6 @@ Structure
 ![img](./img/02/06.png)
 
 ### Categories
-
-Categories
 
 - Multi-mode fiber
   - Core diameter is wider than single-mode fiber
@@ -191,3 +160,45 @@ Fiber-optic cable standards
 | Can be vulnerable to EMI (Electromagnetic Interference)                              | No vulnerability to EMI                                                                      |
 | RJ45 ports used with UTP are cheaper than SFP ports                                  | SFP ports are more expensive than RJ45 ports (single-mode is more expensive than multi-mode) |
 | Emit (leak) a faint signal outside of the cable, which can be copied (security risk) | Does not emit any signal outside of the cable (no security risk)                             |
+
+## Review Questions
+
+Q: What are the main types of ports mentioned?
+
+- RJ45 for standard Ethernet cables, SFP for fiber optic or copper cables via SFP modules
+
+Q: What is Ethernet?
+
+- A collection of network protocols or standards
+
+Q: Why are network protocols or standards needed?
+
+- Requires a common language data transmission, formatting, etc.
+
+Q: What are the two main categories of physical cables?
+
+- UTP cable and fiber optic cable
+
+Q: How is data speed measured?
+
+- In bits per second (Kbps, Mbps, Gbps, etc.) not bytes per second
+
+Q: What does IEEE 802.3 standard define?
+
+- Ethernet standards for local area networks (LANs)
+
+Q: What does BASE stand for in Ethernet naming?
+
+- Baseband signaling
+
+Q: What are the key characteristics of UTP cables?
+
+- Unshielded, twisted pairs, vulnerable to EMI
+
+Q: What is the difference between multi-mode and single-mode fiber?
+
+- Multi-mode has wider core allowing multiple light angles, single-mode has narrower core for single angle
+
+Q: What are the advantages of fiber-optic over UTP?
+
+- Longer distance, no EMI vulnerability, no signal leakage

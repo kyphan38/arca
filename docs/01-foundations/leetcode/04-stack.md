@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -14,7 +14,9 @@
 | [682. Baseball Game](https://leetcode.com/problems/baseball-game/description/) | |
 | [844. Backspace String Compare](https://leetcode.com/problems/backspace-string-compare/description/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -29,7 +31,9 @@
 | [853. Car Fleet](https://leetcode.com/problems/car-fleet/description/) | |
 | [901. Online Stock Span](https://leetcode.com/problems/online-stock-span/description/) | |
 
-### Hard
+## Hard
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -38,4 +42,4 @@
 | [224. Basic Calculator](https://leetcode.com/problems/basic-calculator/description/) | |
 | [895. Maximum Frequency Stack](https://leetcode.com/problems/maximum-frequency-stack/description/) | |
 
-### Optional
+## Optional

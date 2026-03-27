@@ -15,6 +15,10 @@ When asked to write, rewrite, or format any note, always apply the rules below �
 - Simple vocabulary — if a simpler word works, use it
 - Fix grammar and spelling errors silently
 - Do not translate between Vietnamese and English — keep original language
+- Strictly follow standard Markdown formatting
+- Do not use a period (.) at the end of sentences (exceptions: abbreviations like etc., v.v.). Do not use a colon (:) even when introducing a list
+- Write for understanding, not linter compliance — avoid adding unnecessary bridge sentences just to satisfy rules
+- Prioritize natural flow and readability over tool-driven structure
 
 ---
 
@@ -27,11 +31,23 @@ Every markdown file must follow this exact order:
 
 - [ ] Progress: Draft/Review/Done
 
-## Section One
+## H2 Topic Title
+
+### Overview
 
 ...
 
-## Section Two
+### Concepts
+
+...
+
+### Examples
+
+...
+
+## Another H2 Topic
+
+### Introduction
 
 ...
 
@@ -48,9 +64,11 @@ Rules:
 
 - H1: all lowercase, exactly one per file, first line
 - Second line: `- [ ] Progress: Draft/Review/Done` — use `Draft` for new notes
-- H2/H3: Title Case (first letter uppercase)
+- H2: Topic titles in Title Case — used to organize main sections
+- H3: Must be from ALLOWED_TITLES list only: Overview, Introduction, Prerequisites, Concepts, Architecture, Components, Flow, How it works, Pros & cons, Categories, Comparison, Limitations, Security, Configuration, Approaches, Implementation, Commands, Use Cases, Examples, Best practices, Performance, Troubleshooting, Common errors, Summary, Next steps, References
 - Max depth: H3 — never use H4, H5, H6
-- `## Review Questions` must always be the last section
+- `## Review Questions` must always be the last H2 section
+- Optional: H2 sections can have multiple H3 subsections under them for better organization
 
 ---
 

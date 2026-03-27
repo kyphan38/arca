@@ -1,4 +1,4 @@
-// note h2 rp prog
+// note h2 rp prog - H2=title, H3=standardized sections
 
 {
   "New Note": {
@@ -10,7 +10,9 @@
       "",
       "- [ ] Progress: Draft",
       "",
-      "## Overview",
+      "## ${2:Main Topic}",
+      "",
+      "### Overview",
       "",
       "$0",
       "",
@@ -23,9 +25,19 @@
   "H2 Section": {
     "scope": "markdown",
     "prefix": "h2",
-    "description": "Insert an allowed H2 section",
+    "description": "Insert an H2 topic title (custom)",
     "body": [
-      "## ${1|Introduction,Overview,Prerequisites,Concepts,Architecture,Components,Flow,How it works,Pros & cons,Categories,Comparison,Limitations,Security,Configuration,Approaches,Implementation,Commands,Use Cases,Examples,Best practices,Performance,Troubleshooting,Common errors,Summary,Next steps,References,Review Questions|}",
+      "## ${1:Topic Title}",
+      "",
+      "$0"
+    ]
+  },
+  "H3 Section": {
+    "scope": "markdown",
+    "prefix": "h3",
+    "description": "Insert an allowed H3 section from standardized titles",
+    "body": [
+      "### ${1|Introduction,Overview,Prerequisites,Concepts,Architecture,Components,Flow,How it works,Pros & cons,Categories,Comparison,Limitations,Security,Configuration,Approaches,Implementation,Commands,Use Cases,Examples,Best practices,Performance,Troubleshooting,Common errors,Summary,Next steps,References|}",
       "",
       "$0"
     ]

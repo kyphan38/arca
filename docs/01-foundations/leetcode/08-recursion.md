@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -15,4 +15,4 @@
 | [509. Fibonacci Number](https://leetcode.com/problems/fibonacci-number/description/) | |
 | [1837. Sum of Digits in Base K](https://leetcode.com/problems/sum-of-digits-in-base-k/description/) | |
 
-### Optional
+## Optional

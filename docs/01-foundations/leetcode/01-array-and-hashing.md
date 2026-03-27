@@ -2,9 +2,9 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -20,7 +20,9 @@
 | [705. Design HashSet](https://leetcode.com/problems/design-hashset/description/) | |
 | [706. Design HashMap](https://leetcode.com/problems/design-hashmap/description/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -43,4 +45,4 @@
 | [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/description/) | |
 | [912. Sort an Array](https://leetcode.com/problems/sort-an-array/description/) | |
 
-### Optional
+## Optional

@@ -6,8 +6,6 @@
 
 ### Concepts
 
-Key points
-
 - By default, no password is needed to access the CLI of a Cisco IOS device via the console port
 - Can configure a password on the console line
   - Have to enter a password to access the CLI via the console port
@@ -39,8 +37,6 @@ exit
 
 ### Concepts
 
-Key points
-
 - Layer 2 switches do not perform packer routing and do not build a routing table. They are not IP routing aware
 - Can assign an IP address to an Switch Virtual Interface (SVI) to allow remote connections to the CLI of the switch (using Telnet or SSH)
 
@@ -65,8 +61,6 @@ ip default-gateway 192.168.1.254
 ## Telnet
 
 ### Concepts
-
-Key points
 
 - A protocol used to remotely access the CLI of a remote host
 - Developed in 1969
@@ -95,8 +89,6 @@ telnet 192.168.1.253
 ## SSH
 
 ### Concepts
-
-Key points
 
 - SSH (Secure Shell) was developed in 1995 to replace less secure protocols like Telnet
 - SSHv2, a major revision of SSHv1, was released in 2006
@@ -157,3 +149,29 @@ exec-timeout 5 0
 transport input ssh
 access-class 1 in
 ```
+
+## Review Questions
+
+Q: What is the default security for console port access on Cisco devices?
+
+- No password is needed by default
+
+Q: How can you secure console port access?
+
+- Configure a password on the console line or require login with usernames
+
+Q: Why assign an IP to a Layer 2 switch?
+
+- To allow remote connections to the CLI using Telnet or SSH via SVI
+
+Q: What are the main differences between Telnet and SSH?
+
+- Telnet sends data in plain text (port 23), SSH provides encryption (port 22)
+
+Q: What is required to enable SSH on Cisco devices?
+
+- Generate RSA key pair, configure domain name, enable SSHv2
+
+Q: What is the purpose of RSA keys in SSH?
+
+- Used for data encryption/decryption and authentication

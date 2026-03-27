@@ -2,16 +2,18 @@
 
 - [ ] Progress: Draft
 
-## Examples
+## Easy
 
-### Easy
+### Examples
 
 | Number | Note |
 |--------|------|
 | [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/) | |
 | [219. Contains Duplicate II](https://leetcode.com/problems/contains-duplicate-ii/description/) | |
 
-### Medium
+## Medium
+
+### Examples
 
 | Number | Note |
 |--------|------|
@@ -22,11 +24,13 @@
 | [567. Permutation In String](https://leetcode.com/problems/permutation-in-string/description/) | |
 | [658. Find K Closest Elements](https://leetcode.com/problems/find-k-closest-elements/description/) | |
 
-### Hard
+## Hard
+
+### Examples
 
 | Number | Note |
 |--------|------|
 | [76. Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/description/) | |
 | [239. Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/description/) | |
 
-### Optional
+## Optional
