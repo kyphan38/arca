@@ -1,1 +1,0 @@
-# virtualization and cloud
