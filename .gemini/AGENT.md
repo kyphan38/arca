@@ -1,0 +1,1 @@
+# Rule file: see `.gemini/system_instructions.md` in this repo

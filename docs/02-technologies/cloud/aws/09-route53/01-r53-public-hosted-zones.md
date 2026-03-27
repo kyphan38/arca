@@ -1,4 +1,4 @@
-# r53 public hosted zones
+<!-- # r53 public hosted zones
 
 - [x] Progress: Done
 - [] Flashcards: Not yet
@@ -28,4 +28,4 @@ Concepts
 - Resource records (RR) are created within the hosted zone
 - Externally registered domains can point to the R53 public zone
 
-![img](./img/09/01.png)
+![img](./img/09/01.png) -->
