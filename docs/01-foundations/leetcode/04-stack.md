@@ -1,6 +1,6 @@
 # stack
 
-- [] Progress:: Not yet
+- [ ] Progress: Draft
 
 ## Examples
 

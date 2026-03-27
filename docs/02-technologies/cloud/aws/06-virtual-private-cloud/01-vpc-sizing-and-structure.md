@@ -1,6 +1,6 @@
 # vpc sizing and structure
 
-- [ ] Progress: In progress
+- [ ] Progress: Draft
 - [ ] Flashcards: Not yet
 
 ## VPC Considerations

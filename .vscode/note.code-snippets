@@ -1,0 +1,50 @@
+// note h2 rp prog
+
+{
+  "New Note": {
+    "scope": "markdown",
+    "prefix": "note",
+    "description": "Create a new note with standard structure",
+    "body": [
+      "# ${1:title in lowercase}",
+      "",
+      "- [ ] Progress: Draft",
+      "",
+      "## Overview",
+      "",
+      "$0",
+      "",
+      "## Review Questions",
+      "",
+      "Q: ",
+      "- "
+    ]
+  },
+  "H2 Section": {
+    "scope": "markdown",
+    "prefix": "h2",
+    "description": "Insert an allowed H2 section",
+    "body": [
+      "## ${1|Introduction,Overview,Prerequisites,Concepts,Architecture,Components,Flow,How it works,Pros & cons,Categories,Comparison,Limitations,Security,Configuration,Approaches,Implementation,Commands,Use Cases,Examples,Best practices,Performance,Troubleshooting,Common errors,Summary,Next steps,References,Review Questions|}",
+      "",
+      "$0"
+    ]
+  },
+  "Review Question": {
+    "scope": "markdown",
+    "prefix": "rq",
+    "description": "Insert a review question block",
+    "body": [
+      "Q: ${1:question}",
+      "- ${2:answer}"
+    ]
+  },
+  "Progress": {
+    "scope": "markdown",
+    "prefix": "prog",
+    "description": "Insert progress line",
+    "body": [
+      "- [ ] Progress: ${1|Draft,Review,Done|}"
+    ]
+  }
+}

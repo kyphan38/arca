@@ -1,3 +1,3 @@
-# placeholder
+# linked list
 
 - [ ] Progress: Draft

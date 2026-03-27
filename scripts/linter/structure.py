@@ -1,55 +1,59 @@
 import re
+from .config import ALLOWED_TITLES
+
 
 def check_structure(lines):
-    errors = []
-    found_h1 = False
-    has_valid_progress = False
+  errors = []
 
-    # Regex patterns
-    heading_pattern = re.compile(r'^(#{1,6})\s+(.*)')
-    progress_pattern = re.compile(r'^\s*-\s*\[\s*[xX ]?\s*\]\s*Progress:\s*(Draft|Review|Done)\s*$', re.IGNORECASE)
+  found_h1 = False
+  has_valid_progress = False
 
-    for i, line in enumerate(lines):
-        line_num = i + 1
-        content = line.strip()
+  heading_pattern = re.compile(r'^(#{1,6})\s+(.*)')
+  progress_pattern = re.compile(r'^\s*-\s*\[\s*[xX ]?\s*\]\s*Progress:\s*(Draft|Review|Done)\s*$', re.IGNORECASE)
 
-        if not content:
-            continue
+  for i, line in enumerate(lines):
+    line_num = i + 1
+    content = line.strip()
 
-        # Check Progress line
-        if progress_pattern.match(line):
-            if not found_h1:
-                errors.append(f"Line {line_num}: 'Progress' found before H1 heading")
-            else:
-                has_valid_progress = True
-            continue
+    if not content:
+      continue
 
-        # Check Headings
-        match = heading_pattern.match(line)
-        if match:
-            level = len(match.group(1))
-            text = match.group(2).strip()
+    # Check: Progress line
+    if progress_pattern.match(line):
+      if not found_h1:
+        errors.append(f"Line {line_num}: 'Progress' line found before H1")
+      else:
+        has_valid_progress = True
+      continue
 
-            if level > 3:
-                errors.append(f"Line {line_num}: Heading depth too deep (H{level}). Max depth is H3.")
+    match = heading_pattern.match(line)
+    if not match:
+      continue
 
-            # H2 and H3 should be Title Case (Check if it starts with uppercase)
-            if level in [2, 3]:
-                if text and not text.startswith('`'):
-                    if text[0].islower():
-                        errors.append(f"Line {line_num}: H{level} should start with an uppercase letter: '{text}'")
+    level = len(match.group(1))
+    text = match.group(2).strip()
 
-            # H1 Rules
-            if level == 1:
-                if found_h1:
-                    errors.append(f"Line {line_num}: Multiple H1 headings found. Only one H1 is allowed per file.")
-                else:
-                    found_h1 = True
-                    if not text.islower():
-                        errors.append(f"Line {line_num}: H1 heading must be lowercase: '# {text}'")
+    # Rule: Max heading depth is H3
+    if level > 3:
+      errors.append(f"Line {line_num}: H{level} is too deep — max depth is H3")
 
-    # Final check
-    if found_h1 and not has_valid_progress:
-        errors.append("File is missing a valid '- [ ] Progress: [Draft/Review/Done]' line after H1")
+    # Rule: H1 must be all lowercase, only one allowed
+    if level == 1:
+      if found_h1:
+        errors.append(f"Line {line_num}: Multiple H1 found — only one H1 allowed per file")
+      else:
+        found_h1 = True
+        if not text.islower():
+          errors.append(f"Line {line_num}: H1 must be all lowercase — got '# {text}'")
 
-    return errors
+    # Rule: H2/H3 must start with uppercase
+    if level in [2, 3]:
+      if text and not text.startswith('`'):
+        if text[0].islower():
+          errors.append(f"Line {line_num}: H{level} must start with uppercase — got '{'#' * level} {text}'")
+
+  # Rule: Progress line must exist
+  if found_h1 and not has_valid_progress:
+    errors.append("Missing '- [ ] Progress: Draft/Review/Done' after H1")
+
+  return errors

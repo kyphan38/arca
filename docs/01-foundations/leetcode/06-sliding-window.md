@@ -1,6 +1,6 @@
 # sliding window
 
-- [] Progress: Not yet
+- [ ] Progress: Draft
 
 ## Examples
 

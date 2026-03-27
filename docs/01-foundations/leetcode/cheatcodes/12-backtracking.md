@@ -1,3 +1,0 @@
-# backtracking
-
-- [] Progress: Not yet

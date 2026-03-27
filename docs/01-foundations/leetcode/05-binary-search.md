@@ -1,6 +1,6 @@
 # binary search
 
-- [] Progress: Not yet
+- [ ] Progress: Draft
 
 ## Examples
 

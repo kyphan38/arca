@@ -1,3 +1,0 @@
-# graphs
-
-- [] Progress: Not yet

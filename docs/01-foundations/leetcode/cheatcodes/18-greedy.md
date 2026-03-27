@@ -1,3 +1,0 @@
-# greedy
-
-- [] Progress: Not yet

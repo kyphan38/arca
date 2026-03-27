@@ -1,3 +1,3 @@
-# placeholder
+# bit manipulation
 
 - [ ] Progress: Draft
