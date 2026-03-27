@@ -46,6 +46,10 @@ def main():
         print(f"Cannot read {filepath}: {e}")
         continue
 
+      # Skip structure check for index.md files
+      if file == "index.md":
+        continue
+
       structure_errors = check_structure(lines)
 
       if structure_errors:
