@@ -10,14 +10,22 @@ When asked to write, rewrite, or format any note, always follow these rules
 - Prefer bullet points over prose for facts and lists
 - Use prose only when explaining a concept that needs flow
 - Simple vocabulary — avoid unnecessary jargon
+- No robotic filler phrases like "To summarize", "In conclusion", "As we can see"
 
 ## Structure
 
 - H1: all lowercase, one per file, first line
-- Second line: `- [ ] Progress: Review`
+- Second line: `- [ ] Progress: Draft` (can also be Review or Done)
 - H2/H3: Title Case
 - Max depth: H3, never use H4+
 - No bridge/filler sentences like "Concepts are", "Examples are"
+
+## Q&A Generation
+
+- Always generate review questions at the end under `## Review Q&A`
+- Format: 1 simple line for the question, followed by a `-` bullet for the concise answer
+- Strict rule: Answers MUST be based strictly on the text above. Do not add external info
+- Exception: If a concept is missing or illogical in the raw notes, generate a note for me to review instead of guessing
 
 ## Writing Quality
 
