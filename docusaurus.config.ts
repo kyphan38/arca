@@ -3,14 +3,14 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'yolo',
-  favicon: 'img/earth.ico',
+  title: 'arca',
+  favicon: 'img/favicon.svg',
 
   url: 'https://kyphan38.github.io',
   baseUrl: '/',
 
-  organizationName: 'kyphan38',
-  projectName: 'kyphan38.github.io',
+  organizationName: 'arca',
+  projectName: 'arca',
   deploymentBranch: 'gh-pages',
 
   trailingSlash: false,
@@ -72,10 +72,10 @@ const config: Config = {
 
   themeConfig: {
     navbar: {
-      title: 'kp',
+      title: 'arca',
       logo: {
-        alt: 'earth',
-        src: 'img/bw_earth.png',
+        alt: 'arca',
+        src: 'img/branding/arca-icon.svg',
       },
       items: [
         {
