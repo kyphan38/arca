@@ -37,6 +37,6 @@ ALLOWED_TITLES = [
   "Next steps",
   "References",
 
-  # Review — must be last H2 section
+  # Review - must be last H2 section
   "Review Questions",
 ]

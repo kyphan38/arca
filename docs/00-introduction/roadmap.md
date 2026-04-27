@@ -29,7 +29,7 @@
 - [ ] CMU 15-213 - Introduction to Computer Systems (Deadline: October 2026)
 - [ ] MIT 6.172 - Performance Engineering (Deadline: November 2026)
 - [ ] Stanford CS149 - Parallel Computing (Deadline: December 2026)
-- [ ] Intro to Parallel Programming or CUDA C++ Programming — NVIDIA Official (Deadline: January 2027)
+- [ ] Intro to Parallel Programming or CUDA C++ Programming - NVIDIA Official (Deadline: January 2027)
 
 ## Phase 3: AI Systems and Distributed Orchestration (Q1 2027 to Mid 2027)
 

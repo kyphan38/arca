@@ -31,7 +31,7 @@
 
 ### Categories
 
-- Running: Currently executing on CPU — context resides in CPU registers
+- Running: Currently executing on CPU - context resides in CPU registers
 - Blocked / suspended / sleeping: Cannot run, waits for event (e.g., I/O completion)
 - Ready / runnable: Ready to run, waiting for OS scheduler
 - Context of blocked and ready processes is saved in OS memory for later resumption
@@ -45,7 +45,7 @@
 - Initially, P0 is running, and P1 is ready
 - If P0 requests disk data via system call, OS handles request but moves P0 to blocked state (data not immediately available). OS switches to P1
 - P1 runs. Interrupt from disk occurs, signaling P0's requested data is ready. CPU jumps to OS, handles interrupt, and moves P0 to ready state
-- OS can continue running P1 — scheduler will switch to P0 later
+- OS can continue running P1 - scheduler will switch to P0 later
 
 ## Process Control Block (PCB)
 

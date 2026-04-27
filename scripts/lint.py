@@ -26,7 +26,7 @@ def main():
     for d in dirs:
       if not check_naming(d, is_dir=True):
         has_error = True
-        print(f"Naming Error: '{d}' in '{root}' — folders must be kebab-case, no spaces")
+        print(f"Naming Error: '{d}' in '{root}' - folders must be kebab-case, no spaces")
 
     # Check markdown files
     for file in files:
@@ -35,7 +35,7 @@ def main():
 
       if not check_naming(file, is_dir=False):
         has_error = True
-        print(f"Naming Error: '{file}' in '{root}' — files must be kebab-case, no spaces")
+        print(f"Naming Error: '{file}' in '{root}' - files must be kebab-case, no spaces")
 
       filepath = os.path.join(root, file)
 
@@ -60,10 +60,10 @@ def main():
         print("-" * 40)
 
   if has_error:
-    print("\nLINT FAILED — fix errors above")
+    print("\nLINT FAILED - fix errors above")
     sys.exit(1)
   else:
-    print("\nLINT PASSED — all docs look good")
+    print("\nLINT PASSED - all docs look good")
     sys.exit(0)
 
 

@@ -46,22 +46,22 @@ def check_structure(lines):
 
     # Rule: Max heading depth is H3
     if level > 3:
-      errors.append(f"Line {line_num}: H{level} is too deep — max depth is H3")
+      errors.append(f"Line {line_num}: H{level} is too deep - max depth is H3")
 
     # Rule: H1 must be all lowercase, only one allowed
     if level == 1:
       if found_h1:
-        errors.append(f"Line {line_num}: Multiple H1 found — only one H1 allowed per file")
+        errors.append(f"Line {line_num}: Multiple H1 found - only one H1 allowed per file")
       else:
         found_h1 = True
         if not text.islower():
-          errors.append(f"Line {line_num}: H1 must be all lowercase — got '# {text}'")
+          errors.append(f"Line {line_num}: H1 must be all lowercase - got '# {text}'")
 
     # Rule: H2/H3 must start with uppercase
     if level in [2, 3]:
       if text and not text.startswith('`'):
         if text[0].islower():
-          errors.append(f"Line {line_num}: H{level} must start with uppercase — got '{'#' * level} {text}'")
+          errors.append(f"Line {line_num}: H{level} must start with uppercase - got '{'#' * level} {text}'")
 
     # Rule: H3 must be from ALLOWED_TITLES (except when under Review Questions)
     if level == 3:

@@ -20,10 +20,10 @@
 ### Overview
 
 - Manages hardware: CPU, main memory, I/O devices (hard disk, network card, mouse, keyboard)
-- OS provides standardized API (system calls) — applications avoid direct, complex, and dangerous hardware interaction
+- OS provides standardized API (system calls) - applications avoid direct, complex, and dangerous hardware interaction
 - Abstracts hardware by hiding complex, low-level physical component details
 - Optimizes CPU, memory, and resource usage by allocating process resources and duration
-- Ensures process separation — one program cannot crash/impact another or the entire system
+- Ensures process separation - one program cannot crash/impact another or the entire system
 
 ## Program
 
@@ -69,10 +69,10 @@
 ### Overview
 
 - Historically, computers ran one program at a time, causing slow/poor user experience (e.g., cannot listen to music while browsing)
-- OS solves this via CPU Virtualization — allows running multiple programs simultaneously
+- OS solves this via CPU Virtualization - allows running multiple programs simultaneously
 - Relies on two key mechanisms
   - OS scheduler decides which program to run next and for how long
-  - OS performs context switch — quickly swaps processes on/off CPU
+  - OS performs context switch - quickly swaps processes on/off CPU
 - Fast switching creates illusion every program has dedicated CPU
 
 ### Flow
@@ -168,7 +168,7 @@
 
 - User program requests OS service via system call
 - CPU jumps from user code to OS handler code for specific call
-- OS finishes task — CPU returns to user code at exact interruption point
+- OS finishes task - CPU returns to user code at exact interruption point
 - Tip: Programmers use standard library functions (e.g., `printf`) to handle system calls instead of making direct calls
 
 ## Interrupts
@@ -193,7 +193,7 @@
 - CPU runs Program P when interrupt signal arrives
 - CPU immediately saves current state/context of Program P
 - CPU switches to Kernel Mode to run OS interrupt handler code (e.g., reading keyboard character)
-- OS completes handling — CPU restores saved state of Program P
+- OS completes handling - CPU restores saved state of Program P
 - CPU resumes Program P in User Mode
 - Note: Interrupt handling code is part of OS. CPU runs OS handler and returns to user code
 

@@ -24,7 +24,7 @@
 
 ### Concepts
 
-- `fork()`: Creates new child process — all processes are forked from parent
+- `fork()`: Creates new child process - all processes are forked from parent
 - `exec()`: Replaces current process image with new executable
 - `exit()`: Terminates current process
 - `wait()`: Blocks parent process until child terminates
@@ -44,7 +44,7 @@
 - After `fork()`
   - Parent and child resume execution from `fork()` call
   - `fork()` returns 0 to child and child's PID to parent
-  - Parent and child run independently with separate memory — changes in one do not affect other
+  - Parent and child run independently with separate memory - changes in one do not affect other
 - Execution order is non-deterministic without synchronization
 - Nested `fork()` calls create multiple processes (e.g., `fork(); fork();` creates 4 total processes)
 
@@ -70,7 +70,7 @@
 - `waitpid()` reaps specific child by PID
 - Parent should eventually call `wait()` for each `fork()`
 - "Orphan" process (parent exited first) is adopted and reaped by init process
-- Failing to call `wait()` creates zombie processes — can exhaust system resources
+- Failing to call `wait()` creates zombie processes - can exhaust system resources
 - Using `wait()` enforces deterministic execution order (parent waits for child)
 
 ## Exec() System Call
@@ -80,8 +80,8 @@
 - `exec()` replaces current process code and memory with new program
 - Takes executable file as argument
 - Process memory image is completely replaced by new executable's image
-- Successful `exec()` does not return — new program starts executing
-- Unsuccessful `exec()` returns error — original program continues
+- Successful `exec()` does not return - new program starts executing
+- Unsuccessful `exec()` returns error - original program continues
 
 ## Shell and Terminal
 
@@ -91,13 +91,13 @@
 - All other processes are forked from existing ones
 - Shell primary loop: read command, `fork()` child, `exec()` command in child, `wait()` for child
 - Commands like `ls` are executables that shell `exec()`s
-- Some commands (e.g., `cd`) are built-in and executed directly by shell process — necessary to change shell's own working directory, not a temporary child's
+- Some commands (e.g., `cd`) are built-in and executed directly by shell process - necessary to change shell's own working directory, not a temporary child's
 
 ## Foreground and Background Execution
 
 ### Concepts
 
-- Default user command runs in foreground — shell cannot accept next command until previous finishes
+- Default user command runs in foreground - shell cannot accept next command until previous finishes
 - For background commands (`&`), shell forks but does not `wait()`, returning to prompt immediately
 - Shell reaps background processes later, sometimes using non-blocking `wait()` calls
 - Multiple commands can run serially or in parallel
