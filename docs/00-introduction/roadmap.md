@@ -212,4 +212,4 @@ GreenOps and FinOps are uniquely valuable in the EU market due to sustainability
 | Solutions Architect Associate | May 2026 | Immediate career value, you already have the knowledge |
 | AWS ML Specialty (MLS-C01) | After Phase 5 (early 2027) | Combines cloud + ML, stronger signal for MLOps roles |
 
-> Note: Get SAA first — it's faster, validates your current skills, and is a prerequisite mindset for ML Specialty
+> Note: Get SAA first — it is faster, validates your current skills, and is a prerequisite mindset for ML Specialty
