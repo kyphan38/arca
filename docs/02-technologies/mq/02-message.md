@@ -1,4 +1,4 @@
-# payment message
+# message
 
 - [x] Progress: Done
 
