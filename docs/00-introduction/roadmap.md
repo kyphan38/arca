@@ -22,14 +22,14 @@
 
 ### Why first?
 
-CMU 15-213 is the single best foundation course — OS, memory, concurrency, networking at the systems level. Everything else (parallel computing, distributed systems, performance) builds on top of this. Moving it to the front saves you time later
+CMU 15-213 is the single best foundation course - OS, memory, concurrency, networking at the systems level. Everything else (parallel computing, distributed systems, performance) builds on top of this. Moving it to the front saves you time later
 
 ### Next steps
 
-- [ ] CMU 15-213 — Introduction to Computer Systems (Apr–May 2026)
+- [ ] CMU 15-213 - Introduction to Computer Systems (Apr–May 2026)
   - Priority: understand memory hierarchy, concurrency, linking, virtual memory
   - This replaces needing a standalone OS course later
-- [ ] AWS Solutions Architect Associate — study in parallel, schedule exam by end of May
+- [ ] AWS Solutions Architect Associate - study in parallel, schedule exam by end of May
   - You use AWS daily at work; don't delay this
 
 ---
@@ -42,13 +42,13 @@ Networking core chapters give you the vocabulary for everything cloud/distribute
 
 ### Next steps
 
-- [ ] Networking — Kurose & Ross (June 2026)
+- [ ] Networking - Kurose & Ross (June 2026)
   - Focus: Transport layer (TCP/UDP), Network layer (IP, routing), Application layer (HTTP, DNS)
   - Skip: physical layer details, mathematical queuing theory sections
-- [ ] OS — Mythili Vutukuru (June–July 2026)
+- [ ] OS - Mythili Vutukuru (June–July 2026)
   - Will reinforce and extend what you learned in 15-213
-- [ ] Design and Engineering of Computer Systems — Mythili Vutukuru (July 2026)
-- [ ] Virtualization and Cloud Computing — Mythili Vutukuru (August 2026)
+- [ ] Design and Engineering of Computer Systems - Mythili Vutukuru (July 2026)
+- [ ] Virtualization and Cloud Computing - Mythili Vutukuru (August 2026)
   - Directly relevant to your current DevOps work and future MLOps infra
 
 ---
@@ -84,7 +84,7 @@ GPU/parallel computing is the differentiator for MLOps vs generic DevOps. Unders
 
 ### Next steps
 
-- [ ] CMU 15-418 or Stanford CS149 — Parallel Computing (October 2026)
+- [ ] CMU 15-418 or Stanford CS149 - Parallel Computing (October 2026)
   - Pick one; CMU 15-418 is slightly more practical
 - [ ] NVIDIA CUDA C++ Programming (November 2026)
   - Official NVIDIA course
@@ -105,7 +105,7 @@ These are the capstone topics. Distributed systems assumes you understand networ
   - "Designing Machine Learning Systems" by Chip Huyen (book)
   - Or Stanford CS 329S
   - Covers: data pipelines, feature stores, model serving, monitoring, CI/CD for ML
-- [ ] MIT 6.824 — Distributed Systems (December 2026)
+- [ ] MIT 6.824 - Distributed Systems (December 2026)
   - Raft consensus, MapReduce, fault tolerance, replication
   - Foundation for understanding distributed ML training later
 
@@ -115,13 +115,13 @@ These are the capstone topics. Distributed systems assumes you understand networ
 
 ### Next steps
 
-- [ ] CMU 10-414 — Deep Learning Systems (January 2027)
+- [ ] CMU 10-414 - Deep Learning Systems (January 2027)
   - Autograd internals, PyTorch under the hood
   - Bridges your DS background with systems understanding
 - [ ] Data Pipeline & Feature Stores (February 2027)
   - Feast, DVC, MLflow for experiment tracking
   - Build an end-to-end ML pipeline project
-- [ ] Advanced GPU Programming (March 2027) — Optional
+- [ ] Advanced GPU Programming (March 2027) - Optional
   - OpenAI Triton, UIUC ECE408
   - Only if Phase 4 CUDA felt comfortable and you want to go deeper
 
@@ -135,7 +135,7 @@ GreenOps and FinOps are uniquely valuable in the EU market due to sustainability
 
 ### Next steps
 
-- [ ] Stanford CS336 — LLMs from Scratch (April 2027) — Optional
+- [ ] Stanford CS336 - LLMs from Scratch (April 2027) - Optional
   - Full model lifecycle understanding
   - Valuable for AI infrastructure decisions, not required for MLOps entry
 - [ ] K8s AI Infra Project (May 2027)
@@ -144,17 +144,17 @@ GreenOps and FinOps are uniquely valuable in the EU market due to sustainability
 - [ ] FinOps and GreenOps (June 2027)
   - GPU cost modeling (AWS/RunPod), carbon tracking (codecarbon.io), PUE metrics
   - EU companies care about this; mention it in interviews
-- [ ] Kernel Observability: eBPF + Cilium (July 2027) — Optional
+- [ ] Kernel Observability: eBPF + Cilium (July 2027) - Optional
   - Kernel-level monitoring, network policy
   - Nice-to-have for senior roles
 
 ---
 
-## Phase 8: Optional — Performance Engineering
+## Phase 8: Optional - Performance Engineering
 
 > Fit this in whenever you have bandwidth, or skip entirely
 
-- [ ] MIT 6.172 — Performance Engineering
+- [ ] MIT 6.172 - Performance Engineering
   - Deep dive into cache optimization, memory allocation, profiling
   - Most useful if targeting HPC-adjacent roles at Fraunhofer/Jülich
   - Not required for standard MLOps positions
@@ -171,7 +171,7 @@ GreenOps and FinOps are uniquely valuable in the EU market due to sustainability
 ### Career Strategy
 
 - [ ] Target job titles: MLOps Engineer, AI Platform Engineer, ML Infrastructure Engineer, Research Software Engineer
-  - Broader than just "MLOps" — same skills, more openings
+  - Broader than just "MLOps" - same skills, more openings
 - [ ] Werkstudent positions: Start applying in semester 1
   - Target: Automotive (BMW, Bosch, CARIAD), Fintech, or research institutes
 - [ ] Privacy & Federated Learning (during Master's)
@@ -212,4 +212,4 @@ GreenOps and FinOps are uniquely valuable in the EU market due to sustainability
 | Solutions Architect Associate | May 2026 | Immediate career value, you already have the knowledge |
 | AWS ML Specialty (MLS-C01) | After Phase 5 (early 2027) | Combines cloud + ML, stronger signal for MLOps roles |
 
-> Note: Get SAA first — it is faster, validates your current skills, and is a prerequisite mindset for ML Specialty
+> Note: Get SAA first - it is faster, validates your current skills, and is a prerequisite mindset for ML Specialty

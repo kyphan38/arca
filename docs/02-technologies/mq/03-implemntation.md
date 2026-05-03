@@ -33,10 +33,10 @@
 
 ### How it works
 
-- Dashed arc at top represents ACK loop — invisible feedback driving system
+- Dashed arc at top represents ACK loop - invisible feedback driving system
 - Service B sends ACK, broker deletes message, gives B next message
 - ACK loop ensures overall system safety
-- NACK arrow routes from broker down to DLQ instead of directly from Service B — because Service B instructs broker to NACK and broker performs routing
+- NACK arrow routes from broker down to DLQ instead of directly from Service B - because Service B instructs broker to NACK and broker performs routing
 - Service B never accesses DLQ directly
 
 ### Best practices

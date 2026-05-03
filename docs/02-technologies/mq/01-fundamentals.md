@@ -26,5 +26,5 @@
 ### Concepts
 
 - Queue functions like dropping letter in mailbox:
-  - Producer drops letter and leaves — does not wait at mailbox. Post office (Broker) holds letter. Recipient (Consumer) checks mailbox when ready
+  - Producer drops letter and leaves - does not wait at mailbox. Post office (Broker) holds letter. Recipient (Consumer) checks mailbox when ready
   - Recipient unavailable for a week → letter waits without disappearing (Durability). Recipient processes letter upon return (Asynchronous Decoupling)
