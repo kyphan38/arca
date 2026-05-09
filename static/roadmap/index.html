@@ -118,6 +118,8 @@ code{background:#f0eeea;padding:1px 5px;border-radius:4px;font-size:12px;font-fa
   <button class="tab" onclick="show('milestones')">🏁 Milestones</button>
   <button class="tab" onclick="show('reading')">📚 Reading list</button>
   <button class="tab" onclick="show('benchmark')">🎯 Benchmark</button>
+  <button class="tab" onclick="show('edge')">⚔️ Competitive edge</button>
+  <button class="tab" onclick="show('notes')">📝 Note & Anki</button>
   <button class="tab" onclick="show('method')">🧠 Phương pháp học sâu</button>
   <button class="tab" onclick="show('courses')">🎓 Khóa học truyền thống</button>
   <button class="tab" onclick="show('phases')">🗺 3 giai đoạn</button>
@@ -508,6 +510,181 @@ code{background:#f0eeea;padding:1px 5px;border-radius:4px;font-size:12px;font-fa
   <div class="skill-grid">
     <div class="skill-item"><div class="skill-label">Bạn hiện tại</div><div class="skill-note">LinkedIn headline: chung chung · GitHub: ít repos hoặc chưa public · Blog: chưa có · CV: format VN · 0 OSS contributions · 2 năm DevOps</div></div>
     <div class="skill-item"><div class="skill-label">Bạn sau 12 tháng (target)</div><div class="skill-note">LinkedIn: ML Platform focused · GitHub: 2-3 strong pinned repos · Blog: 6+ posts · CV: 1 trang XYZ format · 1-3 OSS PRs merged · 3 năm DevOps + ML platform exp</div></div>
+  </div>
+</div>
+
+<!-- COMPETITIVE EDGE -->
+<div id="panel-edge" class="panel">
+  <div class="card featured">
+    <div class="card-title">Competitive edge — vượt lên ứng viên Ấn Độ & bản xứ</div>
+    <div class="card-body">Phân tích thị trường lao động, không phải stereotypes. Ứng viên Ấn Độ là đối thủ lớn nhất ở mọi thị trường. Hiểu pattern của họ để tìm góc mà bạn có advantage.</div>
+  </div>
+
+  <h3>Pattern employer thường gặp từ ứng viên Ấn Độ</h3>
+
+  <div class="gap-item"><div class="gap-icon">1</div><div class="gap-text"><div class="gap-title">Resume inflation</div><div class="gap-desc">Recruiter châu Âu/Singapore phải "discount" CV vì tỷ lệ phóng đại experience cao. "5 years ML" nhưng thực tế chỉ scikit-learn cho 2 projects nhỏ.</div></div></div>
+
+  <div class="gap-item"><div class="gap-icon">2</div><div class="gap-text"><div class="gap-title">Breadth over depth</div><div class="gap-desc">List 15-20 tools trên CV nhưng hỏi sâu thì surface. "I know K8s, Docker, Terraform, Ansible, Jenkins, ArgoCD, Helm, Istio..." nhưng "explain etcd consensus" → blank.</div></div></div>
+
+  <div class="gap-item"><div class="gap-icon">3</div><div class="gap-text"><div class="gap-title">Communication style mismatch</div><div class="gap-desc">Nói nhiều, nói nhanh, thiếu concise. Hiring manager châu Âu (đặc biệt Hà Lan — văn hóa direct) prefer: rõ ràng, ngắn gọn, đi thẳng vấn đề.</div></div></div>
+
+  <div class="gap-item"><div class="gap-icon">4</div><div class="gap-text"><div class="gap-title">High attrition / job hopping</div><div class="gap-desc">Tỷ lệ churn ở Indian service providers lên tới 35%. Nhiều ứng viên nhảy sau 6-12 tháng để tăng lương. Employer ngại invest vào onboarding.</div></div></div>
+
+  <div class="gap-item"><div class="gap-icon">5</div><div class="gap-text"><div class="gap-title">Herd mentality trong tech choices</div><div class="gap-desc">Dùng K8s vì mọi người dùng, microservices cho mọi thứ, follow trend không hiểu trade-offs. Senior interviewers detect pattern này rất nhanh.</div></div></div>
+
+  <h3>Competitive advantage của bạn — khai thác thế nào</h3>
+
+  <div class="skill-grid">
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Depth over breadth</div><div class="skill-note">Biết 5 tools sâu thay vì 15 tools surface. Blog "Why I chose Feast over Tecton — trade-offs" mạnh hơn 100x so với CV ghi "Experience: Feast, Tecton, Hopsworks."</div></div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Authenticity</div><div class="skill-note">CV chính xác, GitHub project thật, blog posts thể hiện tư duy thật. Trong biển CV inflated, sự trung thực nổi bật ngay lập tức.</div></div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Quiet competence</div><div class="skill-note">Developers VN: communication ngắn gọn, onboarding nhanh, collaboration linh hoạt. Văn hóa Hà Lan & Northern Europe cực value: nói ít, làm nhiều, đúng trọng tâm.</div></div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Stability signal</div><div class="skill-note">VN có attrition thấp hơn nhiều so với Ấn Độ. 2+ năm ở NAB + kế hoạch dài hạn rõ ràng = employer tin tưởng invest vào bạn.</div></div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Diversity value</div><div class="skill-note">Nhiều team châu Âu đã 60-70% engineers Ấn Độ. Hiring manager muốn diversity. Ứng viên VN qualified = giá trị không ai nói ra nhưng thật sự có.</div></div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56"><div class="skill-label">Cost-aware mindset</div><div class="skill-note">Từ VN, bạn hiểu constraint tài nguyên — thiết kế system cost-effective. FAANG engineers giàu resource đôi khi over-engineer. Bạn không có luxury đó → advantage.</div></div>
+  </div>
+
+  <h3>Áp dụng cụ thể</h3>
+
+  <div class="card">
+    <div class="card-title">Trong CV</div>
+    <div class="card-body">Không list 15 tools. List 5-6 tools với depth. Mỗi bullet có metrics thật: "Reduced deployment time from 2h to 15min" thay vì "Managed CI/CD pipelines."</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Trong interview</div>
+    <div class="card-body">Luôn nói trade-offs TRƯỚC solution: "We could use X, but the trade-off is Y. Given constraints, I chose Z because..." — tách biệt bạn khỏi người chỉ name-drop tools.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Trên LinkedIn / GitHub</div>
+    <div class="card-body">1 bài blog "Building a feature store: what I got wrong" có weight hơn CV ghi "Expert in feature engineering." Blog + projects nói to hơn 100 endorsements.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Cultural fit</div>
+    <div class="card-body">Nghiên cứu văn hóa nước target trước interview. Hà Lan = direct, no bullshit, egalitarian. Ireland = friendly nhưng professional. Singapore = meritocratic, result-oriented. Adjust communication style cho phù hợp.</div>
+  </div>
+</div>
+
+<!-- NOTE-TAKING & ANKI -->
+<div id="panel-notes" class="panel">
+  <div class="card featured">
+    <div class="card-title">Note-taking & Anki — ngắn gọn, atomic, bằng lời mình</div>
+    <div class="card-body">Flashcard càng nhiều nội dung càng chán càng bỏ. Note dài = copy-paste kiến thức, cảm giác productive nhưng không nhớ. Nguyên tắc: <strong>atomic, ngắn, bằng lời mình.</strong></div>
+  </div>
+
+  <h3>Anki — nguyên tắc vàng</h3>
+
+  <div class="card" style="border-left:3px solid #A32D2D">
+    <div class="card-title">Mỗi card = MỘT atomic fact</div>
+    <div class="card-body">
+      Front: ≤15 words. Back: ≤15 words. Trả lời trong 5 giây.<br>
+      Nếu mất &gt;5 giây → card quá phức tạp → tách ra.<br>
+      5-8 cards/chapter DDIA là ĐỦ. Tổng 12 tháng: 100-150 cards chất lượng &gt; 500 cards chán ngán.
+    </div>
+  </div>
+
+  <h3>Ví dụ Anki cards — đúng vs sai</h3>
+
+  <div class="skill-grid">
+    <div class="skill-item" style="border-left:3px solid #A32D2D">
+      <div class="skill-label">❌ Sai — quá dài</div>
+      <div class="skill-note">F: "Giải thích Raft consensus, bao gồm leader election, log replication, và safety properties"<br>B: (3 đoạn văn)<br>→ Não coi như bài tập → skip → chán</div>
+    </div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56">
+      <div class="skill-label">✓ Đúng — atomic</div>
+      <div class="skill-note">F: "Raft: khi leader chết, gì trigger election?"<br>B: "Follower timeout → candidate → RequestVote"<br>→ 3 giây đọc, 3 giây trả lời</div>
+    </div>
+  </div>
+
+  <div class="skill-grid">
+    <div class="skill-item" style="border-left:3px solid #0F6E56">
+      <div class="skill-label">✓ Ví dụ: CAP theorem</div>
+      <div class="skill-note">F: "CAP: C là gì?"<br>B: "Consistency — mọi read trả về write gần nhất"</div>
+    </div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56">
+      <div class="skill-label">✓ Ví dụ: Feature store</div>
+      <div class="skill-note">F: "Tại sao cần point-in-time correctness?"<br>B: "Tránh data leakage — training data không chứa future info"</div>
+    </div>
+  </div>
+
+  <div class="skill-grid">
+    <div class="skill-item" style="border-left:3px solid #0F6E56">
+      <div class="skill-label">✓ Ví dụ: Consistent hashing</div>
+      <div class="skill-note">F: "Consistent hashing giải quyết vấn đề gì?"<br>B: "Thêm/bớt node chỉ remap ít keys, không reshuffle toàn bộ"</div>
+    </div>
+    <div class="skill-item" style="border-left:3px solid #0F6E56">
+      <div class="skill-label">✓ Ví dụ: Batch vs stream</div>
+      <div class="skill-note">F: "Khi nào stream processing tốt hơn batch?"<br>B: "Khi cần feature freshness &lt; vài phút (fraud, recommendation)"</div>
+    </div>
+  </div>
+
+  <h3>Card types hiệu quả nhất</h3>
+  <div class="skill-grid">
+    <div class="skill-item"><div class="skill-label">Cloze deletion</div><div class="skill-note">"Raft dùng {{c1::term number}} để prevent {{c2::stale leaders}}"<br>Điền vào chỗ trống — hiệu quả hơn Q&A dài</div></div>
+    <div class="skill-item"><div class="skill-label">Compare pair</div><div class="skill-note">F: "Leader-based vs leaderless replication: ai nhanh hơn write?"<br>B: "Leaderless — write tới multiple nodes song song"</div></div>
+    <div class="skill-item"><div class="skill-label">When/why</div><div class="skill-note">F: "Khi nào KHÔNG cần feature store?"<br>B: "Khi features ít, đội nhỏ, batch-only, không cần online serving"</div></div>
+    <div class="skill-item"><div class="skill-label">Anti-pattern</div><div class="skill-note">F: "Dùng eventual consistency cho financial transactions: tại sao sai?"<br>B: "Double-spend possible — cần strong consistency"</div></div>
+  </div>
+
+  <h3>Markdown notes — Evergreen Notes method</h3>
+
+  <div class="card" style="border-left:3px solid #185FA5">
+    <div class="card-title">Mỗi note = MỘT ý tưởng, tiêu đề là câu khẳng định</div>
+    <div class="card-body">
+      ❌ Sai: "Raft Consensus" (topic → Wikipedia mini → chán)<br>
+      ✓ Đúng: "Raft dùng term number để prevent stale leaders" (claim cụ thể)<br><br>
+      Body chỉ 3-8 câu: claim → giải thích ngắn → ví dụ → links liên quan.<br>
+      Không hơn. Nếu dài hơn 8 câu → tách thành 2 notes.
+    </div>
+  </div>
+
+  <h3>Template evergreen note</h3>
+
+  <div class="card" style="background:#f5f4f0">
+    <div class="card-body" style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:pre-line">
+# Raft dùng term number để prevent stale leaders
+
+Mỗi term = 1 election cycle. Leader mới có term cao hơn.
+Node nhận message từ term cũ → reject.
+→ Prevent split brain: không thể có 2 leaders cùng term.
+
+Relate: [[CAP theorem thực tế]]
+Source: DDIA ch.9, MIT 6.824 lecture 5</div>
+  </div>
+
+  <div class="card" style="background:#f5f4f0">
+    <div class="card-body" style="font-family:'IBM Plex Mono',monospace;font-size:12px;white-space:pre-line">
+# Feature store tách offline và online vì latency requirements khác nhau
+
+Offline store (Hive/BQ): batch, high throughput, chấp nhận latency cao.
+Online store (Redis/DynamoDB): low-latency lookup cho serving.
+Sync giữa 2 stores là bài toán consistency khó nhất.
+
+Relate: [[Batch vs stream processing trade-offs]]
+Source: DoorDash Feature Store paper</div>
+  </div>
+
+  <h3>Workflow mỗi buổi học — 45 phút</h3>
+  <div class="skill-grid">
+    <div class="skill-item"><div class="skill-label">Đọc · 20 phút</div><div class="skill-note">1 section DDIA hoặc 1 MIT 6.824 lecture. Đọc/xem xong → đóng lại.</div></div>
+    <div class="skill-item"><div class="skill-label">Viết · 15 phút</div><div class="skill-note">1-2 evergreen notes bằng lời mình. Tiêu đề là claim, body 3-8 câu.</div></div>
+    <div class="skill-item"><div class="skill-label">Anki · 5 phút</div><div class="skill-note">2-3 atomic cards từ notes vừa viết. Front ≤15 words, back ≤15 words.</div></div>
+    <div class="skill-item"><div class="skill-label">Review · 5 phút</div><div class="skill-note">Review Anki cards cũ (spaced repetition tự schedule). Bắt đầu hoặc kết thúc buổi.</div></div>
+  </div>
+
+  <h3>Tools</h3>
+  <div class="skill-grid">
+    <div class="skill-item"><div class="skill-label">Obsidian</div><div class="skill-note">Free, local, markdown. Linking giữa notes ([[...]]) tạo knowledge graph. Evergreen notes method hoạt động tốt nhất ở đây.</div></div>
+    <div class="skill-item"><div class="skill-label">Anki</div><div class="skill-note">Free, cross-platform, sync điện thoại. Review trên bus, trên toilet, trước khi ngủ. 5 phút/ngày là đủ.</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Nguyên tắc quan trọng nhất</div>
+    <div class="card-body">
+      Không hiểu → không note, không card. Hiểu trước (Feynman), note/card sau.<br>
+      Đọc thêm: "20 Rules of Formulating Knowledge" — Piotr Wozniak (người tạo spaced repetition). 3 rules quan trọng nhất: không học cái chưa hiểu, mỗi card một fact, dùng cloze deletion.
+    </div>
   </div>
 </div>
 
