@@ -14,7 +14,7 @@
 
 ## Quá Trình Ngủ
 
-![img](./img/04.png)
+![img](./img/04.png)z
 
 ## Tính Dẻo
 

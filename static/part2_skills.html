@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Part 2 — Skill Building | MLOps / ML Platform Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf9f7;color:#1a1a1a;font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;max-width:820px;margin:0 auto;padding:24px}
+h1{font-size:20px;font-weight:600;color:#185FA5;margin-bottom:4px}
+.subtitle{font-size:13px;color:#6b6a65;margin-bottom:24px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;border-bottom:1px solid #e8e6e1;padding-bottom:12px}
+.tab{padding:7px 14px;font-size:13px;border-radius:8px;border:0.5px solid #d4d2ca;background:transparent;cursor:pointer;color:#6b6a65;transition:all .15s;font-family:inherit}
+.tab:hover{background:#f0eeea;color:#1a1a1a}
+.tab.active{background:#e6f1fb;color:#185FA5;border-color:transparent;font-weight:500}
+.panel{display:none}.panel.active{display:block}
+.card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1rem 1.25rem;margin-bottom:12px}
+.card.highlight{border:2px solid #b5d4f4}
+.card-t{font-size:14px;font-weight:500;margin-bottom:6px;color:#1a1a1a}
+.card-b{font-size:13px;color:#6b6a65;line-height:1.7}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:8px;margin-right:4px;margin-bottom:4px;font-weight:500}
+.b-r{background:#fcebeb;color:#A32D2D}
+.b-g{background:#e1f5ee;color:#0F6E56}
+.b-b{background:#e6f1fb;color:#185FA5}
+.b-y{background:#faeeda;color:#854F0B}
+.b-gr{background:#f1efe8;color:#6b6a65}
+h3{font-size:12px;font-weight:500;color:#9a9891;text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.si{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:10px 12px}
+.sl{font-size:13px;font-weight:500;margin-bottom:2px;color:#1a1a1a}
+.sn{font-size:11px;color:#6b6a65;line-height:1.5}
+.bar-r{margin-bottom:8px}
+.bar-l{font-size:12px;color:#6b6a65;margin-bottom:3px;display:flex;justify-content:space-between}
+.bar-t{height:5px;background:#e8e6e1;border-radius:3px;overflow:hidden}
+.bar-f{height:100%;border-radius:3px}
+.reading-w{display:grid;grid-template-columns:44px 1fr;gap:8px;margin-bottom:8px;padding:10px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.reading-wk{font-size:11px;font-weight:500;color:#185FA5}
+.reading-c{font-size:11px;color:#6b6a65;line-height:1.5}
+.reading-c strong{color:#1a1a1a}
+.tbl{width:100%;font-size:11px;border-collapse:collapse}
+.tbl td{padding:8px;border-bottom:1px solid #e8e6e1;vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+.tbl td:first-child{color:#6b6a65;width:30%}
+code{background:#f0eeea;padding:1px 5px;border-radius:4px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:#854F0B}
+strong{font-weight:500;color:#1a1a1a}
+.kmap-layer{margin-bottom:16px;border:0.5px solid #e8e6e1;border-radius:8px;overflow:hidden}
+.kmap-head{padding:10px 14px;font-size:13px;font-weight:500;color:#1a1a1a;background:#f5f4f0}
+.kmap-body{padding:12px 14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px}
+.kmap-item{background:#fff;border:0.5px solid #e8e6e1;border-radius:8px;padding:8px 10px}
+.kmap-item-name{font-size:12px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
+.kmap-item-note{font-size:11px;color:#6b6a65;line-height:1.4}
+.kmap-item.have{border-left:3px solid #0F6E56}
+.kmap-item.gap{border-left:3px solid #A32D2D}
+.kmap-item.partial{border-left:3px solid #D4960B}
+.bridge-row{display:grid;grid-template-columns:1fr 24px 1fr;gap:8px;margin-bottom:10px;align-items:center}
+.bridge-from,.bridge-to{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:10px 12px}
+.bridge-arrow{text-align:center;color:#9a9891;font-size:16px}
+.bridge-label{font-size:12px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
+.bridge-sub{font-size:11px;color:#6b6a65;line-height:1.4}
+.method-step{display:flex;gap:12px;margin-bottom:14px;padding:12px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.method-num{width:28px;height:28px;border-radius:50%;background:#e6f1fb;color:#185FA5;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0}
+.method-content .method-title{font-size:13px;font-weight:500;margin-bottom:3px;color:#1a1a1a}
+.method-content .method-desc{font-size:12px;color:#6b6a65;line-height:1.5}
+.gap-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:10px 12px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.gap-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.gap-text .gap-title{font-size:13px;font-weight:500;color:#1a1a1a}
+.gap-text .gap-desc{font-size:12px;color:#6b6a65;line-height:1.5}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.proj-card{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:12px}
+.proj-title{font-size:13px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.proj-body{font-size:12px;color:#6b6a65;line-height:1.5}
+.week-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:12px}
+.week-item{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:8px 10px;text-align:center}
+.week-num{font-size:11px;color:#6b6a65;margin-bottom:3px}
+.week-focus{font-size:12px;font-weight:500;line-height:1.3;color:#1a1a1a}
+.ask-btn{font-size:12px;color:#185FA5;background:none;border:0.5px solid #d4d2ca;border-radius:8px;padding:5px 10px;cursor:pointer;margin-top:8px;margin-right:6px;font-family:inherit}
+.ask-btn:hover{background:#f5f4f0}
+.nav-links{margin-top:24px;padding-top:16px;border-top:1px solid #e8e6e1;display:flex;gap:8px}
+.nav-link{font-size:12px;color:#6b6a65;text-decoration:none;padding:6px 12px;border:0.5px solid #d4d2ca;border-radius:8px;font-family:inherit}
+.nav-link:hover{color:#185FA5;border-color:#185FA5}
+@media(max-width:600px){.g2,.g3,.two-col{grid-template-columns:1fr}.week-grid{grid-template-columns:1fr 1fr}body{padding:16px}}
+</style>
+</head>
+<body>
+
+<h1>PART 2 — SKILL BUILDING 🧠</h1>
+<div class="subtitle">MLOps / ML Platform Engineer — Kiến thức &amp; Phương pháp học</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('skills')">Skills Map</button>
+  <button class="tab" onclick="show('kmap')">Knowledge Map</button>
+  <button class="tab" onclick="show('bridge')">DevOps → ML Platform</button>
+  <button class="tab" onclick="show('platform')">What is a Platform?</button>
+  <button class="tab" onclick="show('reading')">Reading List</button>
+  <button class="tab" onclick="show('courses')">Courses</button>
+  <button class="tab" onclick="show('method')">Deep Learning Methods</button>
+  <button class="tab" onclick="show('notes')">Note &amp; Anki</button>
+  <button class="tab" onclick="show('weekly')">Weekly Schedule</button>
+</div>
+
+<!-- ========== TAB 1: SKILLS MAP ========== -->
+<div class="panel active" id="panel-skills">
+  <div class="card highlight">
+    <div class="card-t">🗺️ Skills Map — Ưu tiên cho Canada market</div>
+    <div class="card-b">Canada JDs thiên về: <strong>AWS/GCP + K8s + ML pipeline + banking/fintech</strong>. Bản đồ dưới đây sắp xếp theo mức độ ưu tiên khi apply job tại Canada — tập trung vào những gì employer thực sự tìm kiếm trong JD.</div>
+  </div>
+
+  <h3>Priority 1 — <span class="badge b-r">Must have trước khi apply</span></h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">ML Pipeline end-to-end</div>
+      <div class="sn">Data ingestion → feature engineering → training → evaluation → deployment. Biết dùng Kubeflow, Airflow, hoặc Vertex AI Pipelines. Đây là core skill #1 trong mọi JD.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Model Serving production</div>
+      <div class="sn">Triển khai model lên production với low latency, auto-scaling. Tooling: TF Serving, Triton, Seldon, KServe. Phải handle A/B testing và canary rollout.</div>
+    </div>
+    <div class="si">
+      <div class="sl">MLflow / Experiment Tracking</div>
+      <div class="sn">Track experiments, model registry, model versioning. MLflow là phổ biến nhất. Cần biết W&B, Neptune.ai alternatives. Đa số Canada JDs yêu cầu rõ ràng.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Distributed Systems Foundation</div>
+      <div class="sn">DDIA-level knowledge: replication, partitioning, consensus. Cần để hiểu tại sao ML platform phức tạp. Senior-level interviews test rất kỹ phần này.</div>
+    </div>
+  </div>
+
+  <h3>Priority 2 — <span class="badge b-y">Strengthen</span></h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">AWS Depth (SageMaker)</div>
+      <div class="sn">SageMaker Pipelines, Processing Jobs, Training Jobs, Endpoints. Canada market thiên AWS hơn GCP. Banking sector dùng AWS rất nhiều.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Feature Engineering at Scale</div>
+      <div class="sn">Feature store concepts (Feast, Tecton). Online vs offline features. Point-in-time correctness. Data leakage prevention.</div>
+    </div>
+    <div class="si">
+      <div class="sl">LLMOps / GenAI Infra</div>
+      <div class="sn">RAG pipelines, vector databases, prompt management, LLM evaluation, fine-tuning infra. Hot market — nhiều Canada JDs mới yêu cầu.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Data Pipeline Orchestration</div>
+      <div class="sn">Airflow, Dagster, Prefect. Đã có kinh nghiệm CI/CD từ NAB — cần extend sang data/ML pipeline orchestration.</div>
+    </div>
+  </div>
+
+  <h3>Priority 3 — <span class="badge b-b">Nice to have</span></h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">Distributed Training</div>
+      <div class="sn">Horovod, DeepSpeed, PyTorch DDP. Chỉ cần nếu apply vào team training large models. Không phải tất cả ML Platform roles cần.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Go / Rust</div>
+      <div class="sn">Một số platform teams dùng Go cho high-performance services. Rust cho inference optimization. Nice to have, không blocking.</div>
+    </div>
+  </div>
+
+  <h3>Certifications — Lộ trình khuyến nghị</h3>
+  <div class="g3">
+    <div class="si">
+      <div class="sl">CKA</div>
+      <div class="sn"><span class="badge b-r">Tháng 1-3</span><br>Certified Kubernetes Administrator. Đã có K8s kinh nghiệm từ NAB → chỉ cần ôn thi. Rất có giá trị cho Canada market.</div>
+    </div>
+    <div class="si">
+      <div class="sl">AWS ML Specialty</div>
+      <div class="sn"><span class="badge b-y">Tháng 4-6</span><br>Chứng minh ML + AWS depth. Canada banking sector đánh giá cao cert này. Study song song với hands-on projects.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Terraform Associate</div>
+      <div class="sn"><span class="badge b-b">Optional</span><br>Nếu còn thời gian. Đã biết IaC từ NAB — cert này validate thêm. Ưu tiên thấp hơn 2 certs trên.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TAB 2: KNOWLEDGE MAP ========== -->
+<div class="panel" id="panel-kmap">
+  <div class="card highlight">
+    <div class="card-t">🧬 Knowledge Map — 7-Layer Stack</div>
+    <div class="card-b">Bản đồ kiến thức theo mô hình 7 tầng — từ foundation lên tới developer experience. Mỗi tầng xây trên tầng dưới.<br><br>
+      <strong>Legend:</strong>
+      <span style="color:#0F6E56">■ Have</span> — đã có từ NAB &nbsp;
+      <span style="color:#D4960B">■ Partial</span> — có cơ bản, cần strengthen &nbsp;
+      <span style="color:#A32D2D">■ Gap</span> — chưa có, cần học mới
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#534AB7">Layer 7 — Developer Experience</div>
+    <div class="kmap-body">
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">SDK / CLI</div>
+        <div class="kmap-item-note">Build internal tools cho ML engineers. Python SDK, CLI wrappers.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Documentation</div>
+        <div class="kmap-item-note">Internal docs, API references, onboarding guides cho platform users.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Self-service</div>
+        <div class="kmap-item-note">Portal/UI cho ML engineers tự tạo pipelines, deploy models mà không cần platform team.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#A32D2D">Layer 6 — ML-Specific Infrastructure</div>
+    <div class="kmap-body">
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Model Serving</div>
+        <div class="kmap-item-note">TF Serving, Triton, KServe. Low-latency inference at scale.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Training Infra</div>
+        <div class="kmap-item-note">GPU scheduling, distributed training, job queuing.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Feature Store</div>
+        <div class="kmap-item-note">Feast, Tecton. Online/offline serving, point-in-time joins.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Experiment Tracking</div>
+        <div class="kmap-item-note">MLflow, W&B. Reproducibility, model registry.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">ML Observability</div>
+        <div class="kmap-item-note">Model drift, data quality, prediction monitoring.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#854F0B">Layer 5 — Data Infrastructure</div>
+    <div class="kmap-body">
+      <div class="kmap-item partial">
+        <div class="kmap-item-name">Batch Processing</div>
+        <div class="kmap-item-note">Spark, Hadoop basics. Có kinh nghiệm xử lý data ở mức DevOps.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Stream Processing</div>
+        <div class="kmap-item-note">Kafka, Flink, Spark Streaming. Real-time feature computation.</div>
+      </div>
+      <div class="kmap-item partial">
+        <div class="kmap-item-name">Data Storage</div>
+        <div class="kmap-item-note">SQL, NoSQL basics. Cần thêm: data lake, Delta Lake, Iceberg.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#185FA5">Layer 4 — Distributed Systems <span class="badge b-r">CRITICAL GAP</span></div>
+    <div class="kmap-body">
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Consensus</div>
+        <div class="kmap-item-note">Raft, Paxos. Nền tảng cho mọi distributed system.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Partitioning</div>
+        <div class="kmap-item-note">Consistent hashing, range partitioning. Data distribution strategies.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Consistency Models</div>
+        <div class="kmap-item-note">Strong vs eventual consistency. CAP theorem. Linearizability.</div>
+      </div>
+      <div class="kmap-item gap">
+        <div class="kmap-item-name">Fault Tolerance</div>
+        <div class="kmap-item-note">Failure detection, recovery, replication strategies.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#0F6E56">Layer 3 — Platform &amp; Orchestration <span class="badge b-g">STRONG BASE</span></div>
+    <div class="kmap-body">
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Kubernetes</div>
+        <div class="kmap-item-note">2 năm kinh nghiệm tại NAB. Production clusters, Helm, operators.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Docker</div>
+        <div class="kmap-item-note">Container building, multi-stage builds, registry management.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">CI/CD</div>
+        <div class="kmap-item-note">Jenkins, GitLab CI, GitHub Actions. Pipeline design & optimization.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Observability</div>
+        <div class="kmap-item-note">Prometheus, Grafana, ELK stack. Alerting, dashboards.</div>
+      </div>
+      <div class="kmap-item partial">
+        <div class="kmap-item-name">IaC</div>
+        <div class="kmap-item-note">Terraform, Ansible. Có kinh nghiệm — cần extend sang ML infra provisioning.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#888780">Layer 2 — Cloud &amp; Networking</div>
+    <div class="kmap-body">
+      <div class="kmap-item have">
+        <div class="kmap-item-name">AWS / Cloud basics</div>
+        <div class="kmap-item-note">EC2, S3, IAM, VPC. Dùng hàng ngày tại NAB.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Networking</div>
+        <div class="kmap-item-note">TCP/IP, DNS, load balancing, service mesh basics.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="kmap-layer">
+    <div class="kmap-head" style="background:#6b6a65">Layer 1 — Foundation</div>
+    <div class="kmap-body">
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Python</div>
+        <div class="kmap-item-note">Scripting, automation, data processing. Ngôn ngữ chính cho ML ecosystem.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">DS / ML Basics</div>
+        <div class="kmap-item-note">BSc Data Science, GPA 3.7. Statistics, ML algorithms, deep learning fundamentals.</div>
+      </div>
+      <div class="kmap-item have">
+        <div class="kmap-item-name">Software Engineering</div>
+        <div class="kmap-item-note">Git, testing, code review, design patterns. 2 năm production experience.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">📖 Cách đọc bản đồ</div>
+    <div class="card-b">Đọc từ dưới lên: Layer 1-3 là nền tảng đã có → Layer 4 là critical gap cần fill trước → Layer 5-6 là ML-specific knowledge → Layer 7 là differentiation. Mỗi layer xây trên layer dưới — không nên nhảy cóc. Ví dụ: không thể build feature store (L6) nếu không hiểu partitioning (L4).</div>
+  </div>
+</div>
+
+<!-- ========== TAB 3: DEVOPS → ML PLATFORM ========== -->
+<div class="panel" id="panel-bridge">
+  <div class="card highlight">
+    <div class="card-t">🌉 DevOps → ML Platform — Mapping 1:1</div>
+    <div class="card-b">Hầu hết skills DevOps đã có đều có counterpart trực tiếp trong ML Platform. Đây là lợi thế lớn — không phải học lại từ đầu mà chỉ cần <strong>extend và apply vào context mới</strong>.</div>
+  </div>
+
+  <h3>Bridge mapping</h3>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">K8s Deployments</div>
+      <div class="bridge-sub">Deployment, StatefulSet, HPA, rolling updates tại NAB</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">K8s cho ML Workloads</div>
+      <div class="bridge-sub">GPU scheduling, Kubeflow, KServe, Training operators, spot instances</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">CI/CD Pipelines</div>
+      <div class="bridge-sub">Jenkins, GitLab CI, automated testing, deployment gates</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">CI/CD cho ML</div>
+      <div class="bridge-sub">ML pipeline orchestration, data validation, model validation, A/B deployment</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">Prometheus + Grafana</div>
+      <div class="bridge-sub">Metrics, alerting, SLOs, dashboard cho microservices</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">ML Observability</div>
+      <div class="bridge-sub">Model drift detection, prediction quality, feature distribution, data quality alerts</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">Terraform IaC</div>
+      <div class="bridge-sub">Infrastructure provisioning, state management, modules</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">ML Infra as Code</div>
+      <div class="bridge-sub">SageMaker endpoints, GPU clusters, feature store infra, training jobs as code</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">Docker Containers</div>
+      <div class="bridge-sub">Multi-stage builds, image optimization, registry management</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">ML Containers</div>
+      <div class="bridge-sub">GPU-enabled images, CUDA layers, model packaging, reproducible training environments</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">API Gateway / REST</div>
+      <div class="bridge-sub">Kong, Nginx, rate limiting, authentication, versioning</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">Model Serving APIs</div>
+      <div class="bridge-sub">gRPC + REST inference, batching, model versioning, shadow deployment, latency optimization</div>
+    </div>
+  </div>
+
+  <div class="bridge-row">
+    <div class="bridge-from">
+      <div class="bridge-label">Log Aggregation</div>
+      <div class="bridge-sub">ELK stack, structured logging, centralized log management</div>
+    </div>
+    <div class="bridge-arrow">→</div>
+    <div class="bridge-to">
+      <div class="bridge-label">Data Lineage &amp; Audit</div>
+      <div class="bridge-sub">Feature lineage, model provenance, data versioning, compliance audit trails</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <div class="card-t">⚠️ Gap duy nhất không có bridge</div>
+    <div class="card-b"><strong>Distributed systems theory</strong> — consensus, partitioning, consistency models. Đây là kiến thức mới hoàn toàn, không có equivalent trong DevOps. Cần học từ DDIA + MIT 6.824.<br><br><strong>ML domain knowledge</strong> — hiểu model lifecycle, feature engineering, experiment design. Có nền DS/ML từ đại học nhưng chưa apply vào production. Cần cầu nối qua Chip Huyen + CS329S.</div>
+  </div>
+</div>
+
+<!-- ========== TAB 4: WHAT IS A PLATFORM? ========== -->
+<div class="panel" id="panel-platform">
+  <div class="card highlight">
+    <div class="card-t">🏗️ ML Platform Engineer làm gì khác MLOps Engineer?</div>
+    <div class="card-b"><strong>MLOps</strong> tập trung vào deploy & operate ML models (CI/CD cho ML, monitoring). <strong>ML Platform</strong> xây dựng nền tảng bên dưới — infra, tools, abstractions để toàn bộ ML org có thể tự serve. Giống DevOps vs Platform Engineering trong software world. Platform engineer suy nghĩ về <strong>internal developer experience</strong>, không chỉ operations.</div>
+  </div>
+
+  <h3>ML Platform — Thành phần cốt lõi</h3>
+  <table class="tbl">
+    <tr>
+      <td>Data Ingestion</td>
+      <td>Pipeline nhập data từ nhiều sources (databases, APIs, streaming) vào data lake. Batch + real-time. Tools: Airflow, Kafka, Spark.</td>
+    </tr>
+    <tr>
+      <td>Feature Store</td>
+      <td>Centralized repo cho features. Online serving (low latency) + offline store (training). Point-in-time correctness. Tools: Feast, Tecton, Hopsworks.</td>
+    </tr>
+    <tr>
+      <td>Experiment Platform</td>
+      <td>Cho ML engineers chạy experiments reproducibly. Tracking metrics, parameters, artifacts. Compare runs. Tools: MLflow, W&B, internal platforms.</td>
+    </tr>
+    <tr>
+      <td>Training Infra</td>
+      <td>GPU/TPU cluster management, job scheduling, distributed training. Auto-scaling, spot instance handling. Cost optimization.</td>
+    </tr>
+    <tr>
+      <td>Model Registry</td>
+      <td>Version control cho models. Metadata, lineage, approval workflows. Staging → Production promotion. Tools: MLflow Registry, Vertex AI Model Registry.</td>
+    </tr>
+    <tr>
+      <td>Serving Infra</td>
+      <td>Low-latency inference at scale. A/B testing, canary rollout, shadow mode. Auto-scaling. Tools: TF Serving, Triton, KServe, Seldon.</td>
+    </tr>
+    <tr>
+      <td>Observability</td>
+      <td>Model performance monitoring, data drift detection, prediction quality. SLOs cho ML models. Alert khi model degrade.</td>
+    </tr>
+    <tr>
+      <td>Developer Experience</td>
+      <td>SDK, CLI, self-service portal. ML engineers có thể tự tạo pipeline, deploy model mà không cần platform team. Documentation, templates, tutorials.</td>
+    </tr>
+  </table>
+
+  <h3>Tại FAANG trông như thế nào</h3>
+  <div class="two-col">
+    <div class="proj-card">
+      <div class="proj-title">Google</div>
+      <div class="proj-body">TFX (TensorFlow Extended) — end-to-end ML platform. Vertex AI là managed version. Internal: Borg cho scheduling, Spanner cho metadata. Mỗi component là một team riêng (100+ engineers cho ML infra).</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">Meta</div>
+      <div class="proj-body">FBLearner Flow — unified ML platform. Feature Store (tự build), PyTorch-native training infra. Mỗi ngày chạy hàng triệu training jobs. ML Platform team ~200 engineers. Focus: developer productivity metrics.</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">Amazon / AWS</div>
+      <div class="proj-body">SageMaker — external-facing ML platform. Internal: nhiều custom tools. Focus on cost optimization (spot instances, right-sizing). ML platform cho từng org (Alexa, Search, Ads có platform teams riêng).</div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">OpenAI / Anthropic</div>
+      <div class="proj-body">Focus: large-scale training infra. GPU cluster management, distributed training optimization, experiment infrastructure. Ít hơn về serving (API-first). Cutting-edge distributed systems challenges.</div>
+    </div>
+  </div>
+
+  <button class="ask-btn" onclick="sendPrompt('Mô tả chi tiết công việc hàng ngày của một ML Platform Engineer tại Meta level E5')">Mô tả công việc hàng ngày của ML Platform Engineer tại Meta E5</button>
+</div>
+
+<!-- ========== TAB 5: READING LIST ========== -->
+<div class="panel" id="panel-reading">
+  <div class="card highlight">
+    <div class="card-t">📚 Reading List theo tuần — 6 tháng đầu</div>
+    <div class="card-b">Mỗi tuần: <strong>1 unit đọc + 1 output</strong> (Anki cards hoặc blog draft). Interleave DDIA (distributed systems) với Chip Huyen (ML systems) để não liên kết hai domain. Mọi tuần đều có "Connect" — liên hệ kiến thức lý thuyết với ML platform thực tế.</div>
+  </div>
+
+  <h3>Tháng 1–2: Foundations <span class="badge b-r">Critical path</span></h3>
+
+  <div class="reading-w">
+    <div class="reading-wk">W1</div>
+    <div class="reading-c"><strong>CH 1-2 + DDIA ch.1-2</strong>: Overview ML systems + Reliable, Scalable, Maintainable. Output: <strong>8 Anki cards</strong>. Feynman về CAP theorem. Connect: tại sao ML platform cần cả 3 properties.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W2</div>
+    <div class="reading-c"><strong>CH 3 + DDIA ch.3</strong>: Storage &amp; Retrieval. LSM-trees vs B-trees. Output: <strong>10 cards</strong>. Connect: feature store storage — tại sao online store dùng key-value (LSM) còn offline store dùng columnar.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W3</div>
+    <div class="reading-c"><strong>CH 4 + DDIA ch.4</strong>: Encoding &amp; Evolution. Protobuf, Avro, schema evolution. Output: <strong>8 cards</strong>. Connect: model versioning — backward/forward compatibility cho model serving API.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W4</div>
+    <div class="reading-c"><strong>CH 5 + DDIA ch.5</strong>: Replication. Leader-follower, multi-leader, leaderless. Output: <strong>8 cards</strong>. Connect: feature store online/offline sync — eventual consistency acceptable hay không?</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W5</div>
+    <div class="reading-c"><strong>CH 7 + DDIA ch.6</strong>: Partitioning. Consistent hashing, rebalancing. Output: <strong>6 cards + code demo</strong> consistent hashing in Python. Connect: distributed training data partitioning.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W6</div>
+    <div class="reading-c"><strong>MIT 6.824 Lecture 1-3 + Raft paper</strong>. Leader election, log replication, safety. Output: <strong>5 cards</strong>. Feynman explanation: giải thích Raft bằng tiếng Việt cho người không biết CS.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W7</div>
+    <div class="reading-c"><strong>CH 8 + DDIA ch.7</strong>: Transactions. ACID, isolation levels, serializability. Output: <strong>7 cards</strong>. Relate: exactly-once semantics trong ML pipelines — tại sao idempotent pipeline design quan trọng.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W8</div>
+    <div class="reading-c"><strong>CH 6 + DDIA ch.8-9</strong>: Distributed Problems + Consensus. Unreliable clocks, Byzantine faults. Output: <strong>10 cards</strong>. <span class="badge b-r">Blog post #1</span>: "Distributed systems fundamentals cho ML engineers".</div>
+  </div>
+
+  <h3>Tháng 3–4: ML Systems + Papers <span class="badge b-y">Applied knowledge</span></h3>
+
+  <div class="reading-w">
+    <div class="reading-wk">W9</div>
+    <div class="reading-c"><strong>CS329S slides 1-4</strong>. ML lifecycle end-to-end: problem framing, data management, feature engineering, model development. Output: summary notes + 6 cards.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W10</div>
+    <div class="reading-c"><strong>Paper: Google TFX</strong> — "TFX: A TensorFlow-Based Production-Scale Machine Learning Platform". Phân tích architecture decisions. Output: 8 cards. Connect: so sánh với Kubeflow.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W11</div>
+    <div class="reading-c"><strong>Paper: Meta FBLearner Flow</strong> — "Applied Machine Learning at Facebook". Workflow engine, feature store, experiment management. Output: 8 cards. Connect: lessons cho platform mình sẽ build.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W12</div>
+    <div class="reading-c"><strong>Paper: Uber Michelangelo</strong> — "Meet Michelangelo: Uber's Machine Learning Platform". End-to-end platform design. Output: 8 cards. So sánh design decisions giữa 3 papers (TFX, FBLearner, Michelangelo).</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W13</div>
+    <div class="reading-c"><strong>CH 9 + DDIA ch.10</strong>: Batch Processing. MapReduce, Spark, dataflow engines. Output: 7 cards. Connect: batch feature computation, offline training data pipelines.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W14</div>
+    <div class="reading-c"><strong>CH 10 + DDIA ch.11</strong>: Stream Processing. Event sourcing, Kafka, exactly-once. Output: 7 cards. Connect: real-time feature serving, online learning pipelines.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W15</div>
+    <div class="reading-c"><strong>Paper: DoorDash Feature Store</strong>. Practical feature store architecture. Output: 7 cards. <span class="badge b-y">Blog post #2</span>: "Feature store architecture deep dive — so sánh 3 approach". Connect: practical implementation plan.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W16</div>
+    <div class="reading-c"><strong>CH 11 + DDIA ch.12</strong>: Future of Data Systems. Wrap-up cả 2 sách. Review toàn bộ Anki deck. Output: revision cards + knowledge map update.</div>
+  </div>
+
+  <h3>Tháng 5–6: Deep Dives + Labs <span class="badge b-b">Hands-on mastery</span></h3>
+
+  <div class="reading-w">
+    <div class="reading-wk">W17-18</div>
+    <div class="reading-c"><strong>MIT 6.824 Lab 2: Raft implementation</strong>. Code Raft consensus algorithm in Go. Leader election, log replication, persistence. Output: working implementation + detailed notes on challenges.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W19-20</div>
+    <div class="reading-c"><strong>MIT 6.824 Lab 3: KV Store on Raft</strong>. Build distributed key-value store using Raft. Client interaction, snapshotting. Output: working KV store. <span class="badge b-b">Blog post #3</span>: "Building a distributed KV store — lessons learned".</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W21-22</div>
+    <div class="reading-c"><strong>Paper: Google Borg + K8s design doc</strong>. Hiểu Borg → K8s evolution. Scheduling, resource management, cluster management at scale. Connect: GPU scheduling cho ML workloads.</div>
+  </div>
+  <div class="reading-w">
+    <div class="reading-wk">W23-24</div>
+    <div class="reading-c"><strong>Full Stack Deep Learning</strong> (selected modules). Deployment, testing ML systems, ML project management. Output: final knowledge map review + study plan cho 6 tháng tiếp.</div>
+  </div>
+
+  <div style="margin-top:12px">
+    <button class="ask-btn" onclick="sendPrompt('DDIA chapter nào đọc trước cho ML Platform Engineer?')">DDIA chapter nào đọc trước cho ML Platform Engineer?</button>
+    <button class="ask-btn" onclick="sendPrompt('FBLearner Flow là gì? Giải thích chi tiết architecture.')">FBLearner Flow là gì?</button>
+  </div>
+</div>
+
+<!-- ========== TAB 6: COURSES ========== -->
+<div class="panel" id="panel-courses">
+  <div class="card highlight">
+    <div class="card-t">🎓 Traditional Courses — Lộ trình học có hệ thống</div>
+    <div class="card-b">Kết hợp courses + papers + self-study. Mỗi course có mục đích rõ ràng trong roadmap. <strong>Không cần học hết</strong> — chọn theo priority và thời gian available.</div>
+  </div>
+
+  <h3>Bắt buộc <span class="badge b-r">Core foundation</span></h3>
+
+  <div class="card" style="border-left:3px solid #185FA5">
+    <div class="card-t">📘 Designing Data-Intensive Applications (DDIA)</div>
+    <div class="card-b"><strong>Martin Kleppmann</strong>. Sách #1 cho distributed systems. Đọc trong 4 tháng đầu song song Chip Huyen. Mỗi chapter liên hệ trực tiếp với ML platform concepts. Không có thay thế cho sách này.<br><br><code>Format</code>: Sách — đọc 2-3 chapters/tuần<br><code>Thời gian</code>: 4 tháng<br><code>Output</code>: 80+ Anki cards + 2 blog posts</div>
+  </div>
+  <div class="card" style="border-left:3px solid #185FA5">
+    <div class="card-t">🔬 MIT 6.824: Distributed Systems</div>
+    <div class="card-b"><strong>Robert Morris</strong>. Course huyền thoại. Lectures + Labs (Raft, KV store). Cung cấp hands-on implementation experience cho distributed systems theory từ DDIA.<br><br><code>Format</code>: Video lectures + 4 labs (Go)<br><code>Thời gian</code>: 3-4 tháng (song song DDIA)<br><code>Output</code>: 4 working labs + blog post #3</div>
+  </div>
+  <div class="card" style="border-left:3px solid #185FA5">
+    <div class="card-t">🎯 Stanford CS244B: Distributed Systems</div>
+    <div class="card-b"><strong>David Mazières</strong>. Bổ sung cho MIT 6.824 — focus vào theory và formal proofs hơn. Selected lectures cho topics MIT 6.824 không cover sâu (Byzantine fault tolerance, distributed transactions).<br><br><code>Format</code>: Lecture notes + selected readings<br><code>Thời gian</code>: 2 tháng (selected topics)<br><code>Output</code>: 15+ Anki cards</div>
+  </div>
+
+  <h3>Quan trọng <span class="badge b-b">ML-specific depth</span></h3>
+
+  <div class="card" style="border-left:3px solid #0F6E56">
+    <div class="card-t">🤖 Stanford CS329S: ML Systems Design</div>
+    <div class="card-b"><strong>Chip Huyen</strong>. ML systems từ production perspective. Data management, feature engineering, model deployment, monitoring. Bridge giữa ML theory và ML platform engineering.<br><br><code>Format</code>: Slides + readings + assignments<br><code>Thời gian</code>: 2 tháng<br><code>Output</code>: Project ideas cho portfolio</div>
+  </div>
+  <div class="card" style="border-left:3px solid #0F6E56">
+    <div class="card-t">🚀 Full Stack Deep Learning</div>
+    <div class="card-b"><strong>Pieter Abbeel, Sergey Karayev, Josh Tobin</strong>. Practical ML deployment. Testing ML systems, project management, infrastructure. Tốt cho understanding end-user perspective (ML engineers dùng platform mình build).<br><br><code>Format</code>: Video + projects<br><code>Thời gian</code>: 1 tháng (selected modules)<br><code>Output</code>: 1 end-to-end deployed project</div>
+  </div>
+  <div class="card" style="border-left:3px solid #0F6E56">
+    <div class="card-t">💾 CMU 15-721: Advanced Database Systems</div>
+    <div class="card-b"><strong>Andy Pavlo</strong>. Deep dive vào database internals. Query optimization, storage engines, concurrency control. Relevant cho feature store design, metadata management.<br><br><code>Format</code>: Video lectures + papers<br><code>Thời gian</code>: Selected lectures only<br><code>Output</code>: 10+ Anki cards on storage engines</div>
+  </div>
+
+  <h3>Bổ sung <span class="badge b-gr">If time permits</span></h3>
+
+  <div class="card" style="border-left:3px solid #333">
+    <div class="card-t">📐 MIT 6.006: Introduction to Algorithms</div>
+    <div class="card-b">Ôn lại algorithms & data structures. Cần cho coding interviews tại Canada. Nếu đã solid từ BSc thì chỉ cần review selected topics (graphs, dynamic programming).<br><br><code>Format</code>: Video + problem sets<br><code>Thời gian</code>: Review 2-3 tuần</div>
+  </div>
+  <div class="card" style="border-left:3px solid #333">
+    <div class="card-t">🌐 CMU 15-440: Distributed Systems</div>
+    <div class="card-b">Alternative/supplement cho MIT 6.824. Khác perspective — focus vào RPC, naming, distributed file systems. Chỉ xem nếu cần thêm breadth sau khi xong MIT 6.824.<br><br><code>Format</code>: Lecture notes + labs<br><code>Thời gian</code>: Selected topics only</div>
+  </div>
+
+  <h3>Papers bắt buộc đọc</h3>
+  <div class="two-col">
+    <div class="proj-card">
+      <div class="proj-title">Distributed Systems</div>
+      <div class="proj-body">
+        • Raft — In Search of an Understandable Consensus Algorithm<br>
+        • Google Spanner — TrueTime &amp; The CAP Theorem<br>
+        • Amazon Dynamo — Highly Available Key-value Store<br>
+        • Google MapReduce<br>
+        • Google Borg — Large-scale Cluster Management
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">ML Infrastructure</div>
+      <div class="proj-body">
+        • Google TFX — Production-Scale ML Platform<br>
+        • Meta FBLearner Flow — Applied ML at Facebook<br>
+        • Uber Michelangelo — ML Platform<br>
+        • DoorDash Feature Store<br>
+        • Google Vizier — A Service for Black-Box Optimization
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">📋 Thứ tự học đề xuất</div>
+    <div class="card-b">
+      <strong>Tháng 1-2:</strong> DDIA + Chip Huyen (song song) + MIT 6.824 lectures<br>
+      <strong>Tháng 3-4:</strong> DDIA finish + CS329S + ML papers (TFX, FBLearner, Michelangelo)<br>
+      <strong>Tháng 5-6:</strong> MIT 6.824 labs + Borg paper + Full Stack Deep Learning<br>
+      <strong>Song song suốt:</strong> Anki daily review + weekly blog drafts<br><br>
+      Nguyên tắc: không học quá 2 "nặng" cùng lúc. Luôn có 1 theory + 1 applied. CKA prep xen kẽ vào weekends tháng 1-3.
+    </div>
+  </div>
+
+  <div style="margin-top:12px">
+    <button class="ask-btn" onclick="sendPrompt('So sánh chi tiết MIT 6.824 và Stanford CS244B — nên học cái nào trước?')">So sánh MIT 6.824 vs CS244B</button>
+    <button class="ask-btn" onclick="sendPrompt('Tóm tắt paper Google TFX — key architecture decisions')">Tóm tắt paper Google TFX</button>
+  </div>
+</div>
+
+<!-- ========== TAB 7: DEEP LEARNING METHODS ========== -->
+<div class="panel" id="panel-method">
+  <div class="card highlight">
+    <div class="card-t">🧪 Phương pháp học sâu — Cognitive Science Framework</div>
+    <div class="card-b">Không chỉ "đọc nhiều" mà phải học đúng cách. 5 phương pháp dưới đây đều có evidence từ cognitive science research. Kết hợp tất cả vào <strong>mỗi buổi học 90 phút</strong> để maximize retention và transfer.</div>
+  </div>
+
+  <h3>5 phương pháp core</h3>
+
+  <div class="method-step">
+    <div class="method-num">1</div>
+    <div class="method-content">
+      <div class="method-title">Feynman Technique</div>
+      <div class="method-desc">Giải thích concept bằng ngôn ngữ đơn giản nhất. Nếu không giải thích được → chưa hiểu. Viết lại bằng tiếng Việt cho người không biết CS. Mỗi tuần chọn 1 concept khó nhất để Feynman. Ví dụ: "Giải thích Raft consensus cho bạn không biết programming".</div>
+    </div>
+  </div>
+
+  <div class="method-step">
+    <div class="method-num">2</div>
+    <div class="method-content">
+      <div class="method-title">Spaced Repetition</div>
+      <div class="method-desc">Dùng Anki với khoảng cách tăng dần. Review cards mỗi sáng 15 phút trước khi đi làm. Atomic cards — mỗi card 1 concept duy nhất. Tổng target: 200+ cards sau 6 tháng. Anki là non-negotiable — skip 1 ngày sẽ tạo thói quen skip.</div>
+    </div>
+  </div>
+
+  <div class="method-step">
+    <div class="method-num">3</div>
+    <div class="method-content">
+      <div class="method-title">Deliberate Practice</div>
+      <div class="method-desc">Không chỉ đọc — phải code. MIT 6.824 labs là deliberate practice tốt nhất cho distributed systems. Mỗi tuần code ít nhất 1 implementation liên quan đến reading (consistent hashing, mini feature store, etc.). Push to GitHub.</div>
+    </div>
+  </div>
+
+  <div class="method-step">
+    <div class="method-num">4</div>
+    <div class="method-content">
+      <div class="method-title">Interleaving</div>
+      <div class="method-desc">Xen kẽ topics thay vì học 1 thứ liên tục. Reading list đã thiết kế interleave DDIA + Chip Huyen. Mỗi tuần luân phiên: distributed systems → ML systems → coding → writing. Giúp não tạo connections giữa domains.</div>
+    </div>
+  </div>
+
+  <div class="method-step">
+    <div class="method-num">5</div>
+    <div class="method-content">
+      <div class="method-title">Teach to Learn</div>
+      <div class="method-desc">Viết blog posts, tạo Anki cards cho người khác, giải thích cho đồng nghiệp tại NAB. Target: 1 blog post mỗi 2 tháng. Share trên dev.to hoặc personal blog. Teaching forces deeper understanding và build public profile cho Canada applications.</div>
+    </div>
+  </div>
+
+  <h3>Cấu trúc mỗi buổi học 90 phút</h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">Block 1 — 20 phút</div>
+      <div class="sn"><strong>Anki review</strong> + quick recap tuần trước. Warm up não. Review 20-30 cards. Ghi chú cards nào khó → revisit cuối session.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Block 2 — 50 phút</div>
+      <div class="sn"><strong>Deep work</strong>: đọc + code. Tắt notifications. Pomodoro 25+25. Đọc chapter/paper rồi implement ngay. Active reading: highlight, annotate, question.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Block 3 — 15 phút</div>
+      <div class="sn"><strong>Output</strong>: tạo Anki cards từ session. Viết 2-3 câu summary. Feynman 1 concept. Ghi vào learning log. Plan cho session tiếp.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Cuối tuần — 4 tiếng</div>
+      <div class="sn"><strong>Deep dive session</strong>: dành cho MIT 6.824 labs, coding projects, blog writing. Longer blocks cho focused implementation. Review weekly progress.</div>
+    </div>
+  </div>
+
+  <h3>Bẫy phổ biến — TRÁNH <span class="badge b-r">Danger zone</span></h3>
+
+  <div class="gap-item">
+    <div class="gap-icon">❌</div>
+    <div class="gap-text">
+      <div class="gap-title">Tutorial hell</div>
+      <div class="gap-desc">Xem video tutorial liên tục mà không bao giờ code. Cảm giác "hiểu" nhưng không thực sự build được gì. Fix: mỗi giờ đọc phải kèm 30 phút code.</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-icon">❌</div>
+    <div class="gap-text">
+      <div class="gap-title">Collecting không processing</div>
+      <div class="gap-desc">Bookmark 100 papers, save 50 courses nhưng không bao giờ đọc xong 1 cái. Fix: reading list đã fixed — chỉ đọc những gì trong list, theo thứ tự.</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-icon">❌</div>
+    <div class="gap-text">
+      <div class="gap-title">Passive reading</div>
+      <div class="gap-desc">Đọc xong chapter mà không output gì. 2 tuần sau quên hết. Fix: mỗi session PHẢI tạo Anki cards. No cards = chưa học xong.</div>
+    </div>
+  </div>
+  <div class="gap-item">
+    <div class="gap-icon">❌</div>
+    <div class="gap-text">
+      <div class="gap-title">Depth without breadth (hoặc ngược lại)</div>
+      <div class="gap-desc">Chỉ đọc DDIA 3 lần mà không biết gì về ML systems. Hoặc chỉ xem tutorials mà không hiểu fundamentals. Fix: interleaving — luôn song song theory + applied.</div>
+    </div>
+  </div>
+
+  <div style="margin-top:12px">
+    <button class="ask-btn" onclick="sendPrompt('Tạo 10 Anki cards cho DDIA chapter 5 — Replication, focus vào ML platform context')">Tạo Anki cards cho DDIA ch.5</button>
+    <button class="ask-btn" onclick="sendPrompt('Feynman explanation: giải thích Raft consensus algorithm bằng tiếng Việt đơn giản nhất')">Feynman: giải thích Raft</button>
+  </div>
+</div>
+
+<!-- ========== TAB 8: NOTE & ANKI ========== -->
+<div class="panel" id="panel-notes">
+  <div class="card highlight">
+    <div class="card-t">🃏 Note &amp; Anki — Hệ thống ghi nhớ dài hạn</div>
+    <div class="card-b">Anki cho memorization (facts, definitions, comparisons). Notes cho understanding (connections, mental models, insights). Hai hệ thống bổ sung nhau — dùng cả hai, mỗi cái có vai trò riêng.</div>
+  </div>
+
+  <div class="card" style="border-left:3px solid #A32D2D">
+    <div class="card-t">Anki — Nguyên tắc vàng</div>
+    <div class="card-b">
+      <strong>1. Atomic:</strong> Mỗi card = 1 fact duy nhất. Không nhồi 5 concepts vào 1 card.<br>
+      <strong>2. Connected:</strong> Mỗi card phải link tới ML platform context. Không học lý thuyết trơ.<br>
+      <strong>3. Daily:</strong> Review mỗi ngày, không skip. 15 phút sáng trước đi làm. Streak quan trọng hơn số lượng.<br>
+      <strong>4. Self-made:</strong> Tự tạo cards, không dùng deck người khác. Process tạo card = learning.<br>
+      <strong>5. Evolve:</strong> Edit cards khi hiểu sâu hơn. Delete cards quá dễ. Thêm context theo thời gian.
+    </div>
+  </div>
+
+  <h3>Ví dụ Anki cards — đúng vs sai</h3>
+  <div class="g2">
+    <div class="si" style="border-left:3px solid #A32D2D">
+      <div class="sl">❌ Sai — quá rộng</div>
+      <div class="sn"><strong>Q:</strong> Giải thích replication trong distributed systems.<br><strong>A:</strong> (3 paragraphs dài)...<br><br><em>Vấn đề: quá broad, không thể review nhanh, não sẽ skip.</em></div>
+    </div>
+    <div class="si" style="border-left:3px solid #0F6E56">
+      <div class="sl">✅ Đúng — atomic &amp; connected</div>
+      <div class="sn"><strong>Q:</strong> Leader-based replication có bao nhiêu loại? Kể tên.<br><strong>A:</strong> 3 loại: single-leader, multi-leader, leaderless. Feature store thường dùng single-leader cho online store.<br><br><em>Atomic, có ML context, review được trong 10 giây.</em></div>
+    </div>
+  </div>
+  <div class="g2">
+    <div class="si" style="border-left:3px solid #A32D2D">
+      <div class="sl">❌ Sai — copy-paste</div>
+      <div class="sn"><strong>Q:</strong> What is CAP theorem?<br><strong>A:</strong> The CAP theorem states that...(textbook definition)<br><br><em>Copy từ sách, không process. Tiếng Anh khi não tư duy tiếng Việt.</em></div>
+    </div>
+    <div class="si" style="border-left:3px solid #0F6E56">
+      <div class="sl">✅ Đúng — tự diễn đạt</div>
+      <div class="sn"><strong>Q:</strong> CAP theorem: khi network partition xảy ra, phải chọn gì?<br><strong>A:</strong> Consistency hoặc Availability. ML feature store: chọn A (stale features OK) hay C (đúng nhưng chậm) tùy use case.<br><br><em>Tự viết, có trade-off thực tế.</em></div>
+    </div>
+  </div>
+
+  <h3>Card types hiệu quả nhất</h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">Cloze Deletion</div>
+      <div class="sn">Raft đảm bảo safety bằng cách [...].<br>→ "mỗi term chỉ có tối đa 1 leader".<br><br>Hiệu quả cho definitions, properties.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Compare Pair</div>
+      <div class="sn">LSM-tree vs B-tree: cái nào tốt hơn cho write-heavy workload?<br>→ LSM-tree (sequential writes).<br><br>Hiệu quả cho trade-offs, design decisions.</div>
+    </div>
+    <div class="si">
+      <div class="sl">When / Why</div>
+      <div class="sn">Khi nào dùng eventual consistency cho feature store?<br>→ Khi features thay đổi chậm và stale data acceptable (e.g., user demographics).<br><br>Hiệu quả cho applied knowledge.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Anti-pattern</div>
+      <div class="sn">Tại sao KHÔNG nên dùng 2PC cho cross-datacenter transactions?<br>→ Coordinator là SPOF, latency cao khi cross-DC.<br><br>Hiệu quả cho interview prep.</div>
+    </div>
+  </div>
+
+  <h3>Markdown Notes — Evergreen Notes Method</h3>
+  <div class="card">
+    <div class="card-t">📝 Evergreen Notes</div>
+    <div class="card-b">Mỗi note là 1 <strong>atomic concept</strong> (giống Anki nhưng dài hơn). Notes link tới nhau tạo thành knowledge graph. Dùng Obsidian cho bidirectional linking. Mỗi note có: Title (concept), Body (explanation bằng lời mình), Links (liên hệ tới notes khác), Source (sách/paper nào). Mỗi tuần tạo 3-5 evergreen notes từ readings.</div>
+  </div>
+
+  <h3>Template ví dụ</h3>
+  <div class="card" style="background:#f5f4f0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:#6b6a65">
+    <code style="background:none;padding:0"># Raft Consensus Algorithm</code><br><br>
+    Raft chia consensus thành 3 subproblems:<br>
+    1. Leader election<br>
+    2. Log replication<br>
+    3. Safety<br><br>
+    **Tại sao quan trọng cho ML Platform:**<br>
+    Feature store metadata cần consensus khi<br>
+    multiple writers update feature definitions.<br><br>
+    Links: [[CAP Theorem]], [[Leader-based Replication]]<br>
+    Source: DDIA ch.9, Raft paper (Ongaro 2014)
+  </div>
+  <div class="card" style="background:#f5f4f0;font-family:'IBM Plex Mono',monospace;font-size:11px;line-height:1.6;color:#6b6a65;margin-top:8px">
+    <code style="background:none;padding:0"># Feature Store — Online vs Offline</code><br><br>
+    Online store: low-latency serving (Redis, DynamoDB)<br>
+    Offline store: batch training data (S3, BigQuery)<br><br>
+    Key insight: cần **point-in-time correctness**<br>
+    để tránh data leakage trong training.<br><br>
+    **Design trade-off:**<br>
+    Sync frequency giữa offline → online.<br>
+    Eventual consistency thường OK cho features<br>
+    thay đổi chậm (user demographics).<br><br>
+    Links: [[LSM vs B-tree]], [[Replication]]<br>
+    Source: DoorDash Feature Store paper, CH ch.5
+  </div>
+
+  <h3>Workflow mỗi buổi học — 45 phút note-taking</h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">Trong lúc đọc (30 phút)</div>
+      <div class="sn">Highlight key concepts. Viết margin notes. Đánh dấu chỗ không hiểu. Ghi câu hỏi ra. Dùng ký hiệu: ⭐ important, ❓ unclear, 🔗 connect to other topic.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Sau khi đọc (15 phút)</div>
+      <div class="sn">Tạo 3-5 Anki cards từ highlights. Viết 1 evergreen note cho concept chính. Link tới existing notes. Update learning log với progress.</div>
+    </div>
+  </div>
+
+  <h3>Tools</h3>
+  <div class="g2">
+    <div class="si">
+      <div class="sl">Obsidian</div>
+      <div class="sn">Free, local-first. Bidirectional links, graph view. Markdown files → portable. Dùng cho evergreen notes + learning log + blog drafts.</div>
+    </div>
+    <div class="si">
+      <div class="sl">Anki</div>
+      <div class="sn">Free, cross-platform. Spaced repetition algorithm đã proven. Sync giữa phone (review trên bus) và desktop (tạo cards). AnkiConnect plugin cho automation.</div>
+    </div>
+  </div>
+
+  <div class="card" style="border-left:3px solid #D4960B;margin-top:12px">
+    <div class="card-t">⚡ Nguyên tắc quan trọng nhất</div>
+    <div class="card-b"><strong>Consistency beats intensity.</strong> 15 phút Anki mỗi ngày tốt hơn 3 giờ mỗi tuần. 30 phút notes mỗi tối tốt hơn "marathon" cuối tuần. Não cần repetition và spacing để chuyển từ short-term → long-term memory. Không có shortcut.</div>
+  </div>
+</div>
+
+<!-- ========== TAB 9: WEEKLY SCHEDULE ========== -->
+<div class="panel" id="panel-weekly">
+  <div class="card highlight">
+    <div class="card-t">📅 Lịch học tuần — Trong khi vẫn đang làm fulltime tại NAB</div>
+    <div class="card-b">Tổng <strong>~15-18 tiếng/tuần</strong>. Tận dụng buổi sáng sớm + tối sau giờ làm + weekend. Không hy sinh sleep — ngủ đủ 7h để não consolidate knowledge. Sustainable pace quan trọng hơn sprint.</div>
+  </div>
+
+  <h3>Tuần điển hình</h3>
+  <div class="week-grid">
+    <div class="week-item">
+      <div class="week-num">Thứ 2 + 4</div>
+      <div class="week-focus">Tối 90 phút<br><span style="font-size:11px;color:#777;font-weight:400">DDIA / Chip Huyen reading + Anki cards</span></div>
+    </div>
+    <div class="week-item">
+      <div class="week-num">Thứ 3 + 5</div>
+      <div class="week-focus">Tối 90 phút<br><span style="font-size:11px;color:#777;font-weight:400">MIT 6.824 lectures / papers + coding practice</span></div>
+    </div>
+    <div class="week-item">
+      <div class="week-num">Thứ 7</div>
+      <div class="week-focus">Sáng 4 tiếng<br><span style="font-size:11px;color:#777;font-weight:400">Deep dive: labs, projects, blog writing</span></div>
+    </div>
+    <div class="week-item">
+      <div class="week-num">Chủ nhật</div>
+      <div class="week-focus">Sáng 3 tiếng<br><span style="font-size:11px;color:#777;font-weight:400">Review tuần + Anki marathon + plan tuần mới</span></div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-b" style="font-size:12px"><strong>Hàng ngày (mỗi sáng):</strong> 15 phút Anki review trước khi đi làm. Không skip. Dùng phone trên bus/tàu nếu cần.<br><strong>Lunch break:</strong> 20 phút — đọc 1 blog post / paper abstract. Light learning, không deep work.</div>
+  </div>
+
+  <h3>Phân bổ thời gian theo mục tiêu</h3>
+  <div class="bar-r">
+    <div class="bar-l"><span>Deep theory (DDIA, MIT 6.824, papers)</span><span>30%</span></div>
+    <div class="bar-t"><div class="bar-f" style="width:30%;background:#A32D2D"></div></div>
+  </div>
+  <div class="bar-r">
+    <div class="bar-l"><span>Building projects (labs, portfolio, coding)</span><span>30%</span></div>
+    <div class="bar-t"><div class="bar-f" style="width:30%;background:#185FA5"></div></div>
+  </div>
+  <div class="bar-r">
+    <div class="bar-l"><span>Anki + Feynman (memorization &amp; understanding)</span><span>15%</span></div>
+    <div class="bar-t"><div class="bar-f" style="width:15%;background:#D4960B"></div></div>
+  </div>
+  <div class="bar-r">
+    <div class="bar-l"><span>Writing (blog posts, notes, documentation)</span><span>15%</span></div>
+    <div class="bar-t"><div class="bar-f" style="width:15%;background:#0F6E56"></div></div>
+  </div>
+  <div class="bar-r">
+    <div class="bar-l"><span>Networking (community, mentors, LinkedIn)</span><span>10%</span></div>
+    <div class="bar-t"><div class="bar-f" style="width:10%;background:#888"></div></div>
+  </div>
+
+  <h3>Tài nguyên học</h3>
+  <div class="two-col">
+    <div class="proj-card">
+      <div class="proj-title">Bắt buộc</div>
+      <div class="proj-body">
+        • DDIA — Martin Kleppmann<br>
+        • Designing ML Systems — Chip Huyen<br>
+        • MIT 6.824 lectures + labs<br>
+        • Anki (daily)<br>
+        • Obsidian (notes)
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">Courses bổ sung</div>
+      <div class="proj-body">
+        • Stanford CS329S (ML Systems)<br>
+        • Full Stack Deep Learning<br>
+        • Stanford CS244B (selected)<br>
+        • CMU 15-721 (selected)
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">Papers</div>
+      <div class="proj-body">
+        • Raft consensus<br>
+        • Google TFX<br>
+        • Meta FBLearner Flow<br>
+        • Uber Michelangelo<br>
+        • DoorDash Feature Store
+      </div>
+    </div>
+    <div class="proj-card">
+      <div class="proj-title">Certifications</div>
+      <div class="proj-body">
+        • CKA (tháng 1-3)<br>
+        • AWS ML Specialty (tháng 4-6)<br>
+        • Terraform Associate (optional)<br>
+        • Prep xen kẽ vào weekends
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:12px">
+    <button class="ask-btn" onclick="sendPrompt('Thiết kế lịch học chi tiết cho tuần đầu tiên — bao gồm DDIA ch.1, Chip Huyen ch.1, và Anki setup')">Lịch chi tiết tuần đầu tiên</button>
+    <button class="ask-btn" onclick="sendPrompt('Làm sao balance học với làm fulltime mà không burnout? Tips cụ thể cho developer 24 tuổi')">Tips tránh burnout khi học + làm</button>
+  </div>
+</div>
+
+<!-- Navigation -->
+<div class="nav-links">
+  <a class="nav-link" href="part1_strategy.html">← Part 1: Strategy</a>
+  <a class="nav-link" href="part3_execution.html">→ Part 3: Execution</a>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.closest('.tab').classList.add('active');
+}
+function sendPrompt(text){
+  if(window.parent && window.parent.postMessage){window.parent.postMessage({type:'sendPrompt',text:text},'*')}
+}
+</script>
+
+</body>
+</html>

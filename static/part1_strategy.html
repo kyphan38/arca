@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PART 1 — Strategy & Goal-setting 🇨🇦</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf9f7;color:#1a1a1a;font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;max-width:820px;margin:0 auto;padding:24px}
+h1{font-size:20px;font-weight:600;color:#185FA5;margin-bottom:4px}
+.subtitle{font-size:13px;color:#6b6a65;margin-bottom:24px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;border-bottom:1px solid #e8e6e1;padding-bottom:12px}
+.tab{padding:7px 14px;font-size:13px;border-radius:8px;border:0.5px solid #d4d2ca;background:transparent;cursor:pointer;color:#6b6a65;transition:all .15s;font-family:inherit}
+.tab:hover{background:#f0eeea;color:#1a1a1a}
+.tab.active{background:#e6f1fb;color:#185FA5;border-color:transparent;font-weight:500}
+.panel{display:none}.panel.active{display:block}
+.card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1rem 1.25rem;margin-bottom:12px}
+.card.highlight{border:2px solid #b5d4f4}
+.card-t{font-size:14px;font-weight:500;margin-bottom:6px;color:#1a1a1a}
+.card-b{font-size:13px;color:#6b6a65;line-height:1.7}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:8px;margin-right:4px;margin-bottom:4px;font-weight:500}
+.b-r{background:#fcebeb;color:#A32D2D}
+.b-g{background:#e1f5ee;color:#0F6E56}
+.b-b{background:#e6f1fb;color:#185FA5}
+.b-y{background:#faeeda;color:#854F0B}
+.b-gr{background:#f1efe8;color:#6b6a65}
+h3{font-size:12px;font-weight:500;color:#9a9891;text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.si{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:10px 12px}
+.sl{font-size:13px;font-weight:500;margin-bottom:2px;color:#1a1a1a}
+.sn{font-size:11px;color:#6b6a65;line-height:1.5}
+.bar-r{margin-bottom:8px}
+.bar-l{font-size:12px;color:#6b6a65;margin-bottom:3px;display:flex;justify-content:space-between}
+.bar-t{height:5px;background:#e8e6e1;border-radius:3px;overflow:hidden}
+.bar-f{height:100%;border-radius:3px}
+.phase{border-left:3px solid #d4d2ca;padding-left:16px;margin-bottom:20px}
+.p1{border-color:#185FA5}.p2{border-color:#854F0B}.p3{border-color:#0F6E56}
+.pt{font-size:15px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.ps{font-size:12px;color:#6b6a65;margin-bottom:10px}
+.co{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:12px;margin-bottom:8px}
+.co-name{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+.co-sub{font-size:11px;color:#6b6a65;margin-bottom:6px}
+.co-tags{display:flex;gap:4px;flex-wrap:wrap}
+.warning{background:#fcebeb;border:1px solid #e8b4b4;border-radius:8px;padding:12px;margin-bottom:12px;font-size:12px;color:#A32D2D;line-height:1.6}
+code{background:#f0eeea;padding:1px 5px;border-radius:4px;font-size:12px;font-family:'IBM Plex Mono',monospace}
+strong{font-weight:500;color:#1a1a1a}
+.bench-card{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:14px;margin-bottom:10px}
+.bench-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:6px}
+.bench-detail{font-size:12px;color:#6b6a65;line-height:1.6}
+.gap-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:10px 12px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.gap-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.gap-text .gap-title{font-size:13px;font-weight:500;color:#1a1a1a}
+.gap-text .gap-desc{font-size:12px;color:#6b6a65;line-height:1.5}
+.ask-btn{font-size:12px;color:#185FA5;background:none;border:0.5px solid #d4d2ca;border-radius:8px;padding:5px 10px;cursor:pointer;margin-top:8px;margin-right:6px;font-family:inherit}
+.ask-btn:hover{background:#f5f4f0}
+.nav-links{margin-top:24px;padding-top:16px;border-top:1px solid #e8e6e1;display:flex;gap:8px}
+.nav-link{font-size:12px;color:#6b6a65;text-decoration:none;padding:6px 12px;border:0.5px solid #d4d2ca;border-radius:8px;font-family:inherit}
+.nav-link:hover{color:#185FA5;border-color:#185FA5}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr}body{padding:16px}}
+</style>
+</head>
+<body>
+
+<h1>PART 1 — STRATEGY & GOAL-SETTING 🇨🇦</h1>
+<div class="subtitle">MLOps / ML Platform Engineer — Chiến lược & Định hướng</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('reality')">⚡ Reality check</button>
+  <button class="tab" onclick="show('gap')">🔍 Gap analysis</button>
+  <button class="tab" onclick="show('companies')">🏢 Target companies</button>
+  <button class="tab" onclick="show('jd')">📋 JD breakdown</button>
+  <button class="tab" onclick="show('benchmark')">🎯 Benchmark</button>
+  <button class="tab" onclick="show('visa')">🛂 Visa pathways</button>
+  <button class="tab" onclick="show('faang')">🏢 FAANG expects</button>
+  <button class="tab" onclick="show('roadmap')">🗺 18-month roadmap</button>
+</div>
+
+<!-- REALITY CHECK -->
+<div id="panel-reality" class="panel active">
+  <div class="warning">
+    <strong>⚠️ Nói thẳng:</strong> Apply trực tiếp từ VN vào Canada cho MLOps mid-level là con đường KHÓ. Hầu hết công ty Canada không tuyển quốc tế cho mid-level. Nhưng KHÔNG phải không thể — chỉ cần strategy đúng và profile đủ mạnh. File này cho bạn roadmap chi tiết nhất để maximize chance.
+  </div>
+
+  <div class="card">
+    <div class="card-t">Profile hiện tại</div>
+    <div class="card-b">
+      Tuổi: 24 · Bằng: Data Science (HCMUS, GPA 3.7) · Exp: 2 năm DevOps tại NAB (enterprise bank) · IELTS: 7.5 · Savings: ~10K USD · Hộ chiếu: Việt Nam
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Tại sao khó</div>
+    <div class="card-b">
+      1. Employer phải làm LMIA hoặc dùng Global Talent Stream — effort + chi phí cho họ<br>
+      2. Với 2-3 năm exp, bạn chưa "irreplaceable" để employer bỏ effort sponsor<br>
+      3. Hầu hết JDs ghi 4+ năm cho visa-sponsored roles<br>
+      4. Competition với local candidates + PR holders + người đã ở Canada
+    </div>
+  </div>
+
+  <div class="card highlight">
+    <div class="card-t">Tại sao vẫn có cơ hội</div>
+    <div class="card-b">
+      1. 500+ MLOps jobs đang open ở Canada — demand thật<br>
+      2. Global Talent Stream xử lý 2 tuần — employer biết fast-track này<br>
+      3. DevOps + Data Science = combo hiếm, đặc biệt cho banking ML<br>
+      4. IELTS 7.5 = top tier cho CRS scoring<br>
+      5. Bạn có 18 tháng để build profile từ "promising" → "must-hire"
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Chiến lược tổng thể</div>
+    <div class="card-b">
+      <strong>2 đường chạy song song:</strong><br><br>
+      Đường 1: Build profile → Apply trực tiếp → Global Talent Stream / LMIA<br>
+      Đường 2: Nộp Express Entry song song → PNP Tech nomination nếu đủ điểm<br><br>
+      <strong>Target:</strong> 18 tháng → offer từ ít nhất 1 công ty Canada willing to sponsor.<br>
+      <strong>Plan B:</strong> Nếu không có offer sau 18 tháng → thạc sĩ Canada (PGWP 3 năm → PR).
+    </div>
+  </div>
+</div>
+
+<!-- GAP ANALYSIS -->
+<div id="panel-gap" class="panel">
+  <div class="card highlight">
+    <div class="card-t">Profile của bạn vs yêu cầu ML Platform Engineer tại Canada</div>
+    <div class="card-b">24 tuổi · DevOps 2 năm (NAB) · Data Science BSc GPA 3.7 · IELTS 7.5</div>
+  </div>
+
+  <h3>Điểm mạnh hiện tại <span class="badge b-g">Giữ & phát triển</span></h3>
+
+  <div class="gap-item">
+    <div class="gap-icon">✅</div>
+    <div class="gap-text">
+      <div class="gap-title">Kubernetes & Docker trong production (NAB)</div>
+      <div class="gap-desc">Platform Eng. dùng K8s hàng ngày. Bạn đã có nền — cần đi sâu hơn vào internals, custom operators, scheduling.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">✅</div>
+    <div class="gap-text">
+      <div class="gap-title">CI/CD, observability, reliability mindset</div>
+      <div class="gap-desc">SRE/DevOps thinking là core skill của Platform Eng. Hầu hết DS-to-MLOps không có cái này.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">✅</div>
+    <div class="gap-text">
+      <div class="gap-title">Data Science foundation (GPA 3.7)</div>
+      <div class="gap-desc">Hiểu ML từ trong ra ngoài giúp bạn build platform phù hợp với user needs thực sự.</div>
+    </div>
+  </div>
+
+  <h3>Skill gaps cần lấp <span class="badge b-y">Critical path</span></h3>
+
+  <div class="gap-item">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text">
+      <div class="gap-title">Distributed systems sâu</div>
+      <div class="gap-desc">Consistent hashing, Raft consensus, distributed storage. Interview hỏi thẳng trong system design round. Đây là gap lớn nhất.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text">
+      <div class="gap-title">ML-specific infra: training distributed (PyTorch DDP, Ray, Horovod)</div>
+      <div class="gap-desc">Platform Eng. build cái infra này cho researcher dùng. Cần hiểu cả lý thuyết lẫn implementation.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text">
+      <div class="gap-title">Feature store & data systems</div>
+      <div class="gap-desc">Feast, Tecton, Hive/Spark. Platform Eng. thường own feature store. Bạn chưa có kinh nghiệm thực tế.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text">
+      <div class="gap-title">Xây internal developer platform (SDK, API design)</div>
+      <div class="gap-desc">"Build tools for engineers" — rất khác "deploy model for users." Cần project thực để demonstrate.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">⚠️</div>
+    <div class="gap-text">
+      <div class="gap-title">Chưa có tên tuổi / open source / publication</div>
+      <div class="gap-desc">Cold apply gần như không work. Cần referral hoặc public signal (OSS, blog, conference talk).</div>
+    </div>
+  </div>
+
+  <button class="ask-btn" onclick="sendPrompt('Tôi có 2 năm DevOps tại NAB. Skill gap lớn nhất khi chuyển sang ML Platform Engineer là gì và cách lấp nhanh nhất?')">Hỏi chi tiết gap analysis ↗</button>
+</div>
+
+<!-- TARGET COMPANIES -->
+<div id="panel-companies" class="panel">
+  <div class="card highlight">
+    <div class="card-t">Companies tuyển MLOps/ML Platform ở Canada — xếp theo khả năng sponsor</div>
+    <div class="card-b">Chia 3 tier dựa trên: có history sponsor visa, team size ML, và mức độ phù hợp profile bạn.</div>
+  </div>
+
+  <h3><span class="badge b-r">Tier 1 — Hay sponsor, ML team lớn</span></h3>
+
+  <div class="g2">
+    <div class="co"><div class="co-name">Google Canada</div><div class="co-sub">Toronto · Montreal · Waterloo</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-g">ML Infra team</span></div></div>
+    <div class="co"><div class="co-name">Amazon / AWS</div><div class="co-sub">Vancouver · Toronto</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-g">SageMaker team</span></div></div>
+    <div class="co"><div class="co-name">Microsoft</div><div class="co-sub">Vancouver · Toronto</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-g">Azure ML</span></div></div>
+    <div class="co"><div class="co-name">Meta</div><div class="co-sub">Toronto</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-g">ML Infra</span></div></div>
+    <div class="co"><div class="co-name">Shopify</div><div class="co-sub">Ottawa · Remote Canada</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-y">ML Platform</span></div></div>
+    <div class="co"><div class="co-name">Databricks Canada</div><div class="co-sub">Toronto</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-y">Core ML Platform</span></div></div>
+  </div>
+
+  <h3><span class="badge b-y">Tier 2 — Có sponsor, relevant domain</span></h3>
+
+  <div class="g2">
+    <div class="co"><div class="co-name">RBC / TD / BMO</div><div class="co-sub">Toronto</div><div class="co-tags"><span class="badge b-gr">LMIA</span><span class="badge b-g">Banking ML ← NAB exp!</span></div></div>
+    <div class="co"><div class="co-name">Sun Life</div><div class="co-sub">Toronto · Montreal</div><div class="co-tags"><span class="badge b-gr">LMIA</span><span class="badge b-g">MLOps team hiring now</span></div></div>
+    <div class="co"><div class="co-name">Wealthsimple</div><div class="co-sub">Toronto · Remote</div><div class="co-tags"><span class="badge b-gr">LMIA</span><span class="badge b-y">Fintech ML</span></div></div>
+    <div class="co"><div class="co-name">Cohere</div><div class="co-sub">Toronto</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-y">LLM infra</span></div></div>
+    <div class="co"><div class="co-name">Scale AI</div><div class="co-sub">Montreal</div><div class="co-tags"><span class="badge b-b">GTS eligible</span><span class="badge b-y">ML Platform</span></div></div>
+    <div class="co"><div class="co-name">Autodesk</div><div class="co-sub">Toronto · Montreal</div><div class="co-tags"><span class="badge b-gr">LMIA</span><span class="badge b-g">ML infra</span></div></div>
+  </div>
+
+  <h3><span class="badge b-gr">Tier 3 — Có thể sponsor, nhỏ hơn</span></h3>
+
+  <div class="g2">
+    <div class="co"><div class="co-name">Deep Genomics</div><div class="co-sub">Toronto</div><div class="co-tags"><span class="badge b-gr">Startup</span><span class="badge b-y">MLOps hiring 4+ yr</span></div></div>
+    <div class="co"><div class="co-name">Ada</div><div class="co-sub">Toronto · Remote</div><div class="co-tags"><span class="badge b-gr">AI company</span></div></div>
+    <div class="co"><div class="co-name">1Password</div><div class="co-sub">Toronto · Remote</div><div class="co-tags"><span class="badge b-gr">Platform eng</span></div></div>
+    <div class="co"><div class="co-name">Clio</div><div class="co-sub">Vancouver · Remote</div><div class="co-tags"><span class="badge b-gr">Legal AI</span></div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Strategy: Banking ML = secret weapon</div>
+    <div class="card-b">
+      Bạn có 2 năm tại NAB (ngân hàng enterprise). Canada Big 5 banks (RBC, TD, BMO, Scotiabank, CIBC) đều có ML teams lớn cho fraud detection, credit scoring, risk management. Đây là nơi NAB experience có weight nhất — bạn hiểu compliance, regulated environment, enterprise scale. Ít ứng viên có combo DevOps + banking + ML.<br><br>
+      <strong>Action:</strong> Frame CV là "Platform Engineer for ML in regulated financial services." Đây là niche mà ít người Ấn Độ hay local candidate có.
+    </div>
+  </div>
+</div>
+
+<!-- JD BREAKDOWN -->
+<div id="panel-jd" class="panel">
+  <div class="card highlight">
+    <div class="card-t">JD Analysis — tổng hợp từ 50+ postings thực tế ở Canada</div>
+    <div class="card-b">Pattern chung từ Google Toronto, Deep Genomics, Sun Life, RBC, Shopify, Databricks Canada.</div>
+  </div>
+
+  <h3>Skills xuất hiện nhiều nhất trong JD Canada</h3>
+
+  <div class="bar-r"><div class="bar-l"><span>Python (production-grade)</span><span>98%</span></div><div class="bar-t"><div class="bar-f" style="width:98%;background:#A32D2D"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Kubernetes + Docker</span><span>92%</span></div><div class="bar-t"><div class="bar-f" style="width:92%;background:#A32D2D"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>CI/CD cho ML (GitHub Actions, ArgoCD)</span><span>90%</span></div><div class="bar-t"><div class="bar-f" style="width:90%;background:#A32D2D"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Cloud platform (AWS or GCP or Azure)</span><span>88%</span></div><div class="bar-t"><div class="bar-f" style="width:88%;background:#D4960B"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>ML lifecycle (training, serving, monitoring)</span><span>85%</span></div><div class="bar-t"><div class="bar-f" style="width:85%;background:#D4960B"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Terraform / IaC</span><span>78%</span></div><div class="bar-t"><div class="bar-f" style="width:78%;background:#D4960B"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>MLflow / W&B / experiment tracking</span><span>72%</span></div><div class="bar-t"><div class="bar-f" style="width:72%;background:#0F6E56"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>PyTorch / TensorFlow (inference, not training)</span><span>68%</span></div><div class="bar-t"><div class="bar-f" style="width:68%;background:#0F6E56"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Model serving (Triton, KServe, vLLM)</span><span>60%</span></div><div class="bar-t"><div class="bar-f" style="width:60%;background:#0F6E56"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Distributed training (DDP, Ray)</span><span>55%</span></div><div class="bar-t"><div class="bar-f" style="width:55%;background:#185FA5"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>Feature stores (Feast, Vertex AI)</span><span>48%</span></div><div class="bar-t"><div class="bar-f" style="width:48%;background:#185FA5"></div></div></div>
+  <div class="bar-r"><div class="bar-l"><span>LLMOps / RAG / GenAI infra</span><span>45%</span></div><div class="bar-t"><div class="bar-f" style="width:45%;background:#185FA5"></div></div></div>
+
+  <h3>Experience yêu cầu</h3>
+  <div class="g2">
+    <div class="si"><div class="sl">Mid-level (target bạn)</div><div class="sn">3-5 năm. "Production infrastructure or MLOps." Bằng CS/DS. Python + K8s + 1 cloud platform depth.</div></div>
+    <div class="si"><div class="sl">Senior (stretch)</div><div class="sn">5+ năm. "End-to-end ML pipeline ownership." System design. Mentoring. Nhiều JD Canada yêu cầu mức này cho visa sponsor.</div></div>
+  </div>
+
+  <h3>Bạn đã có vs chưa có</h3>
+  <div class="g2">
+    <div class="si" style="border-left:3px solid #0F6E56"><div class="sl">✓ Đã có (từ NAB)</div><div class="sn">Python · K8s + Docker · CI/CD · Terraform · Cloud (AWS) · Monitoring (Prometheus/Grafana) · Enterprise/banking context · IELTS 7.5</div></div>
+    <div class="si" style="border-left:3px solid #A32D2D"><div class="sl">✗ Chưa có (cần build)</div><div class="sn">ML pipeline production exp · Model serving · MLflow/W&B · Distributed training · Feature stores · PyTorch inference · LLMOps · System design cho ML · 3+ năm total exp</div></div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Gap closing strategy</div>
+    <div class="card-b">
+      Bạn có 70% foundation (DevOps). Cần build thêm 30% ML-specific. Trong 18 tháng:<br>
+      • Tháng 1-6: học ML systems theory + build projects → close knowledge gap<br>
+      • Tháng 7-12: gain ML platform experience tại NAB + certs → close experience gap<br>
+      • Tháng 13-18: apply nghiêm túc với 3.5 năm exp + portfolio → close credibility gap
+    </div>
+  </div>
+</div>
+
+<!-- BENCHMARK -->
+<div id="panel-benchmark" class="panel">
+  <div class="card highlight">
+    <div class="card-t">"What good looks like" — benchmark thực tế</div>
+    <div class="card-b">Profile của người đã land ML Platform job ở Canada trông như thế nào? Đây là target bạn cần đạt được, không phải tưởng tượng.</div>
+  </div>
+
+  <h3>GitHub profile chuẩn</h3>
+  <div class="bench-card">
+    <div class="bench-title">Cần có gì trên GitHub?</div>
+    <div class="bench-detail">
+      <strong>2-3 pinned repos</strong> — không phải 20 repos hello-world. Mỗi repo có:<br>
+      • README dài ≥500 words với architecture diagram, design decisions, trade-offs<br>
+      • Clean code structure (không phải 1 file duy nhất)<br>
+      • CI/CD pipeline chạy được (GitHub Actions)<br>
+      • Tests (unit + integration)<br>
+      • ADR (Architecture Decision Records) — "tại sao chọn Feast thay vì Tecton?"<br><br>
+      <strong>Repo quan trọng nhất:</strong> Mini ML Platform (Project 1). Phải trông như internal product, không phải homework. Có SDK docs, API reference, quickstart guide.<br><br>
+      <strong>Contribution graph:</strong> xanh đều, không cần mỗi ngày nhưng phải consistent 4-5 ngày/tuần.
+    </div>
+  </div>
+
+  <h3>LinkedIn profile chuẩn</h3>
+  <div class="bench-card">
+    <div class="bench-title">Profile mà recruiter Canada click vào</div>
+    <div class="bench-detail">
+      <strong>Headline:</strong> "ML Platform Engineer | DevOps → ML Infrastructure | Kubernetes, Distributed Systems, Python | Open to Canada 🇨🇦" — KHÔNG phải "Looking for opportunities" hay "Data Science graduate."<br><br>
+      <strong>About (3-4 câu):</strong> "I build infrastructure that lets data scientists deploy ML models without touching Kubernetes. 2+ years DevOps at [enterprise bank], now focused on ML platform engineering — feature stores, model serving, distributed training. I write about distributed systems and ML infrastructure at [blog link]. Open to relocation to Canada."<br><br>
+      <strong>Experience bullets có metrics:</strong> "Managed Kubernetes clusters serving 500+ microservices with 99.9% uptime" — không phải "Responsible for DevOps tasks."<br><br>
+      <strong>Featured section:</strong> 2-3 blog posts + GitHub project link.<br><br>
+      <strong>Location:</strong> Set "Open to Work" → Canada locations (Toronto, Vancouver, Montreal).
+    </div>
+  </div>
+
+  <h3>Blog chuẩn</h3>
+  <div class="bench-card">
+    <div class="bench-title">Blog posts mà Canada recruiter gửi cho hiring manager</div>
+    <div class="bench-detail">
+      <strong>Format:</strong> Mỗi bài 1,500-3,000 words. Có diagrams (draw.io hoặc Excalidraw). Code snippets khi relevant. Không phải tutorial "How to install MLflow" — mà là "Why we chose MLflow over W&B and what we'd do differently."<br><br>
+      <strong>6 topics tốt nhất cho profile của bạn:</strong><br>
+      1. "What I learned about distributed systems from running K8s in production" (từ NAB exp)<br>
+      2. "Building a mini ML platform: design decisions and trade-offs"<br>
+      3. "Feature stores explained: when you need one and when you don't"<br>
+      4. "From DevOps to ML Platform Engineering: what transfers and what doesn't"<br>
+      5. "Implementing Raft consensus from scratch: lessons learned"<br>
+      6. "Distributed training on a budget: running PyTorch DDP on $50/month"<br><br>
+      <strong>Nơi publish:</strong> Medium (nhiều traffic) hoặc personal blog (dev.to, Hashnode, hoặc self-hosted). Cross-post lên LinkedIn.
+    </div>
+  </div>
+
+  <h3>CV 1 trang chuẩn</h3>
+  <div class="bench-card">
+    <div class="bench-title">CV format cho thị trường Canada</div>
+    <div class="bench-detail">
+      <strong>Format:</strong> 1 trang, không ảnh, không tuổi, không gender. Font: clean sans-serif. Sections: Summary → Experience → Projects → Skills → Education.<br><br>
+      <strong>Summary (2 câu):</strong> "ML Platform Engineer with 3 years of DevOps/infrastructure experience at enterprise scale. Building tools that help data scientists deploy ML models reliably — Kubernetes, distributed systems, Python."<br><br>
+      <strong>Experience bullets — XYZ formula:</strong> "Accomplished [X] as measured by [Y] by doing [Z]"<br>
+      ✓ "Reduced deployment time from 2 hours to 15 minutes by implementing GitOps pipeline with ArgoCD, serving 50+ engineering teams"<br>
+      ✗ "Responsible for CI/CD pipeline management"<br><br>
+      <strong>Projects section (quan trọng hơn experience ở giai đoạn này):</strong> 2 projects với 2-3 bullets mỗi cái, có link GitHub.
+    </div>
+  </div>
+
+  <h3>So sánh: Profile hiện tại vs Profile cần đạt</h3>
+  <div class="g2">
+    <div class="si"><div class="sl">Bạn hiện tại</div><div class="sn">LinkedIn headline: chung chung · GitHub: ít repos hoặc chưa public · Blog: chưa có · CV: format VN · 0 OSS contributions · 2 năm DevOps</div></div>
+    <div class="si"><div class="sl">Bạn sau 12 tháng (target)</div><div class="sn">LinkedIn: ML Platform focused, Open to Canada 🇨🇦 · GitHub: 2-3 strong pinned repos · Blog: 6+ posts · CV: 1 trang XYZ format · 1-3 OSS PRs merged · 3 năm DevOps + ML platform exp</div></div>
+  </div>
+</div>
+
+<!-- VISA PATHWAYS -->
+<div id="panel-visa" class="panel">
+  <div class="card highlight">
+    <div class="card-t">Visa pathways vào Canada — xếp theo khả thi</div>
+    <div class="card-b">Chạy song song nhiều đường, không đặt hết trứng 1 rổ.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t"><span class="badge b-r">Path 1</span> Global Talent Stream (GTS)</div>
+    <div class="card-b">
+      <strong>Nhanh nhất:</strong> 2 tuần xử lý. Employer phải eligible + apply cho bạn.<br>
+      <strong>Ai dùng:</strong> Google, Amazon, Shopify, Databricks — FAANG/scale-ups.<br>
+      <strong>Yêu cầu:</strong> Job offer từ employer eligible + role trong Category B (shortage occupation).<br>
+      <strong>Thực tế:</strong> Nếu bạn được offer từ Tier 1 company → đây là path nhanh nhất.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t"><span class="badge b-y">Path 2</span> LMIA-based Work Permit</div>
+    <div class="card-b">
+      <strong>Phổ biến nhất:</strong> Employer apply LMIA → chứng minh không tìm được local → work permit cho bạn.<br>
+      <strong>Ai dùng:</strong> Banks (RBC, TD), mid-size companies, consulting firms.<br>
+      <strong>Timeline:</strong> 2-4 tháng processing.<br>
+      <strong>Thực tế:</strong> Employer phải chịu effort + phí. Cần job offer trước.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t"><span class="badge b-b">Path 3</span> Express Entry (song song)</div>
+    <div class="card-b">
+      <strong>Ước tính CRS score của bạn (sau 18 tháng):</strong><br>
+      Tuổi 25-26: 100+ điểm · Bằng cử nhân: 120 · IELTS 7.5 (CLB 9): 116 · 3 năm exp: 40-50<br>
+      <strong>Tổng ước tính: 430-460</strong><br>
+      General draws cần 480-520 → bạn THIẾU nếu không có PNP.<br><br>
+      <strong>Giải pháp:</strong> BC PNP Tech hoặc Ontario OINP nomination = +600 CRS → guaranteed invite.<br>
+      <strong>Cách được PNP:</strong> Cần job offer tại BC hoặc Ontario → quay lại Path 1/2.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t"><span class="badge b-gr">Plan B</span> Thạc sĩ Canada → PGWP → PR</div>
+    <div class="card-b">
+      Nếu sau 18 tháng không có offer:<br>
+      • Apply UBC, UofT, McGill — MS Computer Science hoặc Data Science<br>
+      • 2 năm study → 3 năm PGWP (Post-Graduate Work Permit)<br>
+      • Canadian work experience → CRS tăng mạnh → PR<br>
+      • Chi phí: $30-50K CAD (học phí + sinh hoạt) — cần tiết kiệm thêm<br>
+      <strong>Đây là con đường chắc chắn nhất nhưng chậm và tốn tiền nhất.</strong>
+    </div>
+  </div>
+</div>
+
+<!-- FAANG EXPECTS -->
+<div id="panel-faang" class="panel">
+  <h3>Google — ML Platform / Vertex AI teams</h3>
+  <div class="card">
+    <div class="card-b">
+      Strong distributed systems (Bigtable, Spanner papers) · TFX/Kubeflow experience hoặc equivalent · Python proficiency + Go là bonus · "Googleyness" — bằng chứng bạn learn fast và document well · Thường cần 1 referral internal để pass resume screening.<br><br>
+      <strong>🇨🇦 Canada note:</strong> Google Canada có offices tại Toronto, Montreal, Waterloo — ML Infra teams tuyển active. Toronto office là ML hub lớn nhất của Google ngoài Bay Area.
+    </div>
+    <div class="co-tags" style="margin-top:8px"><span class="badge b-b">Distributed systems</span><span class="badge b-b">TFX / Kubeflow</span><span class="badge b-b">Go (bonus)</span><span class="badge b-b">Referral needed</span></div>
+  </div>
+
+  <h3>Meta — ML Infra / FBLearner teams</h3>
+  <div class="card">
+    <div class="card-b">
+      PyTorch ecosystem sâu · "Ship at scale" mindset — Meta ship nhanh hơn Google · Production experience với high-traffic systems · Meta hay hỏi về ML System Design nhiều nhất trong FAANG. FBLearner Flow paper là required reading.<br><br>
+      <strong>🇨🇦 Canada note:</strong> Meta Toronto có ML Infra team. Office tại Toronto đang mở rộng, tuyển ML Infra engineers.
+    </div>
+    <div class="co-tags" style="margin-top:8px"><span class="badge b-b">PyTorch DDP</span><span class="badge b-b">High-traffic systems</span><span class="badge b-b">FBLearner paper</span></div>
+  </div>
+
+  <h3>OpenAI / Anthropic — Training Infra teams</h3>
+  <div class="card">
+    <div class="card-b">
+      Đây là unique: họ cần người build infra cho LLM training ở scale nghìn GPU. Yêu cầu CUDA/GPU programming knowledge hoặc ít nhất hiểu GPU memory hierarchy · Experience với large-scale distributed training (không cần PhD) · Anthropic explicitly: "interesting independent projects + insightful blog posts" đặt lên đầu resume.
+    </div>
+    <div class="co-tags" style="margin-top:8px"><span class="badge b-r">GPU programming basics</span><span class="badge b-r">Large-scale training</span><span class="badge b-r">Blog/OSS required</span></div>
+    <button class="ask-btn" onclick="sendPrompt('OpenAI và Anthropic tìm kiếm gì cụ thể ở ML Infrastructure Engineer? Khác gì Google hay Meta?')">OpenAI vs Anthropic infra teams ↗</button>
+  </div>
+
+  <h3>Amazon AWS — SageMaker Platform teams</h3>
+  <div class="card">
+    <div class="card-b">
+      Rõ ràng nhất về requirements: AWS services depth (SageMaker, EKS, S3) · Bar raiser round đặc biệt · Leadership Principles — cần chuẩn bị kỹ hơn bất kỳ FAANG nào khác · Thường open remote positions nhiều nhất.<br><br>
+      <strong>🇨🇦 Canada note:</strong> Amazon Vancouver và Toronto là AWS SageMaker hubs lớn tại Canada. Vancouver office đặc biệt focus vào ML infrastructure và SageMaker development.
+    </div>
+    <div class="co-tags" style="margin-top:8px"><span class="badge b-b">AWS SageMaker</span><span class="badge b-b">Leadership Principles</span><span class="badge b-b">Remote friendly</span></div>
+  </div>
+
+  <div class="card highlight" style="margin-top:16px">
+    <div class="card-t">Lời khuyên thẳng thắn</div>
+    <div class="card-b">
+      Với timeline 18 tháng và target Canada, bạn cần làm đúng thứ tự: <strong>build real experience trước, apply sau.</strong> Cold apply FAANG không work — win rate &lt;1%. Con đường thực tế là: build profile mạnh tại VN → public signal (OSS, blog) → referral từ network → apply Canada companies. Banking experience tại NAB là secret weapon cho Canada Big 5 banks — đừng bỏ qua path này.
+    </div>
+  </div>
+</div>
+
+<!-- 18-MONTH ROADMAP -->
+<div id="panel-roadmap" class="panel">
+  <div class="card highlight">
+    <div class="card-t">18-month roadmap — từ tháng 0 đến offer</div>
+    <div class="card-b">Mỗi phase có mục tiêu cụ thể, measurable. Nếu không đạt milestone → dừng lại fix trước khi sang phase tiếp.</div>
+  </div>
+
+  <div class="phase p1">
+    <div class="pt">Phase 1 · Tháng 1-6 · Foundation + First Projects</div>
+    <div class="ps">Vẫn làm NAB. Build nền tảng ML + public signal.</div>
+    <div class="card-b" style="font-size:12px">
+      <strong>Học:</strong><br>
+      • Chip Huyen "Designing ML Systems" (2-3 tuần) + DDIA song song (1 ch/tuần)<br>
+      • MIT 6.824 lectures + Lab 2 (Raft)<br>
+      • Stanford CS329S slides (ML Systems Design)<br>
+      • Anki daily, evergreen notes (Obsidian)<br><br>
+      <strong>Build:</strong><br>
+      • Project 1: Mini ML Platform — SDK + FastAPI + MLflow + KServe + K8s + monitoring<br>
+      • Use case: Fraud detection (connect NAB experience)<br>
+      • GitHub: README pro, architecture diagram, ADRs<br><br>
+      <strong>Tại NAB:</strong><br>
+      • Xin involve vào ML/data team. "Tôi muốn build infra cho ML workloads"<br>
+      • Nếu không có ML team → tự propose PoC: deploy fraud model lên K8s<br><br>
+      <strong>Certs:</strong> CKA (tháng 2-3), AWS ML Specialty (tháng 5-6)<br><br>
+      <strong>Write:</strong> Blog setup. 1 bài/tháng. Đầu tiên: "How we run K8s in banking" (anonymized NAB)<br><br>
+      <strong>Express Entry:</strong> Nộp ECA (credential evaluation) + tạo Express Entry profile. Song song.
+    </div>
+  </div>
+
+  <div class="phase p2">
+    <div class="pt">Phase 2 · Tháng 7-12 · Signal Building + First Applications</div>
+    <div class="ps">Build public signal + bắt đầu apply thử</div>
+    <div class="card-b" style="font-size:12px">
+      <strong>Build:</strong><br>
+      • Project 2: LLMOps Pipeline — RAG + vLLM serving + eval pipeline + cost tracking<br>
+      • OSS: First PR to Ray hoặc Feast (good-first-issue)<br><br>
+      <strong>Học:</strong><br>
+      • DDIA ch.8-12 (distributed systems deep) + Anki<br>
+      • Full Stack Deep Learning (selected modules)<br>
+      • 1 paper/tuần (FBLearner, Michelangelo, TFX)<br><br>
+      <strong>Network:</strong><br>
+      • LinkedIn optimization (headline: "ML Platform Engineer | DevOps → ML Infrastructure | Open to Canada 🇨🇦")<br>
+      • Connect ML Platform engineers tại Google Toronto, Shopify, RBC<br>
+      • Join MLOps Community Slack + Meetup Toronto ML<br><br>
+      <strong>Apply thử:</strong><br>
+      • 15-20 positions ở Canada (LinkedIn, Indeed, Glassdoor)<br>
+      • Mục tiêu: KHÔNG phải offer — mà học quy trình, biết thiếu gì<br>
+      • Track: bao nhiêu reply, bao nhiêu interview, fail ở vòng nào<br><br>
+      <strong>Express Entry:</strong> Check CRS score. Nếu đủ → wait for draw. Nếu thiếu → research BC PNP Tech, Ontario OINP.
+    </div>
+  </div>
+
+  <div class="phase p3">
+    <div class="pt">Phase 3 · Tháng 13-18 · All-in Apply</div>
+    <div class="ps">Profile đủ mạnh. Push for offers.</div>
+    <div class="card-b" style="font-size:12px">
+      <strong>Profile lúc này:</strong><br>
+      3.5 năm exp (DevOps + ML platform) · CKA + AWS ML cert · 2 strong GitHub projects · 8-12 blog posts · 2-3 OSS PRs · Mock interview experience<br><br>
+      <strong>Apply nghiêm túc:</strong><br>
+      • Tier 1: Google Toronto, Amazon Vancouver, Shopify, Databricks<br>
+      • Tier 2: RBC, TD (frame banking ML experience), Sun Life, Wealthsimple<br>
+      • Tier 3: Cohere, Deep Genomics, Ada<br>
+      • Dùng recruiter contacts từ Phase 2. Aim referral.<br><br>
+      <strong>Interview prep:</strong><br>
+      • 50 LeetCode Medium (Python, graphs, BFS/DFS, hash maps)<br>
+      • ML System Design daily practice (feature store, serving, training infra)<br>
+      • 15 STAR stories với metrics từ NAB<br>
+      • Mock interviews 2-3x/tuần (Interviewing.io, Pramp)<br><br>
+      <strong>Mục tiêu:</strong> 2-3 offers, negotiate, chọn tốt nhất.<br><br>
+      <strong>Plan B (nếu không có offer):</strong><br>
+      • Apply thạc sĩ Canada (UBC, UofT, McGill) — intake tháng 9<br>
+      • PGWP 3 năm sau thạc sĩ → Canadian experience → PR
+    </div>
+  </div>
+</div>
+
+<div class="nav-links">
+  <a class="nav-link" href="part2_skills.html">→ Part 2: Skill Building</a>
+  <a class="nav-link" href="part3_execution.html">→ Part 3: Execution</a>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.closest('.tab').classList.add('active');
+}
+function sendPrompt(text){
+  if(window.parent && window.parent.postMessage){window.parent.postMessage({type:'sendPrompt',text:text},'*')}
+}
+</script>
+</body>
+</html>

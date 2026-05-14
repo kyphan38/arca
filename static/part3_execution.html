@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Part 3 — Execution & Career Prep | MLOps / ML Platform Engineer</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#faf9f7;color:#1a1a1a;font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;max-width:820px;margin:0 auto;padding:24px}
+h1{font-size:20px;font-weight:600;color:#185FA5;margin-bottom:4px}
+.subtitle{font-size:13px;color:#6b6a65;margin-bottom:24px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;border-bottom:1px solid #e8e6e1;padding-bottom:12px}
+.tab{padding:7px 14px;font-size:13px;border-radius:8px;border:0.5px solid #d4d2ca;background:transparent;cursor:pointer;color:#6b6a65;transition:all .15s;font-family:inherit}
+.tab:hover{background:#f0eeea;color:#1a1a1a}
+.tab.active{background:#e6f1fb;color:#185FA5;border-color:transparent;font-weight:500}
+.panel{display:none}.panel.active{display:block}
+.card{background:#fff;border:0.5px solid #e8e6e1;border-radius:12px;padding:1rem 1.25rem;margin-bottom:12px}
+.card.highlight{border:2px solid #b5d4f4}
+.card-t{font-size:14px;font-weight:500;margin-bottom:6px;color:#1a1a1a}
+.card-b{font-size:13px;color:#6b6a65;line-height:1.7}
+.badge{display:inline-block;font-size:11px;padding:2px 8px;border-radius:8px;margin-right:4px;margin-bottom:4px;font-weight:500}
+.b-r{background:#fcebeb;color:#A32D2D}
+.b-g{background:#e1f5ee;color:#0F6E56}
+.b-b{background:#e6f1fb;color:#185FA5}
+.b-y{background:#faeeda;color:#854F0B}
+.b-gr{background:#f1efe8;color:#6b6a65}
+h3{font-size:12px;font-weight:500;color:#9a9891;text-transform:uppercase;letter-spacing:.05em;margin:16px 0 8px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:12px}
+.si{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:10px 12px}
+.sl{font-size:13px;font-weight:500;margin-bottom:2px;color:#1a1a1a}
+.sn{font-size:11px;color:#6b6a65;line-height:1.5}
+.ms{display:flex;gap:10px;margin-bottom:10px;padding:10px 12px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.ms-check{width:20px;height:20px;border:2px solid #d4d2ca;border-radius:50%;flex-shrink:0;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:11px;color:transparent;transition:all .15s}
+.ms-check.done{border-color:#0F6E56;background:#e1f5ee;color:#0F6E56}
+.ms-content{flex:1}
+.ms-title{font-size:12px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
+.ms-desc{font-size:11px;color:#6b6a65;line-height:1.4}
+.ms-test{font-size:11px;color:#185FA5;margin-top:3px}
+.proj-tags{margin-top:6px}
+.gap-item{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px;padding:10px 12px;background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px}
+.gap-icon{font-size:18px;flex-shrink:0;margin-top:1px}
+.gap-text .gap-title{font-size:13px;font-weight:500;color:#1a1a1a}
+.gap-text .gap-desc{font-size:12px;color:#6b6a65;line-height:1.5}
+.bar-r{margin-bottom:8px}
+.bar-l{font-size:12px;color:#6b6a65;margin-bottom:3px;display:flex;justify-content:space-between}
+.bar-t{height:5px;background:#e8e6e1;border-radius:3px;overflow:hidden}
+.bar-f{height:100%;border-radius:3px}
+.phase{border-left:3px solid #d4d2ca;padding-left:16px;margin-bottom:20px}
+.p1{border-color:#185FA5}.p2{border-color:#854F0B}.p3{border-color:#0F6E56}
+.pt{font-size:15px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.ps{font-size:12px;color:#6b6a65;margin-bottom:10px}
+.co{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:12px;margin-bottom:8px}
+.co-name{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:3px}
+.co-sub{font-size:11px;color:#6b6a65;margin-bottom:6px}
+.co-tags{display:flex;gap:4px;flex-wrap:wrap}
+.warning{background:#fcebeb;border:1px solid #e8b4b4;border-radius:8px;padding:12px;margin-bottom:12px;font-size:12px;color:#A32D2D;line-height:1.6}
+code{background:#f0eeea;padding:1px 5px;border-radius:4px;font-size:12px;font-family:'IBM Plex Mono',monospace}
+strong{font-weight:500;color:#1a1a1a}
+em{font-style:italic;color:#6b6a65}
+.bench-card{background:#f5f4f0;border:0.5px solid #e8e6e1;border-radius:8px;padding:14px;margin-bottom:10px}
+.bench-title{font-size:13px;font-weight:500;color:#1a1a1a;margin-bottom:6px}
+.bench-detail{font-size:12px;color:#6b6a65;line-height:1.6}
+.ask-btn{font-size:12px;color:#185FA5;background:none;border:0.5px solid #d4d2ca;border-radius:8px;padding:5px 10px;cursor:pointer;margin-top:8px;margin-right:6px;font-family:inherit}
+.ask-btn:hover{background:#f5f4f0}
+.nav-links{margin-top:24px;padding-top:16px;border-top:1px solid #e8e6e1;display:flex;gap:8px}
+.nav-link{font-size:12px;color:#6b6a65;text-decoration:none;padding:6px 12px;border:0.5px solid #d4d2ca;border-radius:8px;font-family:inherit}
+.nav-link:hover{color:#185FA5;border-color:#185FA5}
+@media(max-width:600px){.g2,.g3{grid-template-columns:1fr}body{padding:16px}}
+</style>
+</head>
+<body>
+
+<h1>PART 3 — EXECUTION 🚀</h1>
+<div class="subtitle">MLOps / ML Platform Engineer — Thực thi & Chuẩn bị Career</div>
+
+<div class="tabs">
+  <button class="tab active" onclick="show('projects')">Projects</button>
+  <button class="tab" onclick="show('milestones')">Milestones</button>
+  <button class="tab" onclick="show('edge')">Competitive Edge</button>
+  <button class="tab" onclick="show('interview')">Interview Prep</button>
+  <button class="tab" onclick="show('apply')">Apply Strategy</button>
+</div>
+
+<!-- ===================== TAB 1: PROJECTS ===================== -->
+<div class="panel active" id="panel-projects">
+
+  <div class="card highlight">
+    <div class="card-t">Project 1 · Mini ML Platform with Developer SDK <span class="badge b-b">Tháng 2-6</span></div>
+    <div class="card-b">
+      Đây là project quan trọng nhất. Mục tiêu: xây một platform nhỏ mà một data scientist có thể dùng mà không cần biết infra.<br><br>
+      <strong>Stack:</strong> Python SDK (public API) → FastAPI backend → MLflow tracking → Feast feature store → KServe serving → Kubernetes · Prometheus monitoring<br><br>
+      <strong>Key differentiator:</strong> Viết <code>pip install your-platform</code> và DS chỉ cần gọi <code>platform.train(model, data)</code> — platform tự lo phần còn lại. Đây là tư duy Platform Engineer, không phải MLOps Engineer.<br><br>
+      <strong>Use case:</strong> Fraud detection for banking (connect NAB + Canada Big 5 banks experience). Frame as: <em>"ML platform for regulated financial services."</em><br><br>
+      <strong>Document as if:</strong> Viết internal RFC, ADR (Architecture Decision Records), onboarding guide. Cho thấy bạn think như một platform owner.
+    </div>
+    <div class="proj-tags">
+      <span class="badge b-b">Python SDK</span>
+      <span class="badge b-b">Kubernetes</span>
+      <span class="badge b-b">MLflow</span>
+      <span class="badge b-b">Feast</span>
+      <span class="badge b-b">KServe</span>
+      <span class="badge b-b">FastAPI</span>
+    </div>
+    <button class="ask-btn" onclick="sendPrompt('Thiết kế chi tiết architecture cho Mini ML Platform project với Python SDK')">💬 Thiết kế chi tiết architecture cho Mini ML Platform project với Python SDK</button>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Project 2 · LLMOps Pipeline <span class="badge b-y">Tháng 7-12</span></div>
+    <div class="card-b">
+      RAG pipeline + vLLM serving + eval pipeline + cost tracking. GitHub public.<br><br>
+      <strong>Mục tiêu thực:</strong> Build production-ready RAG system. Đo latency, find bottleneck, optimize. Viết blog post <em>"Building a production RAG pipeline: what I learned."</em>
+    </div>
+    <div class="proj-tags">
+      <span class="badge b-y">RAG</span>
+      <span class="badge b-y">vLLM</span>
+      <span class="badge b-y">Eval Pipeline</span>
+      <span class="badge b-y">Cost Tracking</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Project 3 · Open Source Contribution <span class="badge b-g">Song song - liên tục</span></div>
+    <div class="card-b">
+      Target: <strong>Ray</strong> (anyscale.com/ray) hoặc <strong>Feast</strong> (feature store). Bắt đầu với good-first-issue, sau đó tackle medium complexity bugs, cuối cùng propose + implement feature nhỏ.<br><br>
+      <strong>Tại sao Ray/Feast:</strong> Core maintainers ở tại các FAANG companies. Contribute = networking tự nhiên. <em>"I contributed X to Ray"</em> là tín hiệu platform engineer rất mạnh với recruiter.
+    </div>
+    <div class="proj-tags">
+      <span class="badge b-g">Ray</span>
+      <span class="badge b-g">Feast</span>
+      <span class="badge b-g">Open Source</span>
+      <span class="badge b-g">Networking</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Project 4 · Production ML Platform (tại NAB) <span class="badge b-gr">Song song</span></div>
+    <div class="card-b">
+      Tại NAB: propose và own một platform initiative thực sự. Ví dụ: <em>"Deploy fraud detection model lên K8s với MLflow tracking và monitoring."</em> Hoặc: <em>"Build internal ML serving endpoint cho credit scoring team."</em><br><br>
+      Đây là resume bullet mạnh nhất vì nó real và có impact đo được trong regulated banking environment — trùng với Canada Big 5 banks.
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== TAB 2: MILESTONES ===================== -->
+<div class="panel" id="panel-milestones">
+
+  <h3><span class="badge b-r">Tháng 1-3 · Foundation</span></h3>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">1. Giải thích được Raft consensus trên giấy trắng trong 5 phút</div>
+      <div class="ms-desc">Leader election, log replication, safety. Hiểu đủ sâu để vẽ và giải thích cho người khác.</div>
+      <div class="ms-test">Test: ghi âm mình giải thích.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">2. Hoàn thành DDIA ch.1-7 + 50 Anki cards</div>
+      <div class="ms-desc">Đọc + Feynman + Anki. Mỗi chapter tạo flashcards cho core concepts.</div>
+      <div class="ms-test">Test: random mở 10 cards, trả lời đúng ≥8/10.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">3. Pass CKA certification</div>
+      <div class="ms-desc">DevOps nền → 4-6 tuần chuẩn bị. Tận dụng kinh nghiệm K8s từ NAB.</div>
+      <div class="ms-test">Test: cert pass/fail.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">4. Viết được 2 blog posts kỹ thuật bằng tiếng Anh</div>
+      <div class="ms-desc">1 về K8s (từ NAB), 1 về distributed systems. Publish trên Medium hoặc personal blog.</div>
+      <div class="ms-test">Test: ≥50 views.</div>
+    </div>
+  </div>
+
+  <h3><span class="badge b-y">Tháng 4-6 · ML Foundation</span></h3>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">5. Trả lời được: "Feature store giải quyết vấn đề gì? Khi nào KHÔNG cần?"</div>
+      <div class="ms-desc">Hiểu online/offline split, point-in-time correctness. Biết khi nào feature store là overkill.</div>
+      <div class="ms-test">Test: giải thích cho đồng nghiệp không biết ML.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">6. Project 1 (Mini ML Platform) có SDK hoạt động</div>
+      <div class="ms-desc"><code>pip install</code> → <code>platform.train()</code> → deployed trên K8s → monitoring. End-to-end workflow chạy smooth.</div>
+      <div class="ms-test">Test: cho 1 người khác dùng SDK, deploy model trong 30 phút.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">7. Pass AWS ML Specialty</div>
+      <div class="ms-desc">SageMaker, ML concepts. Cert này signal bạn hiểu ML infrastructure trên cloud.</div>
+      <div class="ms-test">Test: cert pass/fail.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">8. Hoàn thành MIT 6.824 Lab 2 (Raft)</div>
+      <div class="ms-desc">Code Raft bằng Go, pass tất cả test cases. Đây là bài tập distributed systems kinh điển.</div>
+      <div class="ms-test">Test: all tests pass.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">9. Express Entry profile đã tạo</div>
+      <div class="ms-desc">ECA done, IELTS submitted, profile active trên IRCC portal.</div>
+      <div class="ms-test">Test: CRS score calculated.</div>
+    </div>
+  </div>
+
+  <h3><span class="badge b-b">Tháng 7-12 · Signal Building</span></h3>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">10. Project 2 (LLMOps) hoàn thành</div>
+      <div class="ms-desc">RAG + vLLM + eval pipeline. GitHub public. Có README, architecture diagram, benchmarks.</div>
+      <div class="ms-test">Test: demo chạy end-to-end trong 5 phút.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">11. 1 merged PR vào OSS project</div>
+      <div class="ms-desc">Ray, Feast, hoặc MLflow. Bắt đầu từ good-first-issue, tiến tới meaningful contribution.</div>
+      <div class="ms-test">Test: PR merged on GitHub.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">12. Design feature store cho 10M users trong 30 phút trên whiteboard</div>
+      <div class="ms-desc">Online/offline store, consistency, latency, failure modes. Chuẩn bị cho system design interviews.</div>
+      <div class="ms-test">Test: mock interview score ≥3/4.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">13. ≥1 interview từ Canada company</div>
+      <div class="ms-desc">Bất kỳ tier nào. Không cần pass. Mục tiêu: lấy data về interview process và calibrate level.</div>
+      <div class="ms-test">Test: email mời interview.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">14. ML experience tại NAB (documented)</div>
+      <div class="ms-desc">Đã involve vào ML/data platform workloads. Có metrics. Impact đo được trong regulated banking env.</div>
+      <div class="ms-test">Test: 2-3 resume bullets.</div>
+    </div>
+  </div>
+
+  <h3><span class="badge b-g">Tháng 13-18 · All-in Apply</span></h3>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">15. 50 LeetCode Medium solved</div>
+      <div class="ms-desc">Python. Graphs, BFS/DFS, hash maps, queues. Focus vào patterns, không phải số lượng.</div>
+      <div class="ms-test">Test: solve random Medium ≤25 phút.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">16. Pass ML System Design mock interview</div>
+      <div class="ms-desc">Design feature store hoặc serving system. Practice trên Interviewing.io hoặc với peers.</div>
+      <div class="ms-test">Test: Interviewing.io score ≥3/4.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">17. Pass ≥1 onsite/virtual interview loop</div>
+      <div class="ms-desc">Đến vòng cuối tại bất kỳ target company. Lấy feedback để improve cho lần sau.</div>
+      <div class="ms-test">Test: vào được final round.</div>
+    </div>
+  </div>
+
+  <div class="ms">
+    <div class="ms-check" onclick="this.classList.toggle('done')">✓</div>
+    <div class="ms-content">
+      <div class="ms-title">18. ≥1 offer từ Canada company</div>
+      <div class="ms-desc">Bất kỳ tier nào. Willing to sponsor visa. Đây là milestone cuối cùng.</div>
+      <div class="ms-test">Test: offer letter.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== TAB 3: COMPETITIVE EDGE ===================== -->
+<div class="panel" id="panel-edge">
+
+  <div class="card highlight">
+    <div class="card-t">Competitive Edge</div>
+    <div class="card-b">Competitive edge — vượt lên ứng viên Ấn Độ & bản xứ. Phân tích thị trường lao động, không phải stereotypes.</div>
+  </div>
+
+  <h3>Pattern employer thường gặp từ ứng viên Ấn Độ</h3>
+
+  <div class="gap-item">
+    <div class="gap-icon">1️⃣</div>
+    <div class="gap-text">
+      <div class="gap-title">Resume inflation</div>
+      <div class="gap-desc">Recruiter Canada phải "discount" CV vì tỷ lệ phóng đại cao. Nhiều CV list "Lead Engineer" nhưng thực tế là junior contributor. Bạn cần làm ngược lại: understate title, overdeliver on depth.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">2️⃣</div>
+    <div class="gap-text">
+      <div class="gap-title">Breadth over depth</div>
+      <div class="gap-desc">List 15-20 tools nhưng hỏi sâu thì surface. "I know Kubernetes" nhưng không giải thích được pod scheduling hoặc CNI networking. Bạn chỉ cần list 5-6 tools nhưng giải thích được trade-offs.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">3️⃣</div>
+    <div class="gap-text">
+      <div class="gap-title">Communication style mismatch</div>
+      <div class="gap-desc">Nói nhiều, thiếu concise. Canadian hiring managers prefer clear, structured answers. STAR format, not stream of consciousness.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">4️⃣</div>
+    <div class="gap-text">
+      <div class="gap-title">High attrition / job hopping</div>
+      <div class="gap-desc">Tỷ lệ churn 35%. Employer ngại invest vào training và visa sponsorship rồi mất người sau 6-12 tháng.</div>
+    </div>
+  </div>
+
+  <div class="gap-item">
+    <div class="gap-icon">5️⃣</div>
+    <div class="gap-text">
+      <div class="gap-title">Herd mentality trong tech choices</div>
+      <div class="gap-desc">Follow trend không hiểu trade-offs. "We use microservices because everyone does" — không giải thích được khi nào monolith tốt hơn.</div>
+    </div>
+  </div>
+
+  <h3>Competitive advantage của bạn</h3>
+
+  <div class="g2">
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Depth over breadth</div>
+      <div class="sn">5-6 tools với depth thay vì 20 tools surface. Giải thích được trade-offs, failure modes, khi nào KHÔNG dùng.</div>
+    </div>
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Authenticity</div>
+      <div class="sn">CV nói gì, interview chứng minh được. Blog posts + GitHub projects = bằng chứng thực tế, không phải claims trống.</div>
+    </div>
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Quiet competence</div>
+      <div class="sn">Developers VN: communication ngắn gọn, onboarding nhanh. Văn hóa Canada cực value: polite but direct, no bullshit, inclusive.</div>
+    </div>
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Stability signal</div>
+      <div class="sn">2+ năm tại NAB (enterprise bank) = tín hiệu ổn định. Employer biết bạn không nhảy việc sau 6 tháng.</div>
+    </div>
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Diversity value</div>
+      <div class="sn">Nhiều team Canada đã có nhiều engineers Ấn Độ. Hiring manager muốn diversity. Vietnamese engineer = fresh perspective.</div>
+    </div>
+    <div class="si" style="border-color:#0F6E56">
+      <div class="sl">Cost-aware mindset</div>
+      <div class="sn">Banking DevOps → hiểu cost optimization, compliance, risk management. Đây là skill mà startups thiếu và banks cần.</div>
+    </div>
+  </div>
+
+  <h3>Áp dụng cụ thể</h3>
+
+  <div class="card">
+    <div class="card-t">Trong CV</div>
+    <div class="card-b">List 5-6 tools với depth, dùng XYZ bullets: <em>"Accomplished [X] as measured by [Y], by doing [Z]."</em><br><br>
+      <strong>Bad:</strong> "Experienced in Kubernetes, Docker, Terraform, Ansible, Jenkins, CircleCI, ArgoCD, Helm, Prometheus, Grafana, ELK..."<br>
+      <strong>Good:</strong> "Reduced ML model deployment time from 2 weeks to 4 hours by building KServe-based serving pipeline on K8s, handling 500 RPS with p99 latency &lt;50ms."</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Trong Interview</div>
+    <div class="card-b">Trade-offs TRƯỚC solution. Khi được hỏi "How would you design X?", bắt đầu bằng constraints và trade-offs, không phải solution.<br><br>
+      <strong>Bad:</strong> "I would use Kafka because it's the best."<br>
+      <strong>Good:</strong> "The key trade-off here is latency vs. throughput. If we need sub-100ms latency, Kafka might be overkill — a simple Redis pub/sub could work. But if we need guaranteed delivery and replay, Kafka's log-based architecture gives us that. Given this use case, I'd start with..."</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Trên LinkedIn/GitHub</div>
+    <div class="card-b">Blog > endorsements. 1 blog post kỹ thuật có depth > 50 "Kubernetes" endorsements trên LinkedIn.<br><br>
+      Viết về những gì bạn thực sự build. <em>"How I built an ML serving pipeline at a bank"</em> > <em>"Top 10 MLOps tools in 2025."</em></div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Cultural Fit</div>
+    <div class="card-b">Canada = polite, inclusive, collaborative. Expect structured communication, clear examples, data-driven arguments. Multicultural workplace — show you work well across cultures.<br><br>
+      Trong interview: dùng "we" nhiều hơn "I". Acknowledge contributions của team. Nói "I don't know, but here's how I'd figure it out" thay vì bluff.</div>
+  </div>
+
+</div>
+
+<!-- ===================== TAB 4: INTERVIEW PREP ===================== -->
+<div class="panel" id="panel-interview">
+
+  <div class="card highlight">
+    <div class="card-t">Platform Engineer interview khác MLOps Engineer interview như thế nào</div>
+    <div class="card-b">
+      <strong>MLOps Engineer:</strong> "How do you deploy a model?" — focus vào tools và pipeline.<br>
+      <strong>Platform Engineer:</strong> "How do you build a system that lets 50 teams deploy models themselves?" — focus vào abstraction, DX, scalability, multi-tenancy.<br><br>
+      Platform Engineer interviews đòi hỏi <strong>system design depth</strong>, <strong>distributed systems knowledge</strong>, và khả năng <strong>think about developer experience</strong> — không chỉ infrastructure.
+    </div>
+  </div>
+
+  <h3>Các vòng interview</h3>
+
+  <div class="card">
+    <div class="card-t">Vòng 1: ML System Design (45-60 min)</div>
+    <div class="card-b">
+      <strong>Example questions:</strong><br>
+      • Design a feature store for a ride-sharing company (online + offline, consistency, latency SLAs)<br>
+      • Design a distributed training system for a team of 20 ML engineers<br>
+      • Design an ML platform for self-serve model deployment (multi-tenant, versioning, rollback)<br><br>
+      <strong>What they want:</strong> scalability reasoning, consistency trade-offs, failure modes analysis, developer experience thinking, cost estimation. Không cần perfect answer — cần structured thinking.
+    </div>
+    <button class="ask-btn" onclick="sendPrompt('Mock interview: Design a feature store for a Canadian bank serving 20M customers. Hỏi tôi từng phần như interviewer thực sự.')">💬 Mock interview: Design a feature store for a Canadian bank serving 20M customers</button>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Vòng 2: Distributed Systems Deep Dive (45 min)</div>
+    <div class="card-b">
+      <strong>Example questions:</strong><br>
+      • Explain Raft consensus. What happens when the leader fails? How does log replication ensure consistency?<br>
+      • How does Kafka guarantee ordering within a partition? What about across partitions?<br>
+      • Explain consistent hashing. Why is it used in distributed caches? What are the failure modes?<br>
+      • What is exactly-once semantics? Is it truly achievable? What are the trade-offs?<br><br>
+      <strong>Chuẩn bị:</strong> DDIA chapters 5-9, MIT 6.824 lectures, và hands-on experience (Raft lab, Kafka setup). Hiểu theory + có thể relate tới production experience.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Vòng 3: Coding — Python + Infrastructure (60 min)</div>
+    <div class="card-b">
+      <strong>Typical problems:</strong><br>
+      • Implement LRU cache with O(1) get/put<br>
+      • Design a job scheduler with priority queues and retry logic<br>
+      • Build a Python SDK client with connection pooling and circuit breaker<br>
+      • Implement distributed tracing context propagation<br><br>
+      <strong>LeetCode:</strong> 50 bài Medium là đủ. Focus vào: graphs (BFS/DFS), hash maps, queues/heaps, sliding window. Python là ngôn ngữ chính — viết clean, Pythonic code.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Vòng 4: Behavioral — với Platform Engineer twist</div>
+    <div class="card-b">
+      Dùng STAR format (Situation, Task, Action, Result) với metrics cụ thể.<br><br>
+      <strong>Example questions:</strong><br>
+      • "Tell me about a time you built something that other engineers used." → Platform DX story<br>
+      • "Describe a situation where you had to make a technical decision with incomplete information." → Trade-offs story<br>
+      • "How do you handle disagreements about technical direction?" → Collaboration story<br>
+      • "Tell me about a production incident you handled." → On-call / incident response story<br><br>
+      <strong>Platform Engineer twist:</strong> Mọi câu trả lời nên show rằng bạn think about <strong>users of your platform</strong> (other engineers), không chỉ technology. "I reduced deployment time" → tốt. "I reduced deployment time, which unblocked 3 ML teams from shipping weekly" → rất tốt.
+    </div>
+  </div>
+
+</div>
+
+<!-- ===================== TAB 5: APPLY STRATEGY ===================== -->
+<div class="panel" id="panel-apply">
+
+  <div class="card highlight">
+    <div class="card-t">Apply Strategy</div>
+    <div class="card-b">Apply strategy — cách tối đa hóa cơ hội từ VN. Apply lạnh từ VN vào Canada = tỷ lệ reply ~3-5%. Cần chiến lược rõ ràng để maximize mọi application.</div>
+  </div>
+
+  <h3>CV & LinkedIn</h3>
+
+  <div class="card">
+    <div class="card-t">CV — 1 trang, XYZ format</div>
+    <div class="card-b">
+      <strong>Headline:</strong> "ML Platform Engineer | 3+ years DevOps/ML Infrastructure in Financial Services"<br><br>
+      <strong>Summary:</strong> "Building infrastructure for ML systems in regulated banking environments. Experience designing and operating Kubernetes-based platforms for model serving, feature engineering, and monitoring at enterprise scale."<br><br>
+      <strong>Experience bullets — XYZ format:</strong><br>
+      <strong>Good:</strong> "Reduced ML model deployment time from 2 weeks to 4 hours (X) by building automated KServe pipeline (Z), enabling 3 ML teams to ship models weekly (Y)."<br>
+      <strong>Bad:</strong> "Responsible for deploying ML models using Kubernetes and KServe."<br><br>
+      <strong>Good:</strong> "Decreased infrastructure costs by 40% ($120K/year) (X) by implementing auto-scaling policies and spot instances for training workloads (Z), while maintaining 99.9% uptime SLA (Y)."<br>
+      <strong>Bad:</strong> "Managed cloud infrastructure and optimized costs."<br><br>
+      <strong>Projects section > Experience</strong> tại thời điểm này. Mini ML Platform project + LLMOps pipeline nên chiếm prominent position trên CV.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">LinkedIn — phải optimize trước khi apply</div>
+    <div class="card-b">
+      <strong>Headline:</strong> "ML Platform Engineer | DevOps → ML Infrastructure | K8s, Distributed Systems, Python | Open to Canada 🇨🇦"<br><br>
+      <strong>About:</strong> 3-4 sentences. Build tools cho ML teams, banking exp, open to relocation Canada. Ví dụ: "I build infrastructure that lets ML teams ship models faster. Currently working at NAB (enterprise bank) on Kubernetes-based platforms for model serving and monitoring. Background in distributed systems and DevOps. Open to ML Platform Engineer roles in Canada."<br><br>
+      <strong>Featured:</strong> 2-3 blog posts + GitHub project link. Pin Mini ML Platform repo.<br><br>
+      <strong>Location:</strong> "Open to Work" → Canada locations (Toronto, Vancouver, Montreal). Bật "Open to recruiters" flag.
+    </div>
+  </div>
+
+  <h3>Outreach & Apply</h3>
+
+  <div class="card">
+    <div class="card-t">Cold outreach — cách tiếp cận recruiter/hiring manager</div>
+    <div class="card-b">
+      <strong>Bad:</strong> <em>"Hi, I'm looking for opportunities in Canada. I have experience in DevOps and ML. Please consider my profile."</em><br><br>
+      <strong>Good:</strong> <em>"Hi [Name], I read your team's blog post about [specific topic]. I built something similar — [link]. I'm an ML Platform Engineer with banking infra experience, looking to join a team in Canada. Would you be open to a 15-min chat?"</em><br><br>
+      <strong>Volume:</strong> 5-10 outreach/week. Target: Hiring managers > Recruiters. Hiring managers có quyền quyết định, recruiters chỉ filter.<br><br>
+      <strong>Tìm người đúng:</strong> LinkedIn → search "[Company] ML Platform" hoặc "[Company] MLOps" → tìm hiring managers hoặc team leads. Đọc blog/talks của họ trước khi outreach.
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Platforms to apply</div>
+    <div class="card-b">
+      • <strong>LinkedIn Jobs</strong> — filter: Canada + visa sponsorship<br>
+      • <strong>Indeed Canada</strong> — nhiều enterprise roles<br>
+      • <strong>Glassdoor Canada</strong> — reviews + salary data<br>
+      • <strong>Lever/Greenhouse</strong> — career pages trực tiếp (bypass recruiter filters)<br>
+      • <strong>AngelList/Wellfound</strong> — startups, thường flexible hơn về visa<br>
+      • <strong>GitHub Jobs</strong> — visa-sponsored positions<br>
+      • <strong>Jaabz.com</strong> — aggregator cho Canada tech jobs
+    </div>
+  </div>
+
+  <h3>Timeline apply</h3>
+
+  <div class="card">
+    <div class="card-t">Tháng 7-12: Exploration phase</div>
+    <div class="card-b">Apply thử 15-20 positions. Mục tiêu: data, không phải offer. Tìm hiểu: interview process như nào, câu hỏi thường gặp, level expectations, visa sponsorship policies. Mỗi rejection = data point.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Tháng 13-15: All-in phase</div>
+    <div class="card-b">Apply nghiêm túc 30-50 positions. Target Tier 1 + Tier 2 companies. Tailor CV cho mỗi application. Cold outreach song song. Mục tiêu: ≥5 interviews.</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Tháng 16-18: Close phase</div>
+    <div class="card-b">Follow up, second rounds, negotiate offers. Nếu có multiple offers: negotiate salary, visa timeline, team fit. Nếu chưa có offer: analyze data, adjust strategy, continue applying.</div>
+  </div>
+
+</div>
+
+<!-- ===================== NAVIGATION ===================== -->
+<div class="nav-links">
+  <a class="nav-link" href="part1_strategy.html">← Part 1: Strategy</a>
+  <a class="nav-link" href="part2_skills.html">← Part 2: Skills</a>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('panel-'+id).classList.add('active');
+  event.target.closest('.tab').classList.add('active');
+}
+function sendPrompt(text){
+  if(window.parent && window.parent.postMessage){window.parent.postMessage({type:'sendPrompt',text:text},'*')}
+}
+</script>
+
+</body>
+</html>
