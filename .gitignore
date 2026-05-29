@@ -22,3 +22,6 @@ yarn-error.log*
 # Python cache
 __pycache__/
 *.pyc
+
+# AI
+.antigravitycli/

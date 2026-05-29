@@ -6,7 +6,8 @@ repos:
         name: Markdownlint (Node.js)
         description: Run markdownlint-cli on your Markdown files
         files: \.(md|mdown|markdown|myst)$
-        args: [--fix]
+        exclude: ^(\.rules/|AGENTS\.md|CLAUDE\.md)$
+        args: [--ignore, .rules, --ignore, AGENTS.md, --ignore, CLAUDE.md]
   - repo: local
     hooks:
       - id: docs-structure-check
