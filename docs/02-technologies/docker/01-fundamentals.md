@@ -1,6 +1,6 @@
 # fundamentals
 
-- [ ] Progress: Done
+- [x] Progress: Done
 
 ## Concepts
 
