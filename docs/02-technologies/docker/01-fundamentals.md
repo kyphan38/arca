@@ -103,6 +103,6 @@ Restart policy behaviors
 
 ### Components
 
-- BusyBox: Combines common UNIX utilities into a single optimized executable
+- BusyBox: Combines common UNIX utilities into a single optimized executable file
 - musl libc: Replaces glibc as interface to the Linux kernel
 - Characteristics: Lightweight, fast, designed for embedded systems and minimal environments

@@ -1,6 +1,6 @@
 # images
 
-- [ ] Progress: Draft
+- [x] Progress: Done
 
 ## Concepts
 
