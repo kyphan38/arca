@@ -8,9 +8,9 @@
 
 ![img](./img/01/01.png)
 
-- dockerd - long-running background process
-- containerd - lower-level runtime
-- runc - executes syscalls
+- dockerd: Long-running background process
+- containerd: Lower-level runtime
+- runc: Executes syscalls
 
 ### Overview
 
@@ -23,7 +23,7 @@
 # clone() with namespace flags, set cgroups, exec the entrypoint
 docker run  
 
-# List running contains (-a for stopped too)
+# List running containers (-a for stopped too)
 # Reads daemon state
 docker ps
 
@@ -81,19 +81,19 @@ docker logs dev-redis
 
 Image base variations
 
-- `redis:latest`: worst choice
+- `redis:latest`: Worst choice
 - `redis:7.2`: Debian based, heavier
 - `redis:7.2-alpine`: Alpine based, lightweight, best for Dev/CI
-- `redis@sha256:...`: digest pin, best for production
+- `redis@sha256:...`: Digest pin, best for production
 
 Restart policy behaviors
 
-- `none`: Default, stays dead on crash or daemon restart
+- `none`: Default, stays dead on crash or daemon restarts
 - `on-failure`: Restarts only when exiting with error code
 - `always`: Forces restart, even after manual stop
 - `unless-stopped`: Restarts on crash or machine reboot
 
-## Architecture
+## Alpine
 
 ### Concepts
 
