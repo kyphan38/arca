@@ -2,7 +2,7 @@
 
 - [x] Progress: Done
 
-## Overview
+## Real-World Production Scenario
 
 ![img](./img/01/01.png)
 
@@ -21,9 +21,9 @@ Content-Type: application/json
 }
 ```
 
-## Concepts
+## Core Security Frameworks
 
-### Security
+### CIA Triad
 
 - Confidentiality: Data is only readable by authorized parties
   - Broken by: Eavesdropping, data leaks, etc.
@@ -32,17 +32,17 @@ Content-Type: application/json
 - Availability: System is usable when needed
   - Broken by: DDoS, ransomware, etc.
 
-### Flow
+### AAA Framework
 
 - Authentication: Prove who (or what) is making the request
 - Authorization: Decide what that identity is allowed to do
 - Accounting / Audit: Record what was done by whom and when
 
-### Best practices
+### Trust Boundaries
 
 - Rule: Data crossing trust boundaries must be re-authenticated, re-authorized, re-validated, encoded, and logged
 
-### Categories
+### STRIDE Threat Model
 
 | Letter | Threat | Violates | Example on QuickPayS |
 | :---: | :--- | :--- | :--- |
@@ -53,7 +53,7 @@ Content-Type: application/json
 | **D** | Denial of Service | Availability | Flood `/v1/transfers` with bad-signature requests to exhaust CPU |
 | **E** | Elevation of Privilege | Authorization | The red team finding above — acting on someone else's account |
 
-### Approaches
+### Attack Trees
 
 - Attack tree: Decomposes target objective into sub-goals
   - Root: Attacker's objective

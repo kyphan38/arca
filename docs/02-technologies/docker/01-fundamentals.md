@@ -2,9 +2,9 @@
 
 - [x] Progress: Done
 
-## Concepts
+## Core Architecture & Containers
 
-### Architecture
+### Docker Daemon & Runtime
 
 ![img](./img/01/01.png)
 
@@ -12,11 +12,11 @@
 - containerd: Lower-level runtime
 - runc: Executes syscalls
 
-### Overview
+### Container Isolation
 
 ![img](./img/01/02.png)
 
-## Commands
+## Daily Commands
 
 ```bash
 # Create and start a container from an image
@@ -44,7 +44,7 @@ docker stop
 docker rm
 ```
 
-## Best practices
+## Container Rules & Practices
 
 - Pin tags: Pin specific versions like `redis:7.2-alpine` instead of `redis:latest`
 - Container naming: Name containers using `--name`
@@ -53,7 +53,7 @@ docker rm
 - Restart policy: `--restart unless-stopped` prevents downtime from crashes or reboots
 - Lifecycle: `docker rm` deletes the container writable layer
 
-## Examples
+## One-Off Container Commands
 
 ```bash
 docker run --rm -it alpine:3.20 sh
@@ -62,7 +62,7 @@ docker run --rm -it alpine:3.20 sh
 docker run --rm python:3.12-slim python -c "import sys; print(sys.version)"
 ```
 
-## Implementation
+## Practical Redis Setup
 
 ```bash
 docker run -d \
@@ -77,7 +77,7 @@ docker exec dev-redis redis-cli PING
 docker logs dev-redis
 ```
 
-## Comparison
+## Image Base & Restart Policy Trade-Offs
 
 Image base variations
 
@@ -93,15 +93,15 @@ Restart policy behaviors
 - `always`: Forces restart, even after manual stop
 - `unless-stopped`: Restarts on crash or machine reboot
 
-## Alpine
+## Alpine Linux Images
 
-### Concepts
+### Overview & Philosophy
 
 - Alpine image: Built on Alpine Linux instead of heavy distributions like Ubuntu or Debian
 - Philosophy: Only includes files strictly necessary to run the process
 - Base size: Approximately 5 MB
 
-### Components
+### Key Features
 
 - BusyBox: Combines common UNIX utilities into a single optimized executable file
 - musl libc: Replaces glibc as interface to the Linux kernel

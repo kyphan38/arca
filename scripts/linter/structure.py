@@ -1,5 +1,4 @@
 import re
-from .config import ALLOWED_TITLES
 
 
 def check_structure(lines):
@@ -63,13 +62,9 @@ def check_structure(lines):
         if text[0].islower():
           errors.append(f"Line {line_num}: H{level} must start with uppercase - got '{'#' * level} {text}'")
 
-    # Rule: H3 must be from ALLOWED_TITLES (except when under Review Questions)
-    if level == 3:
-      if text not in ALLOWED_TITLES:
-        errors.append(f"Line {line_num}: H3 '{text}' is not in allowed H3 titles. Must be one of: {', '.join(ALLOWED_TITLES)}")
-
   # Rule: Progress line must exist
   if found_h1 and not has_valid_progress:
     errors.append("Missing '- [ ] Progress: Draft/Review/Done' after H1")
 
   return errors
+

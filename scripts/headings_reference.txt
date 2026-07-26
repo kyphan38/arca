@@ -1,0 +1,44 @@
+# Headings Reference List
+# This list serves as a reference guide for document section titles.
+# Section headings are freestyle and not strictly enforced by the linter.
+
+# Theory
+Introduction
+Overview
+Prerequisites
+Concepts
+Architecture
+Components
+Flow
+How it works
+Pros & cons
+Categories
+Comparison
+Limitations
+Security
+
+# Preparation
+Configuration
+Approaches
+
+# Execution
+Implementation
+Commands
+
+# Deep Dive
+Use Cases
+Examples
+Best practices
+Performance
+
+# Maintenance
+Troubleshooting
+Common errors
+
+# Conclusion
+Summary
+Next steps
+References
+
+# Review
+Review Questions

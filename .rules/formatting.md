@@ -102,11 +102,9 @@ Every markdown file must follow this exact order
 - H2/H3 - Title Case (first letter uppercase)
 - Max depth - H3 - never use H4, H5, H6
 
-### Allowed H2 Section Names
+### Section Names
 
-Must be one of - Introduction, Overview, Prerequisites, Concepts, Architecture, Components, Flow, How it works, Pros & cons, Categories, Comparison, Limitations, Security, Configuration, Approaches, Implementation, Commands, Use Cases, Examples, Best practices, Performance, Troubleshooting, Common errors, Summary, Next steps, References, Review Questions
-
-Details in `scripts/linter/config.py`
+Section names (H2/H3) are freestyle and flexible. For recommended reference section titles, see `scripts/headings_reference.txt`.
 
 ## What NOT to Do
 

@@ -2,9 +2,9 @@
 
 - [x] Progress: Done
 
-## Concepts
+## Image Structure & Storage
 
-### Overview
+### Image Definition & Build Process
 
 Image definition
 
@@ -33,7 +33,7 @@ Build concepts
 
 ![img](./img/02/02.png)
 
-### Components
+### Layers & OverlayFS
 
 Layer creation
 
@@ -73,21 +73,21 @@ Storage cost breakdown
 - Writable layer lifecycle: Files written to `upperdir` are deleted during `docker rm`
 - Data persistence: Databases require volumes to persist data when container is removed
 
-### Comparison
+### Tags vs Digests
 
 - Tag: Mutable reference pointing to a manifest digest
 - Digest: Immutable SHA256 hash of the manifest, changes only if content changes
 
 ![img](./img/02/04.png)
 
-### How it works
+### Disk Usage Measurement
 
 ![img](./img/02/05.png)
 
 - `docker image ls`: Shows virtual size by summing all layers, ignoring sharing
 - `docker system df`: Shows actual disk usage, accounting for layer sharing
 
-## Commands
+## Image Removal (docker rmi)
 
 - Rule: `docker rmi` removes the manifest, layers are deleted only when unreferenced
 
@@ -101,7 +101,7 @@ debian base   30 MB   → node still uses it       → KEPT      ( 0 MB)
 
 - Shared layers: Deleting an image only frees disk space for unshared layers
 
-## Best practices
+## Image Best Practices
 
 - Pin by digest: Use immutable references like `node:20-slim@sha256:9f2a3b…`
 - Disk measurement: Use `docker system df` for actual usage, not `docker image ls`

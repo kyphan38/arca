@@ -1,3 +1,6 @@
+# Note: Section headings are freestyle and no longer strictly enforced by the linter.
+# See scripts/headings_reference.txt for the recommended reference list of headings.
+
 ALLOWED_TITLES = [
   # Theory
   "Introduction",
