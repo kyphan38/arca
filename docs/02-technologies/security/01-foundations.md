@@ -48,10 +48,10 @@ Content-Type: application/json
 | :---: | :--- | :--- | :--- |
 | **S** | Spoofing | Authentication | Stolen JWT → attacker impersonates a customer |
 | **T** | Tampering | Integrity | MITM rewrites `destination_account` in transit |
-| **R** | Repudiation | Non-repudiation | Customer claims "I never authorized that transfer" — can you prove they did? |
+| **R** | Repudiation | Non-repudiation | Customer claims "I never authorized that transfer" - can you prove they did? |
 | **I** | Information disclosure | Confidentiality | Error message leaks "account VN98… does not exist" (account enumeration) |
 | **D** | Denial of Service | Availability | Flood `/v1/transfers` with bad-signature requests to exhaust CPU |
-| **E** | Elevation of Privilege | Authorization | The red team finding above — acting on someone else's account |
+| **E** | Elevation of Privilege | Authorization | The red team finding above - acting on someone else's account |
 
 ### Attack Trees
 
