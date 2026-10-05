@@ -19,6 +19,7 @@
 - Strictly follow standard Markdown formatting
 - Do not use a period (.) at the end of sentences (exception: abbreviations like etc.)
 - Do not use a colon (:) even when introducing a list
+- Do not use the em dash (—) - use a plain hyphen with spaces ( - ) instead
 
 ## Conciseness
 
