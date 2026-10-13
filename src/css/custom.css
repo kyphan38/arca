@@ -1,35 +1,351 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites
+ * arca - shared gray look (values from ../DESIGN.md).
+ * Layout follows the "calm and text-first" rules: space before boxes,
+ * words instead of pills, no shadow, small rounding.
  */
 
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f4;
+  --sunk: #ececec;
+  --ink: #171717;
+  --muted: #555555;
+  --faint: #8a8a8a;
+  --line: #e5e5e5;
+  --line-strong: #d4d4d4;
+  --select: rgb(23 23 23 / 0.14);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Docusaurus sets data-theme on <html> itself (its 3-way toggle covers
+   "system"). `html[...]` matches Infima's own dark block, so this wins. */
+html[data-theme='dark'] {
+  --bg: #111111;
+  --surface: #1a1a1a;
+  --surface-2: #222222;
+  --sunk: #0a0a0a;
+  --ink: #e8e8e8;
+  --muted: #a3a3a3;
+  --faint: #7a7a7a;
+  --line: #262626;
+  --line-strong: #3a3a3a;
+  --select: rgb(232 232 232 / 0.18);
+}
+
+:root,
+html[data-theme='dark'] {
+  /* Infima maps to the shared tokens. Primary is ink: links and the
+     current place are told apart by weight and underline, not hue. */
+  --ifm-color-primary: var(--ink);
+  --ifm-color-primary-dark: var(--ink);
+  --ifm-color-primary-darker: var(--ink);
+  --ifm-color-primary-darkest: var(--ink);
+  --ifm-color-primary-light: var(--muted);
+  --ifm-color-primary-lighter: var(--muted);
+  --ifm-color-primary-lightest: var(--faint);
+
+  --ifm-background-color: var(--bg);
+  --ifm-background-surface-color: var(--bg);
+  --ifm-font-color-base: var(--ink);
+  --ifm-heading-color: var(--ink);
+  --ifm-font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --ifm-heading-font-family: var(--ifm-font-family-base);
+  --ifm-font-family-monospace: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --ifm-line-height-base: 1.75;
+  --ifm-heading-font-weight: 600;
+  --ifm-heading-line-height: 1.3;
+  --ifm-h1-font-size: 1.75rem;
+  --ifm-h2-font-size: 1.3rem;
+  --ifm-h3-font-size: 1.1rem;
+
+  --ifm-link-color: var(--ink);
+  --ifm-link-hover-color: var(--ink);
+  --ifm-link-decoration: underline;
+  --ifm-hover-overlay: var(--surface-2);
+
+  --ifm-global-radius: 8px;
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+  --ifm-hr-background-color: var(--line);
+
+  --ifm-navbar-background-color: var(--bg);
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: var(--faint);
+  --ifm-navbar-link-hover-color: var(--ink);
+  --ifm-navbar-link-active-color: var(--ink);
+  --ifm-navbar-search-input-background-color: var(--surface-2);
+  --ifm-navbar-search-input-color: var(--ink);
+  --ifm-navbar-search-input-placeholder-color: var(--faint);
+  --ifm-dropdown-background-color: var(--surface);
+
+  --ifm-menu-color: var(--muted);
+  --ifm-menu-color-active: var(--ink);
+  --ifm-menu-color-background-active: transparent;
+  --ifm-menu-color-background-hover: transparent;
+  --ifm-toc-border-color: var(--line);
+  --ifm-toc-link-color: var(--faint);
+
+  --ifm-code-font-size: 90%;
+  --ifm-code-background: var(--surface-2);
+  --ifm-pre-background: var(--surface-2);
+  --ifm-code-border-radius: 6px;
+  --docusaurus-highlighted-code-line-bg: var(--sunk);
+
+  --ifm-table-border-color: var(--line);
+  --ifm-table-background: transparent;
+  --ifm-table-stripe-background: transparent;
+  --ifm-table-head-background: transparent;
+  --ifm-table-head-color: var(--faint);
+  --ifm-table-head-font-weight: 500;
+
+  --ifm-breadcrumb-item-background-active: transparent;
+  --ifm-breadcrumb-color-active: var(--ink);
+  --ifm-pagination-nav-color-hover: var(--line-strong);
+  --ifm-scrollbar-thumb-background-color: var(--line-strong);
+  --ifm-scrollbar-track-background-color: transparent;
+
+  /* Admonitions keep their shape but lose their hue. */
+  --ifm-color-info-contrast-background: var(--surface-2);
+  --ifm-color-success-contrast-background: var(--surface-2);
+  --ifm-color-warning-contrast-background: var(--surface-2);
+  --ifm-color-danger-contrast-background: var(--surface-2);
+  --ifm-color-secondary-contrast-background: var(--surface-2);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--select);
+  color: inherit;
+}
+
+:focus {
+  outline: none;
+}
+:focus-visible {
+  outline: 1.5px solid var(--faint);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Links: underline is the only signal ---------- */
+
+.theme-doc-markdown a {
+  text-decoration-color: var(--line-strong);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.theme-doc-markdown a:hover {
+  text-decoration-color: var(--ink);
+}
+.navbar a,
+.menu a,
+.table-of-contents a,
+.breadcrumbs a,
+.pagination-nav a {
+  text-decoration: none;
+}
+
+/* ---------- Navbar: one hairline, words ---------- */
+
+.navbar {
+  border-bottom: 1px solid var(--line);
+}
+.navbar__brand,
+.navbar__title {
+  color: var(--ink);
+  font-weight: 600;
+}
+.navbar__link {
+  font-size: 0.9rem;
+}
+
+/* ---------- Sidebar: plain rows, the current one is ink ---------- */
+
+.theme-doc-sidebar-container {
+  border-right-color: var(--line) !important;
+}
+.menu {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.menu__link {
+  color: var(--muted);
+}
+.menu__link:hover,
+.menu__caret:hover {
+  color: var(--ink);
+}
+.menu__link--active:not(.menu__link--sublist) {
+  color: var(--ink);
+  font-weight: 500;
+}
+.menu__link--sublist.menu__link--active {
+  color: var(--ink);
+}
+
+/* ---------- Breadcrumbs: small faint words, no pill ---------- */
+
+.breadcrumbs__link {
+  padding: 0;
+  font-size: 0.8rem;
+  color: var(--faint);
+  background: none;
+}
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--muted);
+}
+.breadcrumbs__item:not(:last-child)::after {
+  margin: 0 0.4rem;
+  opacity: 0.4;
+}
+
+/* ---------- Article ---------- */
+
+.theme-doc-markdown h1 {
+  margin-bottom: 1.25rem;
+}
+.theme-doc-markdown h2 {
+  margin-top: 2.75rem;
+}
+.theme-doc-markdown h3 {
+  margin-top: 2rem;
+}
+
+/* Inline code: a light wash, no border. */
+code {
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* Code blocks: surface-2, no shadow. */
+.theme-code-block {
+  box-shadow: none;
+  border: 1px solid var(--line);
+}
+
+/* Tables: hairlines only, no stripes, no outer box. */
+table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+}
+table thead tr,
+table tr {
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+table th,
+table td {
+  border: 0;
+  padding: 0.55rem 0.75rem 0.55rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+table th {
+  font-size: 0.8rem;
+}
+
+blockquote {
+  border-left: 2px solid var(--line-strong);
+  color: var(--muted);
+  box-shadow: none;
 }
 
 img {
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
+}
+
+/* Admonitions: hairline box, gray left rule. */
+.theme-admonition {
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--line-strong);
+  color: var(--ink);
+  box-shadow: none;
+}
+.theme-admonition [class*='admonitionHeading'] {
+  color: var(--muted);
+}
+.theme-admonition svg {
+  fill: currentColor;
+}
+
+/* ---------- Table of contents: quiet ---------- */
+
+.table-of-contents {
+  font-size: 0.8rem;
+}
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ink);
+}
+
+/* ---------- Footer of a doc: meta and prev / next as words ---------- */
+
+.theme-last-updated {
+  font-size: 0.8rem;
+  color: var(--faint);
+}
+.pagination-nav__link {
+  border: 0;
+  padding: 0.5rem 0;
+  background: none;
+}
+.pagination-nav__link:hover {
+  border: 0;
+}
+.pagination-nav__link--next {
+  text-align: right;
+}
+.pagination-nav__sublabel {
+  color: var(--faint);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.pagination-nav__label {
+  font-weight: 500;
+}
+
+/* ---------- Search (Algolia autocomplete): gray, not purple ---------- */
+
+html body {
+  --aa-text-color-rgb: 23, 23, 23;
+  --aa-primary-color-rgb: 23, 23, 23;
+  --aa-primary-color-alpha: 0.08;
+  --aa-icon-color-rgb: 138, 138, 138;
+  --aa-muted-color-rgb: 138, 138, 138;
+  --aa-panel-border-color-rgb: 229, 229, 229;
+  --aa-panel-border-color-alpha: 1;
+  --aa-input-border-color-rgb: 212, 212, 212;
+  --aa-input-border-color-alpha: 1;
+  --aa-background-color-rgb: 255, 255, 255;
+  --aa-input-background-color-rgb: 250, 250, 250;
+  --aa-selected-color-rgb: 23, 23, 23;
+  --aa-selected-color-alpha: 0.06;
+  --aa-description-highlight-background-color-rgb: 23, 23, 23;
+  --aa-description-highlight-background-color-alpha: 0.1;
+  --aa-panel-shadow: none;
+  --aa-overlay-color-rgb: 17, 17, 17;
+}
+html[data-theme='dark'] body {
+  --aa-text-color-rgb: 232, 232, 232;
+  --aa-primary-color-rgb: 232, 232, 232;
+  --aa-primary-color-alpha: 0.12;
+  --aa-icon-color-rgb: 122, 122, 122;
+  --aa-muted-color-rgb: 122, 122, 122;
+  --aa-panel-border-color-rgb: 38, 38, 38;
+  --aa-input-border-color-rgb: 58, 58, 58;
+  --aa-background-color-rgb: 26, 26, 26;
+  --aa-input-background-color-rgb: 17, 17, 17;
+  --aa-selected-color-rgb: 232, 232, 232;
+  --aa-selected-color-alpha: 0.08;
+  --aa-description-highlight-background-color-rgb: 232, 232, 232;
+  --aa-description-highlight-background-color-alpha: 0.14;
 }

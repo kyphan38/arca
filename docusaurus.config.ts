@@ -1,6 +1,6 @@
-import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import prismGray from './src/lib/prism-gray';
 
 const config: Config = {
   title: 'arca',
@@ -28,6 +28,15 @@ const config: Config = {
         name: 'robots',
         content: 'noindex, nofollow',
       },
+    },
+    // Browser bar follows the page background (DESIGN.md).
+    {
+      tagName: 'meta',
+      attributes: {name: 'theme-color', content: '#fafafa', media: '(prefers-color-scheme: light)'},
+    },
+    {
+      tagName: 'meta',
+      attributes: {name: 'theme-color', content: '#111111', media: '(prefers-color-scheme: dark)'},
     },
   ],
 
@@ -87,8 +96,8 @@ const config: Config = {
       ],
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: prismGray,
+      darkTheme: prismGray,
     },
     colorMode: {
       defaultMode: 'light',
@@ -96,7 +105,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     mermaid: {
-      theme: { light: 'default'},
+      theme: {light: 'neutral', dark: 'dark'},
     },
   } satisfies Preset.ThemeConfig,
 };
