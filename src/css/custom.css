@@ -35,7 +35,7 @@ html[data-theme='dark'] {
 :root,
 html[data-theme='dark'] {
   /* Infima maps to the shared tokens. Primary is ink: links and the
-     current place are told apart by weight and underline, not hue. */
+     current place are told apart by weight, not hue or underline. */
   --ifm-color-primary: var(--ink);
   --ifm-color-primary-dark: var(--ink);
   --ifm-color-primary-darker: var(--ink);
@@ -60,7 +60,8 @@ html[data-theme='dark'] {
 
   --ifm-link-color: var(--ink);
   --ifm-link-hover-color: var(--ink);
-  --ifm-link-decoration: underline;
+  --ifm-link-decoration: none;
+  --ifm-link-hover-decoration: none;
   --ifm-hover-overlay: var(--surface-2);
 
   --ifm-global-radius: 8px;
@@ -133,15 +134,13 @@ body {
   border-radius: 2px;
 }
 
-/* ---------- Links: underline is the only signal ---------- */
+/* ---------- Links: weight is the signal, no underline ---------- */
 
 .theme-doc-markdown a {
-  text-decoration-color: var(--line-strong);
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
+  font-weight: 500;
 }
 .theme-doc-markdown a:hover {
-  text-decoration-color: var(--ink);
+  color: var(--muted);
 }
 .navbar a,
 .menu a,
