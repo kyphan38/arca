@@ -105,7 +105,7 @@ Every markdown file must follow this exact order
 
 ### Section Names
 
-Section names (H2/H3) are freestyle and flexible. For recommended reference section titles, see `scripts/headings_reference.txt`.
+Section names (H2/H3) are freestyle and flexible. For recommended reference section titles, see `scripts/headings-reference.txt`.
 
 ## What NOT to Do
 
