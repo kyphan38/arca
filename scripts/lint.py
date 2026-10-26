@@ -7,7 +7,7 @@ from linter.structure import check_structure
 
 DOCS_DIR = "docs"
 KEBAB_CASE_PATTERN = re.compile(r'^[0-9a-z-]+$')
-IGNORE_DIRS = {".docusaurus", "node_modules", "img", ".git", ".gemini", "07-content"}
+IGNORE_DIRS = {".docusaurus", "node_modules", "img", ".git", ".gemini"}
 IGNORE_FILES = {os.path.normpath(os.path.join(DOCS_DIR, "00-introduction", "roadmap.md"))}
 
 
@@ -21,7 +21,7 @@ def main():
   has_error = False
 
   for root, dirs, files in os.walk(DOCS_DIR, topdown=True):
-    dirs[:] = [d for d in dirs if d not in IGNORE_DIRS]
+    dirs[:] = [d for d in dirs if d not in IGNORE_DIRS and not d.startswith("_")]
 
     # Check folder names
     for d in dirs:

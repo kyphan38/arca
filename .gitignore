@@ -25,3 +25,5 @@ __pycache__/
 
 # AI
 .antigravitycli/
+# Local course material
+/example_of_videos/
