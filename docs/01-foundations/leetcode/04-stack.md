@@ -1,7 +1,5 @@
 # stack
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

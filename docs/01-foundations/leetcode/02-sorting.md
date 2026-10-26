@@ -1,7 +1,5 @@
 # sorting
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

@@ -1,7 +1,5 @@
 # binary search
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

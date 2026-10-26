@@ -1,7 +1,5 @@
 # images
 
-- [x] Progress: Done
-
 ## Image Structure & Storage
 
 ### Image Definition & Build Process

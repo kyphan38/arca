@@ -1,7 +1,5 @@
 # two pointers
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

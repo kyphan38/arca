@@ -1,3 +1,1 @@
 # graphs
-
-- [ ] Progress: Draft

@@ -1,7 +1,5 @@
 # fundamentals
 
-- [x] Progress: Done
-
 ## Core Architecture & Containers
 
 ### Docker Daemon & Runtime

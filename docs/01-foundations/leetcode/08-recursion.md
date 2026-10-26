@@ -1,7 +1,5 @@
 # recusion
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

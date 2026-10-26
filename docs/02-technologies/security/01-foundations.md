@@ -1,7 +1,5 @@
 # foundations
 
-- [x] Progress: Done
-
 ## Real-World Production Scenario
 
 ![img](./img/01/01.png)

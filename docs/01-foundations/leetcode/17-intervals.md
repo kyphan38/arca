@@ -1,3 +1,1 @@
 # intervals
-
-- [ ] Progress: Draft

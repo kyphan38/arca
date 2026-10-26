@@ -1,3 +1,1 @@
 # backtracking
-
-- [ ] Progress: Draft

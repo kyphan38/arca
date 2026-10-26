@@ -1,3 +1,1 @@
 # greedy
-
-- [ ] Progress: Draft

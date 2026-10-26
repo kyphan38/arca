@@ -1,7 +1,5 @@
 # array and hashing
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

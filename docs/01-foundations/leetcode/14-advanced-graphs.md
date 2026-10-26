@@ -1,3 +1,1 @@
 # advanced graphs
-
-- [ ] Progress: Draft

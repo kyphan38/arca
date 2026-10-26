@@ -1,7 +1,5 @@
 # sliding window
 
-- [ ] Progress: Draft
-
 ## Easy
 
 ### Examples

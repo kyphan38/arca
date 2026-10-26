@@ -1,3 +1,1 @@
 # linked list
-
-- [ ] Progress: Draft
