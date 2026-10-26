@@ -51,7 +51,7 @@ Same types as `/cards` - Fundamental, Scenario, Interview, Traps
 
 For when the user returns after a break and feels they forgot everything
 
-1. Say clearly - do not delete, do not restart. Forgetting is normal, relearning is faster than first learning
+1. Say clearly - do not delete, do not restart. Forgetting is normal, relearning is faster than first learning. Point to `docs/00-introduction/study-method.md` for the full flow
 2. Ask them to clear the Anki `arca` backlog first (cap at 100 reviews per day if it is huge)
 3. Find the last 2 sections they studied (topic `00-map.md`, or `git log -- docs`). Quiz 4 Fundamental questions on each
 4. Each missed topic - give the note path and the source lesson from its header. Revisit only those

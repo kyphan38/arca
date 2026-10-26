@@ -66,7 +66,9 @@ def parse_note(path):
                     note_col = head.index("note") if "note" in head else None
                 elif note_col is not None and len(row) > note_col and row[note_col]:
                     title = LINK.sub(r"\1", row[0])
-                    cards.append({"q": f"{title} - which pattern, and why?", "a": row[note_col], "line": n})
+                    # "(redo)" is the user's re-solve marker, not part of the answer
+                    answer = re.sub(r"\s*\(redo\)\s*$", "", row[note_col])
+                    cards.append({"q": f"{title} - which pattern, and why?", "a": answer, "line": n})
             else:
                 note_col = None
                 if in_q and line.strip():

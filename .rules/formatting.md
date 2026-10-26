@@ -14,6 +14,11 @@
 - When checking a note, point out wrong or missing facts - do not polish the wording
 - Vietnamese, English, or a mix are all fine - keep technical terms in English
 
+## Study Method Page
+
+- `docs/00-introduction/study-method.md` - the user's guide to the whole repo and study flow, all topics. Always write it in Vietnamese
+- Whenever you change `.rules/`, `.claude/skills/`, or `scripts/templates/`, update that page in the same change so it matches - steps, skill names, arguments, sections, decks, sources
+
 ## Never Delete
 
 - Never delete a note or "start a topic over", even if the user asks to clean up
@@ -37,7 +42,7 @@
 - One card per bullet - `- Q: question A: answer`
 - `/cards` turns these lines into Anki cards, so every fact worth remembering must end up here
 - Prefer "why" and scenario questions over plain definitions
-- Problem-list tables (e.g. leetcode) - a filled `Note` cell also becomes a card
+- Problem-list tables (e.g. leetcode) - a filled `Note` cell also becomes a card. A trailing `(redo)` marks a problem to re-solve and is left out of the card
   - Front - the problem, back - the note
   - Write the recognition hint (which pattern and why), not the full solution
 
