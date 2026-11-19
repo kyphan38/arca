@@ -1,7 +1,7 @@
 ---
 title: "commands"
 description: "Daily Docker container commands, container rules, a Redis setup, image tags and restart policies"
-sidebar_position: 3
+sidebar_position: 4
 tags: [docker, containers]
 ---
 

@@ -62,4 +62,8 @@ Ghi chú: note docker images có 6 ảnh, quy tắc là tối đa 1 ảnh mỗi 
 - Tách `docker/01-fundamentals.md`: phần lệnh, quy tắc, Redis, restart policy chuyển sang `docker/03-commands.md` (reference). `01-fundamentals.md` còn kiến trúc, isolation, Alpine (explanation). Hai trang link qua lại
 - `linux/01-ssh/main.md` → `linux/01-ssh.md`
 - Sửa tiêu đề "recusion" → "recursion"
-- Chưa làm: tách `docker/02-images.md`, đổi tên folder `03-guides` và `05-development`, xử lý 14 trang trống. Các việc này đổi URL hoặc cấu trúc chủ đề, để bạn quyết định sau
+- Tách `docker/02-images.md`: phần tag, digest, dung lượng, `rmi`, best practices chuyển sang `docker/03-image-storage.md`. `commands` đổi số thành `04-commands.md` (URL giữ nguyên)
+- `03-guides` → `03-tools` (chỉ chứa bảng tra cứu Vim). Link cũ `/guides/vim` tự chuyển sang `/tools/vim`
+- Link cũ `/technologies/linux/ssh/main` tự chuyển sang `/technologies/linux/ssh`
+- 14 trang trống có `draft: true` - không xóa, không lên web, vẫn thấy khi chạy `npm run dev`
+- Giữ tên `05-development` - chưa rõ ý bạn ("development" có thể là phát triển bản thân)

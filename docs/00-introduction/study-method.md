@@ -209,6 +209,8 @@ Note mẫu đầy đủ - [SQS dead-letter queues](../02-technologies/aws/13-ser
 
 Leetcode học bằng cách làm bài, không phải xem bài giảng, nên không dùng `/lesson`. Mỗi pattern một file (`06-sliding-window.md`), mỗi bài một dòng trong bảng
 
+File của pattern chưa học có `draft: true` trong frontmatter - vẫn thấy khi chạy `npm run dev`, nhưng không lên web. Khi bắt đầu pattern đó, xóa dòng `draft: true`
+
 Một bài
 
 1. Đọc đề, tự đoán pattern trước khi code

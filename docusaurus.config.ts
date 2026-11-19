@@ -5,7 +5,7 @@ import llmsTxtPlugin from './src/plugins/llms-txt';
 
 const config: Config = {
   title: 'arca',
-  tagline: 'Personal knowledge base - notes on foundations, technologies and guides',
+  tagline: 'Personal knowledge base - notes on foundations, technologies and tools',
   favicon: 'img/favicon.svg',
 
   url: 'https://kyphan38.github.io',
@@ -80,6 +80,16 @@ const config: Config = {
 
   plugins: [
     llmsTxtPlugin,
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        // Old links keep working after a page or folder is renamed.
+        redirects: [
+          {from: '/guides/vim', to: '/tools/vim'},
+          {from: '/technologies/linux/ssh/main', to: '/technologies/linux/ssh'},
+        ],
+      },
+    ],
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
