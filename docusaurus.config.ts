@@ -1,9 +1,11 @@
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import prismGray from './src/lib/prism-gray';
+import llmsTxtPlugin from './src/plugins/llms-txt';
 
 const config: Config = {
   title: 'arca',
+  tagline: 'Personal knowledge base - notes on foundations, technologies and guides',
   favicon: 'img/favicon.svg',
 
   url: 'https://kyphan38.github.io',
@@ -12,6 +14,15 @@ const config: Config = {
   organizationName: 'arca',
   projectName: 'arca',
   deploymentBranch: 'gh-pages',
+
+  future: {
+    // Docusaurus Faster: Rspack bundler, SWC loader and minifiers, Lightning CSS.
+    faster: true,
+    v4: {
+      removeLegacyPostBuildHeadAttribute: true,
+      useCssCascadeLayers: false,
+    },
+  },
 
   trailingSlash: false,
   onBrokenLinks: 'throw',
@@ -50,6 +61,12 @@ const config: Config = {
           routeBasePath: '/',
           showLastUpdateTime: true,
         },
+        blog: false,
+        sitemap: {
+          lastmod: 'date',
+          changefreq: null,
+          priority: null,
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -62,11 +79,13 @@ const config: Config = {
   ],
 
   plugins: [
+    llmsTxtPlugin,
     [
       require.resolve("@cmfcmf/docusaurus-search-local"),
       {
         indexDocs: true,
-        indexBlog: true,
+        indexBlog: false,
+        indexPages: false,
         language: "en",
       },
     ],
@@ -80,11 +99,16 @@ const config: Config = {
   },
 
   themeConfig: {
+    // og:image and twitter:image for every page.
+    image: 'img/social-card.png',
+    metadata: [{name: 'twitter:card', content: 'summary_large_image'}],
     navbar: {
       title: 'arca',
       logo: {
-        alt: 'arca',
+        alt: 'arca logo',
         src: 'img/branding/arca-icon.svg',
+        width: 32,
+        height: 32,
       },
       items: [
         {

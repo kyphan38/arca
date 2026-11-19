@@ -11,7 +11,7 @@
   --sunk: #ececec;
   --ink: #171717;
   --muted: #555555;
-  --faint: #8a8a8a;
+  --faint: #6e6e6e; /* 4.9:1 on --bg, passes WCAG AA */
   --line: #e5e5e5;
   --line-strong: #d4d4d4;
   --select: rgb(23 23 23 / 0.14);
@@ -26,7 +26,7 @@ html[data-theme='dark'] {
   --sunk: #0a0a0a;
   --ink: #e8e8e8;
   --muted: #a3a3a3;
-  --faint: #7a7a7a;
+  --faint: #858585; /* 5.1:1 on --bg, passes WCAG AA */
   --line: #262626;
   --line-strong: #3a3a3a;
   --select: rgb(232 232 232 / 0.18);
@@ -206,6 +206,9 @@ body {
 
 /* ---------- Article ---------- */
 
+.theme-doc-markdown {
+  max-width: 46rem;
+}
 .theme-doc-markdown h1 {
   margin-bottom: 1.25rem;
 }
@@ -318,8 +321,9 @@ html body {
   --aa-text-color-rgb: 23, 23, 23;
   --aa-primary-color-rgb: 23, 23, 23;
   --aa-primary-color-alpha: 0.08;
-  --aa-icon-color-rgb: 138, 138, 138;
-  --aa-muted-color-rgb: 138, 138, 138;
+  --aa-icon-color-rgb: 110, 110, 110;
+  --aa-muted-color-rgb: 110, 110, 110;
+  --aa-muted-color-alpha: 1;
   --aa-panel-border-color-rgb: 229, 229, 229;
   --aa-panel-border-color-alpha: 1;
   --aa-input-border-color-rgb: 212, 212, 212;
@@ -337,8 +341,8 @@ html[data-theme='dark'] body {
   --aa-text-color-rgb: 232, 232, 232;
   --aa-primary-color-rgb: 232, 232, 232;
   --aa-primary-color-alpha: 0.12;
-  --aa-icon-color-rgb: 122, 122, 122;
-  --aa-muted-color-rgb: 122, 122, 122;
+  --aa-icon-color-rgb: 133, 133, 133;
+  --aa-muted-color-rgb: 133, 133, 133;
   --aa-panel-border-color-rgb: 38, 38, 38;
   --aa-input-border-color-rgb: 58, 58, 58;
   --aa-background-color-rgb: 26, 26, 26;
@@ -347,4 +351,32 @@ html[data-theme='dark'] body {
   --aa-selected-color-alpha: 0.08;
   --aa-description-highlight-background-color-rgb: 232, 232, 232;
   --aa-description-highlight-background-color-alpha: 0.14;
+}
+
+/* ---------- Mobile ---------- */
+
+@media (max-width: 996px) {
+  /* Wide tables (leetcode lists, STRIDE) scroll inside themselves,
+     not the whole page. */
+  .theme-doc-markdown table {
+    display: block;
+    overflow-x: auto;
+  }
+  .theme-doc-markdown h2 {
+    margin-top: 2.25rem;
+  }
+  /* Last-updated and prev / next stack instead of squeezing. */
+  .pagination-nav {
+    grid-template-columns: 1fr;
+  }
+  .pagination-nav__link--next {
+    text-align: left;
+  }
+}
+
+/* ---------- Mermaid: follow the gray look ---------- */
+
+.docusaurus-mermaid-container {
+  margin-bottom: var(--ifm-leading);
+  overflow-x: auto;
 }
