@@ -1,0 +1,89 @@
+---
+title: "commands"
+description: "Daily Docker container commands, container rules, a Redis setup, image tags and restart policies"
+sidebar_position: 3
+tags: [docker, containers]
+---
+
+# commands
+
+## Daily Commands
+
+```bash
+# Create and start a container from an image
+# clone() with namespace flags, set cgroups, exec the entrypoint
+docker run  
+
+# List running containers (-a for stopped too)
+# Reads daemon state
+docker ps
+
+# Run a new process inside an existing container's namespaces
+# setns() into target's namespaces, then exec
+docker exec
+
+# Show stdout/stderr captured by the daemon
+# Reads the log driver's file
+docker logs
+
+# Send SIGTERM, wait --time, then SIGKILL
+# Signal to PID 1 of the container
+docker stop
+
+# Remove a stopped container
+# Frees the OverlayFS upper dir
+docker rm
+```
+
+## Container Rules & Practices
+
+- Pin tags: Pin specific versions like `redis:7.2-alpine` instead of `redis:latest`
+- Container naming: Name containers using `--name`
+- Explicit port: Map ports using `-p HOST:CONTAINER` as `EXPOSE` is only documentation
+- Execution modes: `-d` for background services, `-it` for interactive terminal commands
+- Restart policy: `--restart unless-stopped` prevents downtime from crashes or reboots
+- Lifecycle: `docker rm` deletes the container writable layer
+
+## One-Off Container Commands
+
+```bash
+docker run --rm -it alpine:3.20 sh
+/ #
+
+docker run --rm python:3.12-slim python -c "import sys; print(sys.version)"
+```
+
+## Practical Redis Setup
+
+```bash
+docker run -d \
+  --name dev-redis \
+  -p 127.0.0.1:6379:6379 \
+  --restart unless-stopped \
+  redis:7.2-alpine
+
+docker ps -f name=dev-redis
+docker port dev-redis
+docker exec dev-redis redis-cli PING
+docker logs dev-redis
+```
+
+## Image Base & Restart Policy Trade-Offs
+
+Image base variations
+
+- `redis:latest`: Worst choice
+- `redis:7.2`: Debian based, heavier
+- `redis:7.2-alpine`: Alpine based, lightweight, best for Dev/CI
+- `redis@sha256:...`: Digest pin, best for production
+
+Restart policy behaviors
+
+- `none`: Default, stays dead on crash or daemon restarts
+- `on-failure`: Restarts only when exiting with error code
+- `always`: Forces restart, even after manual stop
+- `unless-stopped`: Restarts on crash or machine reboot
+
+## Related
+
+- [fundamentals](./01-fundamentals.md) - what dockerd, containerd and runc do under these commands

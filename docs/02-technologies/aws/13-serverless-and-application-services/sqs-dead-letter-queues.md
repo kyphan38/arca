@@ -1,3 +1,10 @@
+---
+title: "sqs dead-letter queues"
+description: "How SQS moves failing messages to a dead-letter queue with a redrive policy and maxReceiveCount, plus retention traps"
+sidebar_position: 1
+tags: [aws, aws-saa, sqs]
+---
+
 # sqs dead-letter queues
 
 > Cantrill 0264 · 2026-10-26

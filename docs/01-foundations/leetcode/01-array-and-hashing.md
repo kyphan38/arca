@@ -1,3 +1,10 @@
+---
+title: "array and hashing"
+description: "LeetCode problems for the array and hashing pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 1
+tags: [leetcode, dsa]
+---
+
 # array and hashing
 
 ## Easy

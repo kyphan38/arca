@@ -32,7 +32,8 @@
 - Sections - `Problem`, `How It Works`, `Traps`, `Questions` - skip a section if it has nothing
   - Cert courses may call it `Exam Traps`
   - Other section names are fine when the topic needs them
-- One H1 on the first line, max depth H3
+- Frontmatter first - `title`, `description`, `sidebar_position`, `tags` (see the template)
+- One H1 right after the frontmatter, max depth H3
 - About 40 lines per note - longer usually means copying the source
 - Max 1 image per note - a self-drawn diagram or a Mermaid block beats a screenshot of slides
 - Demo or lab lessons - no note needed, or 3 lines in the related note (what I did, what broke, the fix)

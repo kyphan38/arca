@@ -1,8 +1,26 @@
+---
+title: "foundations"
+description: "Security basics on a payment API example - CIA triad, AAA, trust boundaries, STRIDE and attack trees"
+sidebar_position: 1
+tags: [security, threat-modeling]
+---
+
 # foundations
 
 ## Real-World Production Scenario
 
-![img](./img/01/01.png)
+```mermaid
+flowchart TD
+  APP["Mobile App (untrusted)<br/>iOS / Android, customer-installed<br/>JWT in Authorization header, biometric unlock"]
+  APP -->|"HTTPS (TLS 1.3), public Internet<br/>--- Boundary A ---"| GW
+  GW["API Gateway + WAF<br/>WAF in front, validates JWT signature<br/>Rate-limits by IP"]
+  GW -->|"HTTP/1.1, plaintext inside VPC<br/>--- Boundary B ---"| PAY
+  PAY["payment-init service<br/>POST /v1/transfers<br/>Java / Spring Boot on EKS<br/>Reads JWT 'sub' claim for customer ID"]
+  PAY --> FR["Fraud Service"]
+  PAY --> LC["Ledger Core"]
+  PAY --> NS["Notification Service"]
+  LC --> AU["Audit DB<br/>append-only, retained 10 yr (PCI-DSS, local CB)"]
+```
 
 Mobile app request body
 

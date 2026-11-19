@@ -1,4 +1,11 @@
-# recusion
+---
+title: "recursion"
+description: "LeetCode problems for the recursion pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 8
+tags: [leetcode, dsa]
+---
+
+# recursion
 
 ## Easy
 

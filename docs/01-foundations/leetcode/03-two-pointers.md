@@ -1,3 +1,10 @@
+---
+title: "two pointers"
+description: "LeetCode problems for the two pointers pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 3
+tags: [leetcode, dsa]
+---
+
 # two pointers
 
 ## Easy

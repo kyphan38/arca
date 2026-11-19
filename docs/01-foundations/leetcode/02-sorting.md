@@ -1,3 +1,10 @@
+---
+title: "sorting"
+description: "LeetCode problems for the sorting pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 2
+tags: [leetcode, dsa]
+---
+
 # sorting
 
 ## Easy

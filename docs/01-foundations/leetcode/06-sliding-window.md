@@ -1,3 +1,10 @@
+---
+title: "sliding window"
+description: "LeetCode problems for the sliding window pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 6
+tags: [leetcode, dsa]
+---
+
 # sliding window
 
 ## Easy

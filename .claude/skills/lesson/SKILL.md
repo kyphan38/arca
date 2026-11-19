@@ -52,6 +52,8 @@ The source is for checking, never for writing. Claude does not put any fact from
    - A note on the same topic already exists - do not make a second file, add the lesson to the existing one
 4. Demo or lab lesson (`Demo` or `DEMO` in the name, or a hands-on tutorial page) - do not create a note. Tell the user to do it, clean up after, then add a `Lab Log` (3 lines) to the related note
 5. Create the note from `scripts/templates/note.md`
+   - Frontmatter - `title` = the H1, `sidebar_position` = next number in the section folder, `tags` = topic key plus course key (e.g. `[aws, aws-saa]`)
+   - Leave `description` empty - the user writes one line after the lesson, in their own words
    - H1 - the lesson title, lowercase
    - Header - from the Sources table, or `> <source> - <URL or chapter> · <date>`
    - Keep every section empty. Keep the template comments

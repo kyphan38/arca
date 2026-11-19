@@ -1,3 +1,10 @@
+---
+title: "phương pháp học"
+description: "Cách học và ghi chép cho toàn bộ repo - nguồn học, một buổi học, cách viết note, flashcard và ôn tập"
+sidebar_position: 2
+tags: [meta, study-method]
+---
+
 # phương pháp học
 
 Cách học và ghi chép cho toàn bộ repo - AWS, Kubernetes, Terraform, Vault, leetcode, lý thuyết. Đọc lại trang này mỗi khi quay lại sau một thời gian nghỉ
@@ -121,6 +128,13 @@ Khoảng 30-60 phút, 1-2 bài
 ### Template
 
 File `scripts/templates/note.md`, 4 phần, bỏ phần nào không có gì
+
+Đầu file là frontmatter, `/lesson` điền sẵn trừ `description`
+
+- `title` - giống H1
+- `description` - một dòng bạn tự viết sau khi học xong, trang web và AI dùng dòng này để tóm tắt note
+- `sidebar_position` - thứ tự trong thư mục, giống số đầu tên file
+- `tags` - chủ đề và khóa học, ví dụ `[aws, aws-saa]`
 
 | Phần | Viết gì | Độ dài |
 | --- | --- | --- |

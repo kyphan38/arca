@@ -1,3 +1,10 @@
+---
+title: "topic name"
+description: ""
+sidebar_position: 1
+tags: [topic]
+---
+
 # topic name
 
 > Source - course / book / link, lesson number · YYYY-MM-DD

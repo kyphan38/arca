@@ -1,3 +1,10 @@
+---
+title: "binary search"
+description: "LeetCode problems for the binary search pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 5
+tags: [leetcode, dsa]
+---
+
 # binary search
 
 ## Easy

@@ -1,3 +1,10 @@
+---
+title: "stack"
+description: "LeetCode problems for the stack pattern, grouped by Easy, Medium and Hard"
+sidebar_position: 4
+tags: [leetcode, dsa]
+---
+
 # stack
 
 ## Easy
