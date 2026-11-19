@@ -8,7 +8,7 @@ const config: Config = {
   tagline: 'Personal knowledge base - notes on foundations, technologies and tools',
   favicon: 'img/favicon.svg',
 
-  url: 'https://kyphan38.github.io',
+  url: 'https://arca.kyphan38.com',
   baseUrl: '/',
 
   organizationName: 'arca',
