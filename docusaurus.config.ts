@@ -17,7 +17,19 @@ const config: Config = {
 
   future: {
     // Docusaurus Faster: Rspack bundler, SWC loader and minifiers, Lightning CSS.
-    faster: true,
+    faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      // @swc/html native binding fails on Cloudflare Pages (ERR_SWC_NATIVE_CACHE:
+      // the build home is writable by another user). Use the JS HTML minifier.
+      swcHtmlMinimizer: false,
+      lightningCssMinimizer: true,
+      mdxCrossCompilerCache: true,
+      rspackBundler: true,
+      rspackPersistentCache: true,
+      ssgWorkerThreads: true,
+      gitEagerVcs: true,
+    },
     v4: {
       removeLegacyPostBuildHeadAttribute: true,
       useCssCascadeLayers: false,
