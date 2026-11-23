@@ -7,12 +7,13 @@ tags: [meta, study-method]
 
 # phương pháp học
 
-Cách học và ghi chép cho toàn bộ repo - AWS, Kubernetes, Terraform, Vault, leetcode, lý thuyết. Đọc lại trang này mỗi khi quay lại sau một thời gian nghỉ
+Cách học và ghi chép cho toàn bộ repo - AWS, Linux, bash, networking, DNS, containers, Kubernetes, AI infra, Terraform, Vault, leetcode, lý thuyết. Đọc lại trang này mỗi khi quay lại sau một thời gian nghỉ
 
 ## Nguyên Tắc
 
 - **Không bao giờ xóa note, không học lại từ đầu.** Quên là bình thường, học lại nhanh hơn học lần đầu
 - **Bạn tự viết note.** Claude chỉ hỏi, kiểm tra, tạo flashcard
+- **Note chỉ giữ ý quan trọng, thẻ thì phủ đủ.** Phần bài gốc có mà note bỏ qua, `/anki-tech` đọc bài gốc và làm thẻ cho phần đó
 - **Nhớ nhờ Anki, không nhờ đọc lại note.** Note là nơi chứa câu hỏi, Anki là nơi ôn
 - **Mỗi ngày tối thiểu 10 phút Anki,** kể cả ngày không học bài mới
 - **Một chủ đề chính tại một thời điểm.** Chủ đề cũ vẫn được giữ nhờ Anki
@@ -24,7 +25,10 @@ Cách học và ghi chép cho toàn bộ repo - AWS, Kubernetes, Terraform, Vaul
 | `docs/<nhóm>/<chủ đề>/` | Note, ví dụ `docs/02-technologies/aws/` |
 | `docs/<nhóm>/<chủ đề>/00-map.md` | Bản đồ chủ đề - mỗi section một dòng, trạng thái |
 | `scripts/templates/note.md` | Template note |
+| `scripts/templates/placeholder.md` | Template placeholder cho chủ đề mới |
 | `.claude/skills/` | Skill `/lesson`, `/cards`, `/quiz` |
+| `~/.claude/skills/anki-tech/` | Skill `/anki-tech` - dùng ở mọi folder, nằm trong repo cskills |
+| `~/Documents/anki-tech/<chủ đề>/` | File làm việc của `/anki-tech` (danh sách ý tưởng, đề xuất sửa note, thẻ) - không nằm trong repo |
 | `.rules/formatting.md` | Quy tắc cho Claude (file `CLAUDE.md` trỏ tới đây) |
 | `scripts/lint.py` | Lint - chỉ kiểm tra tên file kebab-case, một H1, tối đa H3. Chạy tự động khi commit |
 
@@ -55,7 +59,8 @@ flowchart LR
   D --> E["/lesson done"]
   E --> F[Tự sửa note]
   F --> G[Duyệt câu hỏi, push Anki]
-  G --> H[Hết section - /quiz]
+  G --> T["/anki-tech note + bài gốc"]
+  T --> H[Hết section - /quiz]
 ```
 
 ## Chuẩn Bị Một Lần
@@ -63,7 +68,9 @@ flowchart LR
 - Anki desktop + add-on AnkiConnect (code `2055492159`). Mở Anki mỗi khi push thẻ
 - Trong Anki, giới hạn khoảng 15 thẻ mới mỗi ngày (Deck options → New cards/day)
 - Deck tự tạo theo chủ đề - `arca::aws`, `arca::kubernetes`, ... Ôn deck cha `arca` là ôn tất cả
-- Mở Claude Code tại folder `arca` - các skill chỉ có trong repo này
+  - `/cards` đặt deck theo folder chủ đề, ví dụ `arca::docker`
+  - `/anki-tech` đặt deck theo domain cố định: `linux`, `bash`, `networking`, `dns`, `containers`, `kubernetes`, `observability`, `ai-infra`, `aws`, `security`. Ví dụ `arca::dns`
+- Mở Claude Code tại folder `arca` - `/lesson`, `/cards`, `/quiz` chỉ có trong repo này. `/anki-tech` dùng được ở mọi folder
 - Theo chủ đề
   - AWS - học bài 0011 (Creating a Budget) và làm theo trước mọi demo. Demo tạo tài nguyên thật, tốn tiền thật
   - Kubernetes - cluster local (`kind` hoặc `minikube`)
@@ -116,6 +123,23 @@ Khoảng 30-60 phút, 1-2 bài
 - Claude đề xuất câu hỏi còn thiếu → bạn duyệt, sửa → Claude ghi vào note
 - Claude push lên Anki và cập nhật `00-map.md`
 - Muốn làm riêng bước này - `/cards <note>`
+
+### 7. Bổ Sung Thẻ Từ Bài Gốc
+
+Note chỉ giữ ý quan trọng, nên thẻ từ `## Questions` chưa phủ hết bài. Bước này làm thẻ cho phần còn lại
+
+- Gõ `/anki-tech scan <note> --ref <bài gốc>`. Bài gốc có thể là PDF, phụ đề `.srt`, file text hoặc URL trang docs
+  - Có thể đưa cả folder section thay cho một note
+  - PDF dài thì thêm `--pages 40-75`
+- Skill chia note và bài gốc thành các window, mỗi lần chỉ đọc 1 window cho kỹ. Gõ `/anki-tech next` để đọc tiếp, `/anki-tech status` để xem đã tới đâu
+- Mỗi window cho ra
+  - `V` - chỗ note sai, cũ hoặc mơ hồ, có tìm web để xác nhận. Câu đề xuất sửa nằm trong file notes-fix, bạn tự sửa note
+  - Ý tưởng thẻ - nhất là phần bài gốc có mà note bỏ qua. Không có số câu cố định
+- Đọc hết thì có thêm `G` (kiến thức quan trọng mà cả note và bài gốc đều thiếu) và `I` (câu hỏi phỏng vấn mở để luyện nói)
+- Chọn số rồi gõ `/anki-tech cards 1-8,G1,I2`. Skill tự kiểm tra từng thẻ rồi push vào `arca::<domain>`, bỏ qua ý đã có trong deck `arca`
+- Thẻ có tag `check` - xem lại trước khi học
+- Thẻ của `/anki-tech` chỉ nằm trong Anki, không ghi vào note
+- Không cần làm sau mỗi bài - có thể làm một lần khi hết section, với cả folder section
 
 ### Bài Demo, Lab
 
@@ -193,7 +217,8 @@ Note mẫu đầy đủ - [SQS dead-letter queues](../02-technologies/aws/13-ser
 | Loại | Ví dụ | Nguồn chính | Câu hỏi ưu tiên sau Fundamental | Ghi chú |
 | --- | --- | --- | --- | --- |
 | Khóa luyện thi | AWS SAA | Video | Scenario, Traps | Gần thi làm practice exam |
-| Công cụ | Kubernetes, Terraform, Vault, Docker, Linux | Docs + lab | Interview, Traps | Lab quan trọng hơn thẻ |
+| Công cụ, DevOps | Linux, bash, networking, DNS, containers, Kubernetes, Terraform, Vault | Docs, sách + lab | Interview, Traps | Lab quan trọng hơn thẻ. `/anki-tech` cho phần note bỏ qua |
+| AI infra | GPU, LLM serving, KV cache | Docs, paper, blog | Fundamental, Interview | `/anki-tech` với bài gốc |
 | Lý thuyết | Game theory, security foundations | Sách, khóa học | Fundamental, Interview | Thêm phần Example |
 | Bài tập | Leetcode | Danh sách bài | - | Ghi mẹo nhận dạng vào cột `Note` |
 
@@ -234,6 +259,7 @@ Một bài
   - Thêm dòng `doing` vào map, nói tên section với `/lesson` một lần
   - Folder tên theo section, ví dụ `13-serverless-and-application-services`, chỉ tạo khi bắt đầu
 - Hết section
+  - Nếu chưa làm sau từng bài - `/anki-tech scan <folder section> --ref <bài gốc>` để thêm thẻ cho phần note bỏ qua
   - `/quiz <folder section>` - xem yếu loại câu hỏi nào
   - Đổi trạng thái thành `done`
 - AWS - folder video không chia section. Các bài `update_ch_...` ở cuối (0383-0385) thuộc section cũ, học khi tới chủ đề đó
@@ -279,11 +305,13 @@ Ví dụ bắt đầu Kubernetes sau AWS
 | `/quiz [note, folder]` | Cuối tuần, hết section | Hỏi từng câu, chấm theo loại, ghi câu sai vào note | Không đưa đáp án trước khi bạn trả lời |
 | `/quiz interview` | Luyện phỏng vấn | Câu mở, có câu hỏi nối tiếp, đáp án mẫu | - |
 | `/quiz comeback <chủ đề>` | Sau khi nghỉ | Quy trình quay lại | Không bảo bạn học lại từ đầu |
+| `/anki-tech scan <note> --ref <bài gốc>` | Sau `/lesson done` hoặc hết section | Đọc từng window, báo note sai, ý tưởng thẻ cho phần note bỏ qua, gap, câu phỏng vấn mở | Không sửa note, không ghi thẻ vào note |
+| `/anki-tech next`, `status`, `cards <số>` | Đọc tiếp, xem tiến độ, làm thẻ | Tự kiểm tra thẻ, push `arca::<domain>`, bỏ qua thẻ đã có | Không đọc vội nhiều window một lúc |
 
 ## Không Làm
 
 - Xóa note hoặc folder rồi bắt đầu lại
-- Nhờ AI viết hoặc tóm tắt bài thay mình
+- Nhờ AI viết hoặc tóm tắt bài thay mình. Tự học và tự viết note trước, rồi mới để `/anki-tech` làm thẻ cho phần còn lại
 - Ghi chép trong lúc học, chụp slide
 - Tạo trước folder cho cả khóa
 - Học song song nhiều chủ đề mới

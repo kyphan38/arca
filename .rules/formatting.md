@@ -10,6 +10,7 @@
 - The user writes the notes, in their own words, after watching or reading the source
 - Claude does not write or rewrite note content unless the user asks for that exact note
 - Claude's job - ask questions, check notes against the source, find gaps, make flashcards (`/lesson`, `/cards`, `/quiz`)
+- `/anki-tech` (a global skill, not in this repo) adds cards for what a note leaves out, from the full source. Those cards live only in Anki (decks `arca::<domain>`), never in the note, and its work files stay outside the repo
 - `/lesson` may create an empty note from the template, but never puts facts from the source into it
 - When checking a note, point out wrong or missing facts - do not polish the wording
 - Vietnamese, English, or a mix are all fine - keep technical terms in English

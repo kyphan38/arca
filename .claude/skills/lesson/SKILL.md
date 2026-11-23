@@ -77,3 +77,4 @@ The source is for checking, never for writing. Claude does not put any fact from
 4. When the user has updated the note, run the `/cards` steps on it - coverage check by question type, draft gaps, approve, preview, push
 5. Update the topic's `00-map.md` - add the note link to its section row, create the row if needed (status `doing`)
 6. One-line summary - note path, cards added, what is next (the next lesson number)
+   - If the source has much more than the note keeps (the note holds only key points), add one line with the command to cover the rest: `/anki-tech scan <note> --ref <source file or URL>` (global skill, decks `arca::<domain>`, skips cards already in `arca`). Do not run it unless the user asks
