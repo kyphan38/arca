@@ -197,7 +197,7 @@ Tự viết (dễ đọc lại, dễ nhớ)
 
 > Problem - message lỗi cứ quay lại queue mãi, xử lý fail hoài
 
-Note mẫu đầy đủ - [SQS dead-letter queues](../02-technologies/aws/13-serverless-and-application-services/sqs-dead-letter-queues.md)
+Note mẫu đầy đủ - `docs/_archive/02-technologies/aws/13-serverless-and-application-services/sqs-dead-letter-queues.md` (đã lưu trữ, không hiện trên web)
 
 ### Viết Câu Hỏi
 

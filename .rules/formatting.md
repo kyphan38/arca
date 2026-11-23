@@ -29,7 +29,7 @@
 ## Note Format
 
 - Template - `scripts/templates/note.md`
-- Example - `docs/02-technologies/aws/13-serverless-and-application-services/sqs-dead-letter-queues.md`
+- Example - `docs/_archive/02-technologies/aws/13-serverless-and-application-services/sqs-dead-letter-queues.md` (archived, still the reference format)
 - Sections - `Problem`, `How It Works`, `Traps`, `Questions` - skip a section if it has nothing
   - Cert courses may call it `Exam Traps`
   - Other section names are fine when the topic needs them

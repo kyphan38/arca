@@ -1,7 +1,7 @@
 ---
 title: "SSH Protocol"
 description: "SSH layers and the handshake step by step - version exchange, KEXINIT, key exchange, host key check and known_hosts"
-sidebar_position: 1
+sidebar_position: 100
 tags: [linux, ssh, networking]
 ---
 
