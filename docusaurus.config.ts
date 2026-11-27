@@ -61,6 +61,11 @@ const config: Config = {
       tagName: 'meta',
       attributes: {name: 'theme-color', content: '#111111', media: '(prefers-color-scheme: dark)'},
     },
+    // Home screen icon and name for the PWA (iOS reads apple-touch-icon, not the manifest).
+    {tagName: 'link', attributes: {rel: 'manifest', href: '/manifest.webmanifest'}},
+    {tagName: 'link', attributes: {rel: 'apple-touch-icon', href: '/icons/apple-touch-icon.png'}},
+    {tagName: 'meta', attributes: {name: 'apple-mobile-web-app-title', content: 'arca'}},
+    {tagName: 'meta', attributes: {name: 'mobile-web-app-capable', content: 'yes'}},
   ],
 
   presets: [
